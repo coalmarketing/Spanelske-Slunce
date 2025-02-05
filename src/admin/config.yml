@@ -137,3 +137,46 @@ collections:
           - label: Obsah
             name: body
             widget: markdown
+
+    # GALLERY ALBUMS
+    - label: Alba galerie
+      name: galleryAlbums
+      folder: src/content/gallery/albums
+      editor:
+          preview: false
+      create: true
+      slug: "{{slug}}"
+      fields:
+          - label: Název
+            name: title
+            widget: string
+            
+          - label: Popis
+            name: description
+            widget: string
+            required: false
+
+    # GALLERY ALBUMS
+    - label: Galerie
+      name: galleryPhotos
+      folder: src/content/gallery
+      editor:
+          preview: false
+      create: true
+      slug: "{{slug}}"
+      fields:
+          - label: Obrázek
+            name: image
+            widget: image
+
+          - label: Popis obrázku
+            name: imageAlt
+            widget: string
+
+          - label: Album
+            name: album
+            widget: relation
+            collection: galleryAlbums
+            search_fields: [title]
+            value_field: "{{slug}}"
+            display_fields: [title]
