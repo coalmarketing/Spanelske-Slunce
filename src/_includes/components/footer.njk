@@ -1,133 +1,173 @@
 <!-- FOOTER -->
-<footer class="w-full py-16 ~px-4/8 bg-white dark:bg-gray-950 border-t border-gray-300 dark:border-gray-600">
+<footer class="py-16 ~px-4/8 bg-white dark:bg-zinc-950 border-t border-zinc-300 dark:border-gray-600">
     <div class="container m-auto flex flex-col gap-12">
         <!-- LOGO + NAVIGATION + CONTACT -->
-        <div class="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-16">
-            <div class="flex flex-col items-center lg:items-start gap-8 lg:gap-12">
+        <div class="flex flex-row justify-between items-center gap-16">
+            <div class="flex flex-col items-start gap-4">
                 <img
-                    class="dark:hidden h-14 w-auto"
+                    class="dark:hidden h-20 w-auto"
                     decoding="async"
                     loading="lazy"
-                    src="/assets/svgs/bvspeed_logo_black.svg"
-                    alt="BV Speed - logo"
-                    width="205"
-                    height="56">
+                    src="/assets/svgs/Spanelske_Slunce_logo_dark.svg"
+                    alt="Španělské Slunce - logo"
+                    width="256"
+                    height="80">
 
                 <img
-                    class="hidden dark:block h-14 w-auto"
+                    class="hidden dark:block h-20 w-auto"
                     decoding="async"
                     loading="lazy"
-                    src="/assets/svgs/bvspeed_logo_white.svg"
-                    alt="BV Speed - logo"
-                    width="205"
-                    height="56">
+                    src="/assets/svgs/Spanelske_Slunce_logo_light.svg"
+                    alt="Španělské Slunce - logo"
+                    width="256"
+                    height="80">
 
-                <!-- NAVIGATION -->
-                <nav class="flex justify-center whitespace-nowrap">
-                    <ul class="flex gap-8">
-                        {% set navPages = collections.all | eleventyNavigation %}
-
-                        {# Loop through all pages with a eleventyNavigation in the frontmatter #}
-                        {% for entry in navPages %}
-
-                            {# Define a hasChild variable to make it easier to test what navigation items are have child dropdown pages #}
-                            {% set hasChild = entry.children.length %}
-                            <li
-                            class="group relative flex items-center{% if hasChild %} dropdown{% endif %}"
-                            {% if hasChild %}
-                            tabindex="0"
-                            {% endif %}>
-                                <a
-                                href="{{ entry.url }}"
-                                class="text-gray-800 dark:text-gray-200 uppercase font-medium
-                                {% if entry.url == page.url or entry.title | lower in page.url %} text-primary dark:text-primary
-                                {% else %} transition-colors duration-300 hover:text-primary{% endif %}"
-                                {% if entry.url == page.url or entry.title | lower in page.url %}
-                                aria-current="page"
-                                {% endif %}>
-                                    {{ entry.title }}
-                                </a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </nav>
+                <p class="max-w-xs font-proxima-nova text-zinc-800 dark:text-zinc-200">
+                    Pomáháme našim studentům objevovat krásy španělského jazyka prostřednictvím různorodých výukových metod.
+                </p>
             </div>
 
-            <!-- CONTACT INFO -->
-            <ul class="flex flex-wrap justify-center items-start gap-8 sm:gap-16">
-                <li class="flex flex-col items-start gap-3">
-                    <!-- ICON -->
-                    <div class="p-3 bg-primary rounded-lg">
-                        <img
-                        src="/assets/svgs/footer/buildings.svg"
-                        alt="Ikona budov"
-                        decoding="async"
-                        loading="lazy"
-                        width="24"
-                        height="24"
-                        draggable="false"/>
-                    </div>
-
-                    <!-- TEXT -->
-                    <div class="flex flex-col gap-2">
-                        <span class="font-medium dark:text-white">BV Speed s.r.o.</span>
-                        <p class="font-work-sans text-sm text-gray-800 dark:text-gray-200">
-                            IČO: 07829442<br/>
-                            DIČ: CZ07829442
-                        <p></div>
+            <!-- NAVIGATION + CONTACT -->
+            <div class="flex gap-20">
+                <!-- SERVICES -->
+                <div class="flex flex-col gap-4">
+                    <span class="dark:text-white font-proxima-nova font-bold">Naše služby</span>
+                    <ul class="flex flex-col gap-3">
+                        <li>
+                            <a href="/online-kurzy" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white">
+                                Online kurzy
+                            </a>
                         </li>
+                        <li>
+                            <a href="/pobytove-kurzy" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white">
+                                Pobytové kurzy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/videokurzy" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white">
+                                Videokurzy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/preklady" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white">
+                                Překlady
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-                        <li class="flex flex-col items-start gap-3">
-                            <!-- ICON -->
-                            <div class="p-3 bg-primary rounded-lg">
-                                <img
-                        src="/assets/svgs/footer/geo.svg"
-                        alt="Ikona bodu na mapě"
-                        decoding="async"
-                        loading="lazy"
-                        width="24"
-                        height="24"
-                        draggable="false"/>
-                            </div>
-                            <!-- TEXT -->
-                            <div class="flex flex-col gap-2">
-                                <span class="font-medium dark:text-white">Adresa</span>
-                                <p class="font-work-sans text-sm text-gray-800 dark:text-gray-200">
-                            U Javorky 363,<br/>
-                            560 02 Česká Třebová
-                        <p></div>
-                                </li>
+                <!-- LINKS -->
+                <div class="flex flex-col gap-4">
+                    <span class="dark:text-white font-proxima-nova font-bold">Užitečné odkazy</span>
+                    <ul class="flex flex-col gap-3">
+                        <li>
+                            <a href="/o-mne" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white">
+                                O mně
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/galerie" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white">
+                                Galerie
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/reference" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white">
+                                Reference
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/kontakt" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white">
+                                Kontakt
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/blog" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white">
+                                Blog
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-                                <li class="flex flex-col items-start gap-3">
-                                    <!-- ICON -->
-                                    <div class="p-3 bg-primary rounded-lg">
-                                        <img
-                                        src="/assets/svgs/footer/reply-all.svg"
-                                        alt="Ikona odpovědi"
-                                        decoding="async"
-                                        loading="lazy"
-                                        width="24"
-                                        height="24"
-                                        draggable="false"/>
-                                    </div>
-                                    <!-- TEXT -->
-                                    <div class="flex flex-col gap-2">
-                                        <span class="font-medium dark:text-white">Kontakt</span>
-                                        <a class="font-work-sans text-sm text-gray-800 dark:text-gray-200 hover:underline hover:text-black dark:hover:text-white" href="/kontakt">
-                            Kliknutím <br/>
-                            zašlete zprávu
-                        </a>
-                                    </div>
-                                </li>
-                            </ul>
+                <!-- CONTACT INFO -->
+                <ul class="flex flex-col gap-4">
+                    <li class="flex items-center gap-3">
+                        <!-- ICON -->
+                        <div class="p-1 rounded bg-secondary">
+                            <img
+                                decoding="async"
+                                loading="lazy"
+                                src="/assets/svgs/footer/mail.svg"
+                                alt="Ikona telefonu"
+                                width="24"
+                                height="24">
                         </div>
 
-                        <!-- SEPARATOR -->
-                        <div class="h-px w-full bg-gray-300 dark:bg-gray-600"></div>
+                        <a
+                            href="mailto:{{client.email}}"
+                            class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white hover:underline"
+                        >
+                            {{client.email}}
+                        </a>
+                    </li>
 
-                        <!-- CREDITS -->
-                        <span class="font-work-sans text-center text-sm text-gray-600 dark:text-gray-400 font-medium">
-            © 2024 Všechna práva vyhrazena - Vyvinuto na míru od <a class="underline hover:text-black dark:hover:text-white" href="https://www.senoweb.cz" target="_blank">Senoweb.cz</a>
-                        </span>
-                    </div>
-                </footer>
+                    <li class="flex items-center gap-3">
+                        <!-- ICON -->
+                        <div class="p-1 rounded bg-secondary">
+                            <img
+                                decoding="async"
+                                loading="lazy"
+                                src="/assets/svgs/footer/call.svg"
+                                alt="Ikona telefonu"
+                                width="24"
+                                height="24">
+                        </div>
+
+                        <a
+                            href="tel:{{client.phoneForTel}}"
+                            class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white hover:underline"
+                        >
+                            {{client.phoneFormatted}}
+                        </a>
+                    </li>
+
+                    <li class="flex items-center gap-3">
+                        <!-- ICON -->
+                        <div class="p-1 rounded bg-secondary">
+                            <img
+                                decoding="async"
+                                loading="lazy"
+                                src="/assets/svgs/footer/facebook.svg"
+                                alt="Ikona telefonu"
+                                width="24"
+                                height="24">
+                        </div>
+
+                        <a
+                            href="{{client.social.facebook}}"
+                            target="_blank"
+                            class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white hover:underline"
+                        >
+                            Španělské Slunce
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-4">
+            <!-- SEPARATOR -->
+            <div class="h-px w-full bg-zinc-300 dark:bg-zinc-600"></div>
+
+            <div class="flex justify-between items-center">
+                <!-- CREDITS -->
+                <span class="font-proxima-nova text-center text-sm text-zinc-600 dark:text-zinc-400 font-medium">
+                    © 2024 Všechna práva vyhrazena - Ručně vyvinuto od <a class="underline hover:text-black dark:hover:text-white" href="https://www.coalmarketing.cz" target="_blank">coalmarketing.cz</a>
+                </span>
+
+                <a href="#" class="font-proxima-nova text-center text-sm text-zinc-600 dark:text-zinc-400 font-medium hover:text-black dark:hover:text-white">
+                    Zpět nahoru
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>

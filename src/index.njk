@@ -57,9 +57,823 @@ eleventyNavigation:
 
 {% block body %}
   <!-- HERO -->
-  <section class="py-24 ~px-4/8">
-    <div class="container m-auto"></div>
+  <section class="relative pb-32 pt-48 ~px-4/8 overflow-hidden">
+    <div class="container m-auto flex justify-center items-center gap-24">
+      <!-- HEADING + CTA -->
+      <div class="flex flex-col items-start gap-8">
+        <!-- HEADING + TEXT -->
+        <div class="flex flex-col gap-4 max-w-2xl">
+          <!-- TOPPER + HEADING -->
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center gap-1.5">
+              <img
+                class="mb-0.5"
+                src="/assets/svgs/hero/logo_icon.svg"
+                alt="Tmavé pozadí"
+                decoding="async"
+                loading="eager"
+                width="20"
+                height="20"
+                draggable="false"/>
+              <span class="text-secondary text-lg font-bold leading-none">Španělské Slunce</span>
+            </div>
+            <h1 class="text-4xl font-bold text-white">
+              Zažijte španělštinu naplno - pobytová, online nebo video výuka pro každého
+            </h1>
+          </div>
+          <p class="font-proxima-nova text-xl text-zinc-200">
+            Naučte se španělsky s profesionální lektorkou, která vám nabízí flexibilní výuku přesně podle vašich potřeb.
+            Ať už preferujete intenzivní prezenční kurzy, pohodlné online lekce nebo samostudium pomocí video kurzů, máme řešení pro každého.
+          </p>
+        </div>
+
+        <!-- CTA BUTTON -->
+        <a class="hidden lg:block relative px-4 py-2 bg-primary text-white font-semibold rounded-lg z-10 overflow-hidden whitespace-nowrap
+          before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-tertiary before:-z-10
+          before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
+          href="/kontakt">
+          Kontaktujte nás
+        </a>
+      </div>
+
+      <!-- IMAGES -->
+      <div class="flex-shrink-0 relative h-[30rem] w-[48rem]">
+        <!-- IMAGE POLYGON LEFT -->
+        <div class="polygon-1 absolute top-1/2 left-0 -translate-y-1/2 h-full max-h-[20rem] w-full max-w-[19rem] bg-black overflow-hidden">
+          <picture class="before:absolute before:top-0 before:left-0 before:h-full before:w-full before:-z-10 before:bg-black/75">
+            <source srcset="{% getUrl "/assets/images/hero/laptop_with_coffee.jpg" | resize({ width: 608, height: 640, position: 'left' }) | webp({ quality: 70 }) %}">
+            <img
+                class="h-full w-full object-cover"
+                src="{% getUrl "/assets/images/hero/laptop_with_coffee.jpg" | resize({ width: 608, height: 640, position: 'left' }) | jpeg({ quality: 70 }) %}"
+                alt="Otevřený notebook na stole s kávou a poznámkovým blokem"
+                decoding="async"
+                loading="eager"
+                width="304"
+                height="320"
+                draggable="false"/>
+          </picture>
+        </div>
+
+        <!-- IMAGE POLYGON TOP -->
+        <div class="polygon-2 absolute top-0 left-[11rem] h-full max-h-[15rem] w-full max-w-[21rem]">
+          <picture class="before:absolute before:top-0 before:left-0 before:h-full before:w-full before:-z-10 before:bg-black/75">
+            <source srcset="{% getUrl "/assets/images/hero/segrada-familia.jpg" | resize({ width: 672, height: 480 }) | webp({ quality: 70 }) %}">
+            <img
+                class="h-full w-full object-cover"
+                src="{% getUrl "/assets/images/hero/segrada-familia.jpg" | resize({ width: 672, height: 480 }) | jpeg({ quality: 70 }) %}"
+                alt="Sagrada Família"
+                decoding="async"
+                loading="eager"
+                width="336"
+                height="240"
+                draggable="false"/>
+          </picture>
+        </div>
+
+        <div class="polygon-3 absolute bottom-0 left-[14rem] h-full max-h-[16rem] w-full max-w-[22rem]">
+          <picture class="before:absolute before:top-0 before:left-0 before:h-full before:w-full before:-z-10 before:bg-black/75">
+            <source srcset="{% getUrl "/assets/images/hero/person-writing-notebook.jpg" | resize({ width: 704, height: 512 }) | webp({ quality: 70 }) %}">
+            <img
+                class="h-full w-full object-cover"
+                src="{% getUrl "/assets/images/hero/person-writing-notebook.jpg" | resize({ width: 704, height: 512 }) | jpeg({ quality: 70 }) %}"
+                alt="Osoba zapisující si do poznámkového bloku"
+                decoding="async"
+                loading="eager"
+                width="352"
+                height="256"
+                draggable="false"/>
+          </picture>
+        </div>
+
+        <div class="polygon-4 bg-black absolute top-4 left-[31rem] h-full max-h-[23rem] w-full max-w-[17rem]">
+          <picture class="before:absolute before:top-0 before:left-0 before:h-full before:w-full before:-z-10 before:bg-black/75">
+            <source srcset="{% getUrl "/assets/images/hero/person-writing-notebook.jpg" | resize({ width: 544, height: 736 }) | webp({ quality: 70 }) %}">
+            <img
+                class="h-full w-full object-cover"
+                src="{% getUrl "/assets/images/hero/person-writing-notebook.jpg" | resize({ width: 544, height: 736 }) | jpeg({ quality: 70 }) %}"
+                alt="Učebnice španělštiny"
+                decoding="async"
+                loading="eager"
+                width="272"
+                height="368"
+                draggable="false"/>
+          </picture>
+        </div>
+      </div>
+    </div>
+
+    <!-- BACKGROUND -->
+    <picture class="before:absolute before:top-0 before:left-0 before:h-full before:w-full before:-z-10 before:bg-black/75">
+      <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero/hero_background_image.jpg" | resize({ width: 1920, height: 800 }) | webp({ quality: 70 }) %}">
+      <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/hero/hero_background_image.jpg" | resize({ width: 1920, height: 800 }) | webp({ quality: 70 }) %}">
+      <img
+          class="absolute inset-0 h-full w-full object-cover -z-20 scale-110 blur-xl"
+          src="{% getUrl "/assets/images/hero/hero_background_image.jpg" | resize({ width: 1920, height: 800 }) | jpeg({ quality: 70 }) %}"
+          alt="Tmavé pozadí"
+          decoding="async"
+          loading="eager"
+          width="1920"
+          height="800"
+          draggable="false"/>
+    </picture>
   </section>
 
+  <!-- SERVICES -->
+  <section class="py-24 ~px-4/8 bg-zinc-100 dark:bg-zinc-900">
+    <div class="container m-auto flex flex-col items-center gap-16">
+      <!-- HEADING + TEXT -->
+      <div class="flex flex-col gap-4 max-w-2xl">
+        <!-- TOPPER + HEADING -->
+        <div class="flex flex-col gap-2">
+          <span class="text-sm text-center text-primary dark:text-secondary font-bold leading-none">Naše služby</span>
+          <h2 class="dark:text-white text-center text-3xl font-bold">
+            Výuka španělštiny - od online kurzů až po zážitkové pobyty
+          </h2>
+        </div>
+        <p class="font-proxima-nova text-center text-zinc-800 dark:text-zinc-200">
+          Od intenzivních pobytových kurzů přes skupinové online lekce až po flexibilní video kurzy.
+          Každá z našich služeb je navržena tak, aby maximálně vyhovovala vašemu stylu učení a časovým možnostem.
+        </p>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="grid grid-cols-4 gap-8 w-full">
+        <!-- SERVICE ITEM 1 -->
+        <a
+          href="/online-kurzy"
+          class="group relative flex flex-col justify-center items-center min-h-80 p-6 bg-white dark:bg-zinc-950 rounded-xl border-4 border-transparent overflow-hidden z-10
+          transition-colors duration-300 hover:border-tertiary"
+        >
+          <!-- ICON -->
+          <img
+            class="h-40 mb-6 transition-[height,_opacity,_margin-bottom] duration-500 group-hover:h-0 group-hover:opacity-0 group-hover:mb-0"
+            src="/assets/svgs/services/icon-online.svg"
+            alt="Ikona online kurzu"
+            decoding="async"
+            loading="lazy"
+            width="160"
+            height="160"
+            draggable="false"/>
+
+          <div class="flex flex-col items-center w-full">
+            <h3 class="dark:text-white text-center text-2xl font-bold mb-0 transition-[margin-bottom] duration-500 group-hover:mb-4">Online kurzy</h3>
+            <div class="relative w-full h-0 transition-[height] duration-500 group-hover:h-[5lh]">
+              <p class="absolute top-0 left-1/2 -translate-x-1/2 w-full font-proxima-nova text-center text-zinc-800 dark:text-zinc-200
+                opacity-0 scale-y-0 transition-[transform,_opacity] duration-500 origin-top group-hover:opacity-100 group-hover:scale-y-100">
+                Učte se španělsky z pohodlí domova v živých online lekcích.
+                Připojte se k malé skupině maximálně 10 studentů a užijte si interaktivní výuku vedenou zkušenou lektorkou.
+              </p>
+            </div>
+          </div>
+
+          <!-- READ MORE -->
+          <div
+            class="group/more absolute bottom-4 left-1/2 translate-y-8 -translate-x-1/2 flex items-center gap-1 opacity-0 transition-[transform,_opacity] duration-500
+              group-hover:opacity-100 group-hover:translate-y-0">
+            <span class="relative text-right text-tertiary text-sm font-semibold leading-none whitespace-nowrap
+              before:absolute before:-bottom-1 before:left-0 before:h-0.5 before:w-full before:bg-tertiary before:transition-transform before:duration-300
+              before:scale-x-0 before:origin-left group-hover/more:before:scale-x-100">
+              Dozvědět se více
+            </span>
+            <!-- ICON -->
+            <img
+              class="mt-0.5 transition-[transform,_opacity] duration-300 group-hover/more:opacity-0 group-hover/more:translate-x-2"
+              src="/assets/svgs/services/trending_flat.svg"
+              alt="Ikona šipky"
+              decoding="async"
+              loading="lazy"
+              width="16"
+              height="16"
+              draggable="false"/>
+          </div>
+
+          <!-- BACKGROUND ICON -->
+          <img 
+            class="absolute -top-full -left-full opacity-15 rotate-[30deg] -z-10 transition-transform duration-300
+              group-hover:translate-x-64 group-hover:translate-y-64"
+            src="/assets/svgs/services/icon-online.svg"
+            alt="Ikona online kurzu v pozadí"
+            decoding="async"
+            loading="lazy"
+            width="256"
+            height="256"
+            draggable="false"/>
+        </a>
+
+        <!-- SERVICE ITEM 2 -->
+        <a
+          href="/pobytove-kurzy"
+          class="group relative flex flex-col justify-center items-center min-h-80 p-6 bg-white dark:bg-zinc-950 rounded-xl border-4 border-transparent overflow-hidden z-10
+          transition-colors duration-300 hover:border-tertiary"
+        >
+          <!-- ICON -->
+          <img
+            class="h-40 mb-6 transition-[height,_opacity,_margin-bottom] duration-500 group-hover:h-0 group-hover:opacity-0 group-hover:mb-0"
+            src="/assets/svgs/services/icon-spain.svg"
+            alt="Ikona pobytového kurzu"
+            decoding="async"
+            loading="lazy"
+            width="160"
+            height="160"
+            draggable="false"/>
+
+          <div class="flex flex-col items-center w-full">
+            <h3 class="dark:text-white text-center text-2xl font-bold mb-0 transition-[margin-bottom] duration-500 group-hover:mb-4">Pobytové kurzy</h3>
+            <div class="relative w-full h-0 transition-[height] duration-500 group-hover:h-[5lh]">
+              <p class="absolute top-0 left-1/2 -translate-x-1/2 w-full font-proxima-nova text-center text-zinc-800 dark:text-zinc-200
+                opacity-0 scale-y-0 transition-[transform,_opacity] duration-500 origin-top group-hover:opacity-100 group-hover:scale-y-100">
+                Naše pobytové kurzy kombinují dopolední intenzivní výuku španělštiny s odpoledním objevováním krás místní architektury, gastronomie a života.
+              </p>
+            </div>
+          </div>
+
+          <!-- READ MORE -->
+          <div
+            class="group/more absolute bottom-4 left-1/2 translate-y-8 -translate-x-1/2 flex items-center gap-1 opacity-0 transition-[transform,_opacity] duration-500
+              group-hover:opacity-100 group-hover:translate-y-0">
+            <span class="relative text-right text-tertiary text-sm font-semibold leading-none whitespace-nowrap
+              before:absolute before:-bottom-1 before:left-0 before:h-0.5 before:w-full before:bg-tertiary before:transition-transform before:duration-300
+              before:scale-x-0 before:origin-left group-hover/more:before:scale-x-100">
+              Dozvědět se více
+            </span>
+            <!-- ICON -->
+            <img
+              class="mt-0.5 transition-[transform,_opacity] duration-300 group-hover/more:opacity-0 group-hover/more:translate-x-2"
+              src="/assets/svgs/services/trending_flat.svg"
+              alt="Ikona šipky"
+              decoding="async"
+              loading="lazy"
+              width="16"
+              height="16"
+              draggable="false"/>
+          </div>
+
+          <!-- BACKGROUND ICON -->
+          <img 
+            class="absolute -top-full -left-full opacity-15 rotate-[30deg] -z-10 transition-transform duration-300
+              group-hover:translate-x-64 group-hover:translate-y-64"
+            src="/assets/svgs/services/icon-spain.svg"
+            alt="Ikona pobytového kurzu v pozadí"
+            decoding="async"
+            loading="lazy"
+            width="256"
+            height="256"
+            draggable="false"/>
+        </a>
+
+        <!-- SERVICE ITEM 3 -->
+        <a
+          href="/videokurzy"
+          class="group relative flex flex-col justify-center items-center min-h-80 p-6 bg-white dark:bg-zinc-950 rounded-xl border-4 border-transparent overflow-hidden z-10
+          transition-colors duration-300 hover:border-tertiary"
+        >
+          <!-- ICON -->
+          <img
+            class="h-40 mb-6 transition-[height,_opacity,_margin-bottom] duration-500 group-hover:h-0 group-hover:opacity-0 group-hover:mb-0"
+            src="/assets/svgs/services/icon-video.svg"
+            alt="Ikona videokurzu"
+            decoding="async"
+            loading="lazy"
+            width="160"
+            height="160"
+            draggable="false"/>
+
+          <div class="flex flex-col items-center w-full">
+            <h3 class="dark:text-white text-center text-2xl font-bold mb-0 transition-[margin-bottom] duration-500 group-hover:mb-4">Videokurzy</h3>
+            <div class="relative w-full h-0 transition-[height] duration-500 group-hover:h-[5lh]">
+              <p class="absolute top-0 left-1/2 -translate-x-1/2 w-full font-proxima-nova text-center text-zinc-800 dark:text-zinc-200
+                opacity-0 scale-y-0 transition-[transform,_opacity] duration-500 origin-top group-hover:opacity-100 group-hover:scale-y-100">
+                Učte se španělsky svým vlastním tempem s našimi propracovanými videokurzy!
+                Získáte komplexní výukový systém kombinující interaktivní videa s tištěnou učebnicí.
+              </p>
+            </div>
+          </div>
+
+          <!-- READ MORE -->
+          <div
+            class="group/more absolute bottom-4 left-1/2 translate-y-8 -translate-x-1/2 flex items-center gap-1 opacity-0 transition-[transform,_opacity] duration-500
+              group-hover:opacity-100 group-hover:translate-y-0">
+            <span class="relative text-right text-tertiary text-sm font-semibold leading-none whitespace-nowrap
+              before:absolute before:-bottom-1 before:left-0 before:h-0.5 before:w-full before:bg-tertiary before:transition-transform before:duration-300
+              before:scale-x-0 before:origin-left group-hover/more:before:scale-x-100">
+              Dozvědět se více
+            </span>
+            <!-- ICON -->
+            <img
+              class="mt-0.5 transition-[transform,_opacity] duration-300 group-hover/more:opacity-0 group-hover/more:translate-x-2"
+              src="/assets/svgs/services/trending_flat.svg"
+              alt="Ikona šipky"
+              decoding="async"
+              loading="lazy"
+              width="16"
+              height="16"
+              draggable="false"/>
+          </div>
+
+          <!-- BACKGROUND ICON -->
+          <img 
+            class="absolute -top-full -left-full opacity-15 rotate-[30deg] -z-10 transition-transform duration-300
+              group-hover:translate-x-64 group-hover:translate-y-64"
+            src="/assets/svgs/services/icon-video.svg"
+            alt="Ikona videokurzu v pozadí"
+            decoding="async"
+            loading="lazy"
+            width="256"
+            height="256"
+            draggable="false"/>
+        </a>
+
+        <!-- SERVICE ITEM 3 -->
+        <a
+          href="/preklady"
+          class="group relative flex flex-col justify-center items-center min-h-80 p-6 bg-white dark:bg-zinc-950 rounded-xl border-4 border-transparent overflow-hidden z-10
+          transition-colors duration-300 hover:border-tertiary"
+        >
+          <!-- ICON -->
+          <img
+            class="h-40 mb-6 transition-[height,_opacity,_margin-bottom] duration-500 group-hover:h-0 group-hover:opacity-0 group-hover:mb-0"
+            src="/assets/svgs/services/icon-video.svg"
+            alt="Ikona videokurzu"
+            decoding="async"
+            loading="lazy"
+            width="160"
+            height="160"
+            draggable="false"/>
+
+          <div class="flex flex-col items-center w-full">
+            <h3 class="dark:text-white text-center text-2xl font-bold mb-0 transition-[margin-bottom] duration-500 group-hover:mb-4">Překlady</h3>
+            <div class="relative w-full h-0 transition-[height] duration-500 group-hover:h-[5lh]">
+              <p class="absolute top-0 left-1/2 -translate-x-1/2 w-full font-proxima-nova text-center text-zinc-800 dark:text-zinc-200
+                opacity-0 scale-y-0 transition-[transform,_opacity] duration-500 origin-top group-hover:opacity-100 group-hover:scale-y-100">
+                Učte se španělsky svým vlastním tempem s našimi propracovanými videokurzy!
+                Získáte komplexní výukový systém kombinující interaktivní videa s tištěnou učebnicí.
+              </p>
+            </div>
+          </div>
+
+          <!-- READ MORE -->
+          <div
+            class="group/more absolute bottom-4 left-1/2 translate-y-8 -translate-x-1/2 flex items-center gap-1 opacity-0 transition-[transform,_opacity] duration-500
+              group-hover:opacity-100 group-hover:translate-y-0">
+            <span class="relative text-right text-tertiary text-sm font-semibold leading-none whitespace-nowrap
+              before:absolute before:-bottom-1 before:left-0 before:h-0.5 before:w-full before:bg-tertiary before:transition-transform before:duration-300
+              before:scale-x-0 before:origin-left group-hover/more:before:scale-x-100">
+              Dozvědět se více
+            </span>
+            <!-- ICON -->
+            <img
+              class="mt-0.5 transition-[transform,_opacity] duration-300 group-hover/more:opacity-0 group-hover/more:translate-x-2"
+              src="/assets/svgs/services/trending_flat.svg"
+              alt="Ikona šipky"
+              decoding="async"
+              loading="lazy"
+              width="16"
+              height="16"
+              draggable="false"/>
+          </div>
+
+          <!-- BACKGROUND ICON -->
+          <img 
+            class="absolute -top-full -left-full opacity-15 rotate-[30deg] -z-10 transition-transform duration-300
+              group-hover:translate-x-64 group-hover:translate-y-64"
+            src="/assets/svgs/services/icon-video.svg"
+            alt="Ikona videokurzu v pozadí"
+            decoding="async"
+            loading="lazy"
+            width="256"
+            height="256"
+            draggable="false"/>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT ME -->
+  <section class="relative py-24 ~px-4/8 bg-white dark:bg-zinc-950 z-10 overflow-hidden">
+    <div class="container m-auto flex justify-center items-center gap-24">
+      <!-- IMAGE -->
+      <picture>
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-me/ludmila-vycitalova.webp" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}">
+        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/about-me/ludmila-vycitalova.webp" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}">
+        <img
+            class="max-w-3xl rounded-xl object-cover"
+            src="{% getUrl "/assets/images/about-me/ludmila-vycitalova.webp" | resize({ width: 1536, height: 1008 }) | jpeg({ quality: 70 }) %}"
+            alt="Fotka lektorky Ludmily Vyčítalové"
+            decoding="async"
+            loading="lazy"
+            width="1536"
+            height="504"
+            draggable="false"/>
+      </picture>
+
+      <!-- TEXT -->
+      <div class="flex flex-col items-start gap-6">
+        <!-- HEADING + TEXT -->
+        <div class="flex flex-col gap-4 max-w-2xl">
+          <!-- TOPPER + HEADING -->
+          <div class="flex flex-col gap-2">
+            <span class="text-sm text-primary dark:text-secondary font-bold leading-none">O mně</span>
+            <h2 class="dark:text-white text-3xl font-bold">
+              Lída Vyčítalová - lektorka Španělštiny s dlouholetou praxí
+            </h2>
+          </div>
+          <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+            ŠPANĚLSKO: země, kde jsem absolvovala závěr základního vzdělání i celou střední školu, kde jsem dospívala, poprvé si koupila cédéčko,
+            svůj první mobil, zažila první lásky, koupila si první auto a později i první vlastní byt, hledala to pravé zaměstnání v různých sektorech.
+            Mám zde mnoho přátel, oblíbených míst a na tisíce vzpomínek všeho druhu – jak už to v životě bývá.
+          </p>
+          <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+            Španělsko je navždy tak trochu mým domovem.
+          </p>
+          <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+            Ve Španělsku jsem žila od svých 13 do svých 25 let a tudíž jsem se v mnoha směrech formovala právě pod záštitou španělské mentality, hodnot,
+            zvyků a samozřejmě – španělského jazyka. A toužím to předávat dál, dělit se o to poznání a vhled.
+          </p>
+        </div>
+
+        <!-- BENEFITS -->
+        <ul class="flex gap-4">
+          <!-- BENEFIT -->
+          <li class="flex flex-col items-start gap-3 w-full max-w-40 p-3 bg-secondary rounded-lg">
+            <!-- ICON -->
+            <div class="p-1.5 bg-black rounded-md">
+              <img
+                src="/assets/svgs/about-me/school.svg"
+                alt="Ikona zkušeností"
+                decoding="async"
+                loading="lazy"
+                width="32"
+                height="32"
+                draggable="false"/>
+            </div>
+
+            <span class="text-sm font-bold">
+              Více než 15 let zkušeností
+            </span>
+          </li>
+
+          <!-- BENEFIT -->
+          <li class="flex flex-col items-start gap-3 w-full max-w-40 p-3 bg-secondary rounded-lg">
+            <!-- ICON -->
+            <div class="p-1.5 bg-black rounded-md">
+              <img
+                src="/assets/svgs/about-me/sentiment_very_satisfied.svg"
+                alt="Ikona smějící se smajlíka"
+                decoding="async"
+                loading="lazy"
+                width="32"
+                height="32"
+                draggable="false"/>
+            </div>
+
+            <span class="text-sm font-bold">
+              Přátelský přístup
+            </span>
+          </li>
+
+          <!-- BENEFIT -->
+          <li class="flex flex-col items-start gap-3 w-full max-w-40 p-3 bg-secondary rounded-lg">
+            <!-- ICON -->
+            <div class="p-1.5 bg-black rounded-md">
+              <img
+                src="/assets/svgs/about-me/arrows_output.svg"
+                alt="Ikona šipek směřujících ven"
+                decoding="async"
+                loading="lazy"
+                width="32"
+                height="32"
+                draggable="false"/>
+            </div>
+
+            <span class="text-sm font-bold">
+              Rozmanitost našich kurzů
+            </span>
+          </li>
+        </ul>
+
+        <!-- CTA BUTTON -->
+        <a class="hidden lg:block relative px-4 py-2 bg-primary text-sm text-white font-semibold rounded-lg z-10 overflow-hidden whitespace-nowrap
+          before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-tertiary before:-z-10
+          before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
+          href="/o-mne">
+          Více o mně
+        </a>
+      </div>
+    </div>
+
+    <!-- BACKGROUND IMAGE -->
+    <img
+      class="absolute top-0 left-0 h-full w-1/4 object-cover opacity-50 -z-10"
+      src="/assets/svgs/about-me/mosaic_background.svg"
+      alt="Pozadí žluté mozaiky"
+      decoding="async"
+      loading="lazy"
+      width="480"
+      height="734"
+      draggable="false"/>
+  </section>
+
+  <!-- BLOG -->
+  <section class="py-24 ~px-4/8 bg-zinc-100 dark:bg-zinc-900">
+    <div class="container m-auto flex flex-col gap-8 items-center">
+      <!-- HEADING -->
+      <div class="flex flex-col gap-2 items-center">
+        <span class="text-sm text-primary font-bold leading-none">Blog</span>
+        <h2 class="dark:text-white text-3xl font-bold">
+          Naše poslední novinky
+        </h2>
+      </div>
+
+      <!-- BLOG POSTS -->
+      <div class="flex justify-center items-start gap-8">
+        <!-- BLOG POST -->
+        <a
+          href="/blog/clanek"
+          class="flex flex-col gap-5 max-w-md p-6 bg-white dark:bg-zinc-950 border-4 border-transparent rounded-xl transition-colors duration-300 hover:border-tertiary"
+        >
+          <!-- IMAGE + METADATA -->
+          <div class="flex flex-col gap-2">
+            <!-- IMAGE -->
+            <picture>
+              <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/blog/blog_preview_image.jpg" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}">
+              <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/blog/blog_preview_image.jpg" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}">
+              <img
+              class="h-64 w-full rounded-xl object-cover"
+              src="{% getUrl "/assets/images/blog/blog_preview_image.jpg" | resize({ width: 1536, height: 1008 }) | jpeg({ quality: 70 }) %}"
+              alt="Fotka lektorky Ludmily Vyčítalové"
+              decoding="async"
+              loading="lazy"
+              width="1536"
+              height="504"
+              draggable="false"/>
+            </picture>
+
+            <!-- METADATA -->
+            <div class="flex justify-between items-center">
+              <!-- CATEGORY -->
+              <span class="py-1 px-2 bg-tertiary font-proxima-nova text-sm text-white font-bold rounded-lg">Pobytové kurzy</span>
+              <!-- DATE -->
+              <div class="flex items-center gap-1.5">
+                <svg class="text-zinc-800 dark:text-zinc-200" xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 -960 960 960" fill="currentColor">
+                  <path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z"/>
+                </svg>
+                <span class="font-proxima-nova text-sm text-zinc-800 dark:text-zinc-200 leading-none">01. 02. 2025</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- HEADING + TEXT -->
+          <div class="flex flex-col gap-2">
+            <h4 class="dark:text-white font-proxima-nova text-xl font-bold">
+              Jaro 2025 - pobytový kurz v Barceloně
+            </h4>
+            <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200 line-clamp-3">
+              Lorem ipsum dolor sit amet consectetur. Ut gravida ultricies in sed pellentesque. Erat arcu quis sed eu. Eu laoreet tempus turpis quis volutpat etiam in tristique.
+              Lorem ipsum dolor sit amet consectetur. Ut gravida ultricies in sed pellentesque. Erat arcu quis sed eu. Eu laoreet tempus turpis quis volutpat etiam in tristique.
+            </p>
+          </div>
+
+          <!-- SEPARATOR -->
+          <div class="h-px w-full bg-zinc-300 dark:bg-zinc-600"></div>
+
+          <!-- AUTHOR + ICON -->
+          <div class="flex justify-between items-center">
+            <!-- AUTHOR -->
+            <div class="flex items-center gap-3">
+              <!-- AUTHOR ICON -->
+              <div class="px-0.5 pt-1.5 bg-zinc-200 dark:bg-zinc-600 rounded-full overflow-hidden">
+                <svg class="fill-zinc-600 dark:fill-zinc-300" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" viewBox="0 0 1200 1200">
+                  <path d="M939.574 858.383c-157.341-57.318-207.64-105.702-207.64-209.298c0-62.17 51.555-102.462 69.128-155.744c17.575-53.283 27.741-116.367 36.191-162.256s11.809-63.638 16.404-112.532C859.276 157.532 818.426 0 600 0C381.639 0 340.659 157.532 346.404 218.553c4.596 48.894 7.972 66.645 16.404 112.532c8.433 45.888 18.5 108.969 36.063 162.256c17.562 53.286 69.19 93.574 69.19 155.744c0 103.596-50.298 151.979-207.638 209.298C102.511 915.83 0 972.479 0 1012.5V1200h1200v-187.5c0-39.957-102.574-96.606-260.426-154.117"/>
+                </svg>
+              </div>
+
+              <div class="flex flex-col gap-1">
+                <span class="font-proxima-nova text-sm text-zinc-800 leading-none dark:text-zinc-200">Autor</span>
+                <span class="font-proxima-nova text-sm font-bold leading-none dark:text-white">Ludmila Vyčítalová</span>
+              </div>
+            </div>
+
+            <!-- ICON -->
+            <div class="group p-1.5 border border-zinc-300 dark:border-zinc-600 rounded-full transition-colors duration-300 hover:border-tertiary">
+              <svg class="fill-zinc-300 dark:fill-zinc-600 transition-colors duration-300 group-hover:fill-tertiary" xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 -960 960 960" fill="currentColor">
+                <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADDITIONAL SERVICES -->
+  <section class="relative py-24 ~px-4/8 bg-[#6E1315] z-10 overflow-hidden">
+    <div class="container m-auto flex justify-center items-center gap-24">
+      <!-- TEXT -->
+      <div class="flex flex-col items-start gap-6">
+        <!-- HEADING + TEXT -->
+        <div class="flex flex-col gap-4 max-w-2xl">
+          <!-- TOPPER + HEADING -->
+          <div class="flex flex-col gap-2">
+            <span class="text-sm text-secondary font-bold leading-none">Dodatkové služby</span>
+            <h2 class="text-3xl text-white font-bold">
+              Doplňkové služby pro další rozvoj vaší španělštiny
+            </h2>
+          </div>
+          <p class="font-proxima-nova text-zinc-200">
+            Naše dodatkové služby vám pomohou posunout vaši španělštinu na další úroveň. S VIP telefonními konzultacemi získáte rychlou a profesionální
+            pomoc přímo od lektorky - společně rozebereme vaše konkrétní potíže a připravíme personalizované materiály pro jejich překonání.
+            Pro samostudium jsme připravili specializovaný e-book zaměřený na minulé časy, který vám pomůže zvládnout tuto důležitou část španělské gramatiky.
+            Potřebujete-li profesionální překlad dokumentů nebo tlumočení při obchodních jednáních, můžete se spolehnout na naše zkušenosti a odbornost.
+          </p>
+        </div>
+
+        <!-- CTA BUTTON -->
+        <a class="hidden lg:block relative px-4 py-2 bg-secondary text-sm text-black font-semibold rounded-lg z-10 overflow-hidden whitespace-nowrap
+          transition-colors duration-300 hover:text-white
+          before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-tertiary before:-z-10
+          before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
+          href="/o-mne">
+          Více o mně
+        </a>
+      </div>
+
+      <ul class="flex flex-col gap-4">
+        <li class="flex items-center gap-6 max-w-xl p-5 bg-white dark:bg-zinc-950 rounded-xl">
+          <!-- ICON -->
+          <img
+            src="/assets/svgs/services/icon-online.svg"
+            alt="Ikona minikurzu"
+            decoding="async"
+            loading="lazy"
+            width="72"
+            height="72"
+            draggable="false"/>
+
+          <div class="flex flex-col gap-1.5">
+            <h3 class="dark:text-white text-lg font-semibold">Minikurzy</h3>
+            <p class="font-proxima-nova text-sm text-zinc-800 dark:text-zinc-200">
+              V krátkých, cílených hovorech společně identifikujeme vaše potíže a připravíme pro vás personalizované materiály k jejich překonání.
+            </p>
+          </div>
+        </li>
+
+        <li class="flex items-center gap-6 max-w-xl p-5 bg-white dark:bg-zinc-950 rounded-xl">
+          <!-- ICON -->
+          <img
+            src="/assets/svgs/services/icon-online.svg"
+            alt="Ikona minikurzu"
+            decoding="async"
+            loading="lazy"
+            width="72"
+            height="72"
+            draggable="false"/>
+
+          <div class="flex flex-col gap-1.5">
+            <h3 class="dark:text-white text-lg font-semibold">VIP telefonáty</h3>
+            <p class="font-proxima-nova text-sm text-zinc-800 dark:text-zinc-200">
+              V krátkých, cílených hovorech společně identifikujeme vaše potíže a připravíme pro vás personalizované materiály k jejich překonání.
+            </p>
+          </div>
+        </li>
+
+        <li class="flex items-center gap-6 max-w-xl p-5 bg-white dark:bg-zinc-950 rounded-xl">
+          <!-- ICON -->
+          <img
+            src="/assets/svgs/services/icon-online.svg"
+            alt="Ikona minikurzu"
+            decoding="async"
+            loading="lazy"
+            width="72"
+            height="72"
+            draggable="false"/>
+
+          <div class="flex flex-col gap-1.5">
+            <h3 class="dark:text-white text-lg font-semibold">E-book - minulé časy</h3>
+            <p class="font-proxima-nova text-sm text-zinc-800 dark:text-zinc-200">
+              V krátkých, cílených hovorech společně identifikujeme vaše potíže a připravíme pro vás personalizované materiály k jejich překonání.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- BACKGROUND IMAGE -->
+    <img
+      class="absolute top-0 right-0 -translate-y-1/3 translate-x-1/3 size-[48rem] opacity-50 -z-10"
+      src="/assets/svgs/additional-services/background-logo.svg"
+      alt="Červené slunce z loga"
+      decoding="async"
+      loading="lazy"
+      width="480"
+      height="734"
+      draggable="false"/>
+  </section>
+
+  <!-- SERVICE HIGHLIGHT -->
+  <section class="py-24 ~px-4/8 dark:bg-zinc-950">
+    <div class="container m-auto flex justify-center items-center gap-24">
+      <!-- IMAGES -->
+      <div class="basis-1/2 flex justify-center items-start gap-8">
+        <picture>
+          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-highlight/service_hightlight_1.jpg" | resize({ width: 688, height: 960 }) | webp({ quality: 70 }) %}">
+          <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service-highlight/service_hightlight_1.jpg" | resize({ width: 688, height: 960 }) | webp({ quality: 70 }) %}">
+          <img
+                class="basis-1/2 h-[30rem] w-full mt-24 object-cover object-bottom rounded-xl"
+                src="{% getUrl "/assets/images/service-highlight/service_hightlight_1.jpg" | resize({ width: 688, height: 960 }) | jpeg({ quality: 70 }) %}"
+                alt="Fotografie z galerie {{ loop.index }}"
+                decoding="async"
+                loading="eager"
+                width="344"
+                height="480"
+                draggable="false"/>
+        </picture>
+
+        <picture>
+          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-highlight/service_hightlight_2.jpg" | resize({ width: 688, height: 960 }) | webp({ quality: 70 }) %}">
+          <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service-highlight/service_hightlight_2.jpg" | resize({ width: 688, height: 960 }) | webp({ quality: 70 }) %}">
+          <img
+                class="basis-1/2 h-[30rem] w-full object-cover rounded-xl"
+                src="{% getUrl "/assets/images/service-highlight/service_hightlight_2.jpg" | resize({ width: 688, height: 960 }) | jpeg({ quality: 70 }) %}"
+                alt="Fotografie z galerie {{ loop.index }}"
+                decoding="async"
+                loading="eager"
+                width="344"
+                height="480"
+                draggable="false"/>
+        </picture>
+      </div>
+
+      <!-- TEXT -->
+      <div class="basis-1/2 flex flex-col items-start gap-6">
+        <!-- HEADING + TEXT -->
+        <div class="flex flex-col gap-4 max-w-2xl">
+          <!-- TOPPER + HEADING -->
+          <div class="flex flex-col gap-2">
+            <span class="text-sm text-primary dark:text-secondary font-bold leading-none">Pobytové kurzy</span>
+            <h2 class="dark:text-white text-3xl font-bold">
+              Zažijte autentické Španělsko na&nbsp;unikátních pobytových kurzech s&nbsp;výukou i&nbsp;zážitky
+            </h2>
+          </div>
+          <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+            Objevte nejefektivnější způsob, jak se naučit španělsky - přímo v srdci Španělska! Naše exkluzivní pobytové kurzy kombinují intenzivní
+            dopolední výuku s odpoledním programem plným kultury, památek a gastronomických zážitků.
+            Zatímco se budete učit španělštinu od zkušené lektorky, zároveň ji budete okamžitě používat v reálných situacích.
+            Prožijte nezapomenutelný vzdělávací pobyt, který vám otevře dveře do světa španělského jazyka i kultury.
+          </p>
+        </div>
+
+        <!-- CTA BUTTON -->
+        <a class="hidden lg:block relative px-4 py-2 bg-primary text-sm text-white font-semibold rounded-lg z-10 overflow-hidden whitespace-nowrap
+          before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-tertiary before:-z-10
+          before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
+          href="/o-mne">
+          Dozvědet se více
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="py-24 ~px-4/8 bg-zinc-100 dark:bg-zinc-900">
+    <div class="container m-auto flex flex-col items-center gap-8">
+      <!-- TOPPER + HEADING -->
+      <div class="flex flex-col gap-2">
+        <span class="text-sm text-center text-primary dark:text-secondary font-bold leading-none">Galerie</span>
+        <h2 class="dark:text-white text-center text-3xl font-bold">
+            Prohlédněte si fotografie z našich pobytů
+          </h2>
+      </div>
+
+      <!-- GALLERY -->
+      <div class="grid grid-cols-2 xl:grid-cols-4 gap-8 w-full">
+        {% for i in range(0, 8) %}
+          {% set imagePath = '/assets/images/gallery/gallery_' + loop.index + '.jpg' %}
+          <picture>
+            <source media="(max-width: 600px)" srcset="{% getUrl imagePath | resize({ width: 720, height: 640 }) | webp({ quality: 70 }) %}">
+            <source media="(min-width: 601px)" srcset="{% getUrl imagePath | resize({ width: 720, height: 640 }) | webp({ quality: 70 }) %}">
+            <img
+                class="h-80 w-full object-cover rounded-xl"
+                src="{% getUrl imagePath | resize({ width: 720, height: 640 }) | jpeg({ quality: 70 }) %}"
+                alt="Fotografie z galerie {{ loop.index }}"
+                decoding="async"
+                loading="eager"
+                width="360"
+                height="320"
+                draggable="false"/>
+          </picture>
+        {% endfor %}
+      </div>
+
+      <!-- CTA BUTTON -->
+      <a class="hidden lg:block relative px-4 py-2 bg-primary text-sm text-white font-semibold rounded-lg z-10 overflow-hidden whitespace-nowrap
+          before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-tertiary before:-z-10
+          before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
+          href="/galerie">
+          Zobrazit vše
+        </a>
+    </div>
+  </section>
+
+  {% include "components/reviews.njk" %}
   {% include "components/cta.njk" %}
 {% endblock body %}

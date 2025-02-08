@@ -13,11 +13,13 @@ module.exports = {
     screens: screens,
     extend: {
       fontFamily: {
-        "sans": ["Oswald", defaultTheme.fontFamily.sans],
-        "work-sans": ["Work Sans", defaultTheme.fontFamily.sans]
+        "sans": ["TT Travels", defaultTheme.fontFamily.sans],
+        "proxima-nova": ["Proxima Nova", defaultTheme.fontFamily.sans]
       },
       colors: {
-        primary: "#3B82F6"
+        primary: "#CE2327",
+        secondary: "#FFC30C",
+        tertiary: "#2159AA"
       }
     },
   },

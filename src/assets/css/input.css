@@ -1,54 +1,44 @@
 @import ".\tailwindcss/base.css";
 @import ".\tailwindcss/components.css";
 @import ".\tailwindcss/utilities.css";
-/* oswald-regular - latin-ext */
+/* TT Travels-SemiBold */
 @font-face {
   font-display: swap;
   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/oswald-v53-latin-ext-regular.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* oswald-500 - latin-ext */
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 500;
-  src: url('../fonts/oswald-v53-latin-ext-500.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* oswald-600 - latin-ext */
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Oswald';
+  font-family: 'TT Travels';
   font-style: normal;
   font-weight: 600;
-  src: url('../fonts/oswald-v53-latin-ext-600.woff2') format('woff2');
+  src: url('../fonts/TTTravels-DemiBold.ttf') format('truetype');
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-/* work-sans-regular - latin-ext */
+/* TT Travels-Bold */
 @font-face {
   font-display: swap;
   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Work Sans';
+  font-family: 'TT Travels';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/TTTravels-Bold.ttf') format('truetype');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* Proxima Nova - regular */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Proxima Nova';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/work-sans-v19-latin-ext-regular.woff2') format('woff2');
+  src: url('../fonts/ProximaNova-Regular.woff2') format('woff2');
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* work-sans-500 - latin-ext */
 @font-face {
   font-display: swap;
   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Work Sans';
+  font-family: 'Proxima Nova';
   font-style: normal;
-  font-weight: 500;
-  src: url('../fonts/work-sans-v19-latin-ext-500.woff2') format('woff2');
+  font-weight: 700;
+  src: url('../fonts/ProximaNova-Bold.woff2') format('woff2');
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 :root {
@@ -200,4 +190,16 @@ html.dark label.darkmode-container input[type="checkbox"] ~ .elements svg:nth-ch
 }
 html.dark label.darkmode-container input[type="checkbox"] ~ .elements svg:nth-child(11) circle {
   fill: var(--bg-planet-lightshadow);
+}
+.polygon-1 {
+  clip-path: polygon(0% 30%, 3% 25%, 46% 0%, 53% 3%, 99% 55%, 97% 61%, 77% 91%, 73% 95%, 22% 100%, 17% 96%);
+}
+.polygon-2 {
+  clip-path: polygon(0% 31%, 8% 11%, 93% 3%, 91% 25%, 98% 90%, 75% 88%, 38% 100%);
+}
+.polygon-3 {
+  clip-path: polygon(35% 100%, 5% 100%, 1% 92%, 28% 18%, 33% 13%, 61% 3%, 82% 15%, 87% 20%, 100% 56%, 98% 65%);
+}
+.polygon-4 {
+  clip-path: polygon(0% 7%, 6% 0%, 87% 28%, 92% 33%, 99% 52%, 97% 57%, 74% 97%, 70% 99%, 45% 95%, 13% 61%);
 }

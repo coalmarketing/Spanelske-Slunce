@@ -1,29 +1,30 @@
 <!-- NAVIGATION -->
-<header class="fixed ~top-4/8 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl py-4 px-7 bg-white dark:bg-gray-950 ring-2 ring-primary/50 rounded-xl z-50
+<header class="fixed ~top-4/8 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] container py-4 px-7 bg-white dark:bg-zinc-950 rounded-xl z-50
   transition-[width,max-width,transform] duration-300 group-[&.scroll]/body:w-full group-[&.scroll]/body:max-w-full group-[&.scroll]/body:~-translate-y-4/8
   group-[&.scroll]/body:rounded-none group-[&.scroll]/body:shadow-lg">
-  <div class="max-w-[96rem] m-auto flex justify-between items-center">
+  <div class="container m-auto flex justify-between items-center">
     <!-- NAVIGATION LOGO -->
     <a
+        class="flex-1"
         aria-label="Kliknutím přejdete na domovskou stránku"
         href="/">
       <img
-          class="h-8 w-auto dark:hidden"
+          class="h-12  w-auto dark:hidden"
           decoding="async"
           loading="eager"
-          src="/assets/svgs/bvspeed_logo_black.svg"
-          alt="BV Speed - logo"
-          width="110"
-          height="30">
+          src="/assets/svgs/Spanelske_Slunce_logo_dark.svg"
+          alt="Španělské Slunce - logo"
+          width="153"
+          height="48">
 
       <img
-          class="hidden dark:block h-8 w-auto"
+          class="hidden dark:block h-12 w-auto"
           decoding="async"
           loading="eager"
-          src="/assets/svgs/bvspeed_logo_white.svg"
-          alt="BV Speed - logo"
-          width="110"
-          height="30">
+          src="/assets/svgs/Spanelske_Slunce_logo_light.svg"
+          alt="Španělské Slunce - logo"
+          width="153"
+          height="48">
     </a>
 
     <!-- NAVIGATION -->
@@ -42,13 +43,13 @@
                 tabindex="0"
                 {% endif %}>
             <a
-                  href="{{ entry.url }}"
-                  class="py-2 text-sm text-gray-800 dark:text-gray-200 uppercase font-medium
-                  {% if entry.url == page.url or entry.title | lower in page.url %} text-primary dark:text-primary
-                  {% else %} transition-colors duration-300 hover:text-primary{% endif %}"
-                  {% if entry.url == page.url or entry.title | lower in page.url %}
-                  aria-current="page"
-                  {% endif %}>
+              href="{{ entry.url }}"
+              class="py-2 text-sm font-semibold
+              {% if entry.url == page.url or entry.title | lower in page.url %} text-primary dark:text-primary
+              {% else %} text-zinc-800 dark:text-zinc-200 transition-colors duration-300 hover:text-black dark:hover:text-white{% endif %}"
+              {% if entry.url == page.url or entry.title | lower in page.url %}
+              aria-current="page"
+              {% endif %}>
               {{ entry.title }}
             </a>
           </li>
@@ -57,14 +58,14 @@
     </nav>
 
     <!-- CTA + DARKMODE BUTTON -->
-    <div class="flex items-center gap-6">
+    <div class="flex-1 flex justify-end items-center gap-6">
       <!-- CTA BUTTON -->
-      <a class="hidden lg:block relative px-6 py-2.5 bg-primary text-white font-semibold leading-none uppercase rounded-full z-10 overflow-hidden
-        before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-gray-800 dark:before:bg-blue-800 before:-z-10
+      <a class="hidden lg:block relative px-4 py-2 bg-primary text-white font-semibold rounded-lg z-10 overflow-hidden whitespace-nowrap
+        before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-tertiary before:-z-10
         before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
         href="/kontakt">
           Kontaktujte nás
-        </a>
+      </a>
 
       <!-- DARKMODE BUTTON -->
       <label for="darkmode-switch" class="darkmode-container">
