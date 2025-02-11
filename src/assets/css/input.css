@@ -8,7 +8,7 @@
   font-family: 'TT Travels';
   font-style: normal;
   font-weight: 600;
-  src: url('../fonts/TTTravels-DemiBold.ttf') format('truetype');
+  src: url('../fonts/TTTravels-DemiBold.woff2') format('woff2');
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* TT Travels-Bold */
@@ -18,7 +18,7 @@
   font-family: 'TT Travels';
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/TTTravels-Bold.ttf') format('truetype');
+  src: url('../fonts/TTTravels-Bold.woff2') format('woff2');
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* Proxima Nova - regular */

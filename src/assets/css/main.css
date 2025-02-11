@@ -1716,10 +1716,6 @@ select {
   max-width: 20rem;
 }
 
-.max-w-5xl {
-  max-width: 64rem;
-}
-
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -2566,7 +2562,7 @@ select {
 
   font-weight: 600;
 
-  src: url('../fonts/TTTravels-DemiBold.ttf') format('truetype');
+  src: url('../fonts/TTTravels-DemiBold.woff2') format('woff2');
 
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
@@ -2584,7 +2580,7 @@ select {
 
   font-weight: 700;
 
-  src: url('../fonts/TTTravels-Bold.ttf') format('truetype');
+  src: url('../fonts/TTTravels-Bold.woff2') format('woff2');
 
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
@@ -2915,14 +2911,14 @@ html.dark label.darkmode-container input[type="checkbox"] ~ .elements svg:nth-ch
   left: 0px;
 }
 
-.before\:top-0::before {
-  content: var(--tw-content);
-  top: 0px;
-}
-
 .before\:right-0::before {
   content: var(--tw-content);
   right: 0px;
+}
+
+.before\:top-0::before {
+  content: var(--tw-content);
+  top: 0px;
 }
 
 .before\:-z-10::before {
@@ -2950,14 +2946,14 @@ html.dark label.darkmode-container input[type="checkbox"] ~ .elements svg:nth-ch
   height: 1px;
 }
 
-.before\:w-full::before {
-  content: var(--tw-content);
-  width: 100%;
-}
-
 .before\:w-16::before {
   content: var(--tw-content);
   width: 4rem;
+}
+
+.before\:w-full::before {
+  content: var(--tw-content);
+  width: 100%;
 }
 
 .before\:origin-left::before {
