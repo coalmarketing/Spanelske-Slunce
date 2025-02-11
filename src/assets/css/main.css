@@ -1796,12 +1796,12 @@ select {
   resize: both;
 }
 
-.list-disc {
-  list-style-type: disc;
-}
-
 .list-decimal {
   list-style-type: decimal;
+}
+
+.list-disc {
+  list-style-type: disc;
 }
 
 .list-none {
@@ -1810,18 +1810,6 @@ select {
 
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.grid-cols-6 {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-}
-
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -2271,11 +2259,6 @@ select {
   line-height: 1.75rem;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -2290,18 +2273,6 @@ select {
 
 .leading-none {
   line-height: 1;
-}
-
-.tracking-tighter {
-  letter-spacing: -0.05em;
-}
-
-.-tracking-widest {
-  letter-spacing: -0.1em;
-}
-
-.-tracking-wide {
-  letter-spacing: -0.025em;
 }
 
 .text-black {
@@ -2465,12 +2436,6 @@ select {
   transition-duration: 150ms;
 }
 
-.transition-opacity {
-  transition-property: opacity;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 .transition-transform {
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -2479,10 +2444,6 @@ select {
 
 .delay-150 {
   transition-delay: 150ms;
-}
-
-.duration-0 {
-  transition-duration: 0s;
 }
 
 .duration-200 {
@@ -3025,11 +2986,6 @@ html.dark label.darkmode-container input[type="checkbox"] ~ .elements svg:nth-ch
   transition-duration: 300ms;
 }
 
-.odd\:bg-zinc-100:nth-child(odd) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(244 244 245 / var(--tw-bg-opacity, 1));
-}
-
 .odd\:bg-white:nth-child(odd) {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
@@ -3038,10 +2994,6 @@ html.dark label.darkmode-container input[type="checkbox"] ~ .elements svg:nth-ch
 .even\:bg-zinc-100:nth-child(even) {
   --tw-bg-opacity: 1;
   background-color: rgb(244 244 245 / var(--tw-bg-opacity, 1));
-}
-
-.group[open] .group-open\:h-auto {
-  height: auto;
 }
 
 .group[open] .group-open\:rotate-180 {
@@ -3071,14 +3023,6 @@ html.dark label.darkmode-container input[type="checkbox"] ~ .elements svg:nth-ch
 .group[open] .group-open\:text-primary {
   --tw-text-opacity: 1;
   color: rgb(206 35 39 / var(--tw-text-opacity, 1));
-}
-
-.group[open] .group-open\:opacity-100 {
-  opacity: 1;
-}
-
-.group[open] .group-open\:duration-200 {
-  transition-duration: 200ms;
 }
 
 .group:hover .group-hover\:mb-0 {
@@ -3166,10 +3110,6 @@ html.dark label.darkmode-container input[type="checkbox"] ~ .elements svg:nth-ch
   top: 50%;
 }
 
-.group.active .group-\[\&\.active\]\:h-auto {
-  height: auto;
-}
-
 .group\/body.scroll .group-\[\&\.scroll\]\/body\:w-full {
   width: 100%;
 }
@@ -3188,11 +3128,6 @@ html.dark label.darkmode-container input[type="checkbox"] ~ .elements svg:nth-ch
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.group.active .group-\[\&\.active\]\:rotate-180 {
-  --tw-rotate: 180deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .group.active .group-\[\.active\]\:rotate-45 {
   --tw-rotate: 45deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -3208,36 +3143,8 @@ html.dark label.darkmode-container input[type="checkbox"] ~ .elements svg:nth-ch
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.group.active .group-\[\&\.active\]\:select-auto {
-  -webkit-user-select: auto;
-     -moz-user-select: auto;
-          user-select: auto;
-}
-
 .group\/body.scroll .group-\[\&\.scroll\]\/body\:rounded-none {
   border-radius: 0px;
-}
-
-.group.active .group-\[\&\.active\]\:fill-primary {
-  fill: #CE2327;
-}
-
-.group.active .group-\[\&\.active\]\:px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-.group.active .group-\[\&\.active\]\:pb-4 {
-  padding-bottom: 1rem;
-}
-
-.group.active .group-\[\&\.active\]\:text-primary {
-  --tw-text-opacity: 1;
-  color: rgb(206 35 39 / var(--tw-text-opacity, 1));
-}
-
-.group.active .group-\[\&\.active\]\:opacity-100 {
-  opacity: 1;
 }
 
 .group.active .group-\[\.active\]\:opacity-0 {
@@ -3252,10 +3159,6 @@ html.dark label.darkmode-container input[type="checkbox"] ~ .elements svg:nth-ch
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.group.active .group-\[\&\.active\]\:duration-200 {
-  transition-duration: 200ms;
 }
 
 .group\/body.scroll .group-\[\&\.scroll\]\/body\:\~-translate-y-4\/8 {
@@ -3695,12 +3598,4 @@ html.dark label.darkmode-container input[type="checkbox"] ~ .elements svg:nth-ch
 .\[\&\.active\]\:rotate-90.active {
   --tw-rotate: 90deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.\[\&\:\:marker\]\:hidden::marker {
-  display: none;
-}
-
-summary.\[summary\&\:\:marker\]\:hidden::marker {
-  display: none;
 }
