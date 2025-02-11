@@ -20,6 +20,11 @@
     </div>
     <div class="flex items-center gap-4 *:font-work-sans *:text-sm">
       <a class="text-zinc-200 hover:text-white" href="/">Domů</a>
+      {# Check if a blog post is open (if url is /blog/something) #}
+      {%- if page.url.match('^/blog/.+') -%}
+        <div class="h-0.5 w-4 mt-0.5 bg-primary"></div>
+        <a class="text-zinc-200 hover:text-white" href="/blog">Blog</a>
+      {%- endif -%}
       <div class="h-0.5 w-4 mt-0.5 bg-primary"></div>
       <a class="text-white" href="#">{{ title }}</a>
     </div>

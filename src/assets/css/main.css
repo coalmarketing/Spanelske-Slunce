@@ -1716,6 +1716,10 @@ select {
   max-width: 20rem;
 }
 
+.max-w-5xl {
+  max-width: 64rem;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -2916,6 +2920,11 @@ html.dark label.darkmode-container input[type="checkbox"] ~ .elements svg:nth-ch
   top: 0px;
 }
 
+.before\:right-0::before {
+  content: var(--tw-content);
+  right: 0px;
+}
+
 .before\:-z-10::before {
   content: var(--tw-content);
   z-index: -10;
@@ -2946,6 +2955,11 @@ html.dark label.darkmode-container input[type="checkbox"] ~ .elements svg:nth-ch
   width: 100%;
 }
 
+.before\:w-16::before {
+  content: var(--tw-content);
+  width: 4rem;
+}
+
 .before\:origin-left::before {
   content: var(--tw-content);
   transform-origin: left;
@@ -2972,6 +2986,23 @@ html.dark label.darkmode-container input[type="checkbox"] ~ .elements svg:nth-ch
   content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(212 212 216 / var(--tw-bg-opacity, 1));
+}
+
+.before\:bg-gradient-to-r::before {
+  content: var(--tw-content);
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.before\:from-white\/0::before {
+  content: var(--tw-content);
+  --tw-gradient-from: rgb(255 255 255 / 0) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.before\:to-white\/100::before {
+  content: var(--tw-content);
+  --tw-gradient-to: rgb(255 255 255 / 1) var(--tw-gradient-to-position);
 }
 
 .before\:transition-transform::before {

@@ -587,7 +587,7 @@ eleventyNavigation:
         <!-- BLOG POSTS -->
         <div class="grid grid-cols-1 xl:grid-cols-3 justify-center gap-8 w-full max-xl:max-w-4xl">
           {# Loop over the latest (reverse) 3 (limit(3)) blog posts #}
-          {% for post in collections.post | reverse | limit(3) %}
+          {% for post in collections.post | reverse %}
             <!-- BLOG POST -->
             <article
               class="flex flex-col md:flex-row xl:flex-col gap-6 xl:max-w-md ~p-4/6 bg-white dark:bg-zinc-950 border-4 border-transparent rounded-xl
@@ -613,13 +613,15 @@ eleventyNavigation:
                 <!-- METADATA -->
                 <div class="flex justify-between items-center">
                   <!-- CATEGORY -->
-                  <span class="py-1 px-2 bg-tertiary font-proxima-nova text-sm text-white font-bold rounded-lg">{{ post.data.category }}</span>
+                  <span class="py-1 px-2 bg-tertiary font-proxima-nova text-sm text-white font-bold rounded-lg">Pobytové kurzy</span>
                   <!-- DATE -->
                   <div class="flex items-center gap-1.5">
                     <svg class="text-zinc-800 dark:text-zinc-200" xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 -960 960 960" fill="currentColor">
                       <path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z"/>
                     </svg>
-                    <span class="mt-0.5 font-proxima-nova text-sm text-zinc-800 dark:text-zinc-200 leading-none">{{ post.date | postDate }}</span>
+                    <span class="mt-0.5 font-proxima-nova text-sm text-zinc-800 dark:text-zinc-200 leading-none">
+                      {{ post.date | postDate }}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -628,7 +630,11 @@ eleventyNavigation:
               <div class="flex-1 flex flex-col gap-4">
                 <!-- HEADING + TEXT -->
                 <div class="flex flex-col gap-2">
-                  <a class="dark:text-white font-proxima-nova text-2xl xl:text-xl font-bold truncate transition-colors duration-300 hover:text-tertiary" href="{{ post.url }}">
+                  <a
+                    title="{{ post.data.title }}"
+                    class="relative dark:text-white font-proxima-nova text-2xl xl:text-xl font-bold truncate transition-colors duration-300 hover:text-tertiary
+                      before:absolute before:top-0 before:right-0 before:h-full before:w-16 before:bg-gradient-to-r before:from-white/0 before:to-white/100"
+                    href="{{ post.url }}">
                     <h4>
                       {{ post.data.title }}
                     </h4>
