@@ -3,7 +3,6 @@ const eleventyPluginSharpImages = require("@codestitchofficial/eleventy-plugin-s
 const pluginEleventyNavigation = require("@11ty/eleventy-navigation");
 const pluginMinifier = require("@sherby/eleventy-plugin-files-minifier");
 const pluginSitemap = require("@quasibit/eleventy-plugin-sitemap");
-const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
 
 // Configs
 const configCss = require("./src/config/css");
@@ -104,6 +103,14 @@ module.exports = function (eleventyConfig) {
      *  https://moment.github.io/luxon/api-docs/index.html#datetime
      */
     eleventyConfig.addFilter("postDate", filterPostDate);
+
+    /**
+     *  Limits the number of items we get from a collection.
+     *  Use - {{ collections.blog | limit(3) }}
+     */
+    eleventyConfig.addFilter("limit", function (array, limit) {
+        return array.slice(0, limit);
+    });
     /**=====================================================================
                                     END FILTERS
     =======================================================================*/

@@ -1,12 +1,35 @@
----
-eleventyComputed:
-    title: '{{ title }}'
-    description: '{{ description }}'
-    preloadImg: '{{ image }}'
-    permalink: '/blog/{{ title | slug }}/index.html'
----
-
 {% extends "layouts/base.njk" %}
+
+{% block head %}
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            {% if title %}"headline": "{{ title }}",{% endif %}
+            {% if image %}
+                "image": ["{{ image }}"],
+            {% endif %}
+            {% if date %}"datePublished": "{{ date | postDate }}",{% endif %}
+            {% if client.name %}
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "{{ client.name }}"
+                },
+            {% endif %}
+            {% if author %}
+                "author": [
+                    {
+                        "@type": "Person",
+                        "name": "{{ author }}"
+                    }
+                ],
+            {% endif %}
+            {% if description %}"articleBody": "{{ description | safe }}",{% endif %}
+            {% if client.domain and page.url %}"url": "{{ client.domain }}{{ page.url }}",{% endif %}
+            {% if tags %}"articleSection": "{{ tags }}"{% endif %}
+        }
+    </script>
+{% endblock %}
 
 {% block body %}
     {% include "components/landing.njk" %}
@@ -19,7 +42,7 @@ eleventyComputed:
                 </picture>
 
                 <!-- BLOG POST -->
-                <section class="prose prose-slate dark:prose-invert w-full max-w-[75ch]">
+                <section class="prose prose-zinc dark:prose-invert w-full max-w-[75ch]">
                     <div class="flex flex-col gap-2">
                         <!-- BLOG TITLE -->
                         <h1 class="~text-2xl/4xl mb-0">{{ title }}</h1>

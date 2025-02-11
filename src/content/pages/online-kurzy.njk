@@ -1,0 +1,353 @@
+---
+title: 'Online kurzy'
+description: 'Připojte se k interaktivním online kurzům španělštiny. Skupinové lekce, flexibilní rozvrh, záznamy hodin a materiály k samostudiu. Naučte se španělsky pohodlně a efektivně, s důrazem na konverzaci a španělskou kulturu.'
+permalink: 'online-kurzy/'
+eleventyNavigation:
+  key: Online kurzy
+  parent: Služby
+  order: 100
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block body %}
+  {% include "components/landing.njk" %}
+
+  <section class="py-24 ~px-4/8 bg-zinc-100 dark:bg-zinc-900">
+    <div class="container m-auto flex max-xl:flex-col justify-center items-center xl:items-start ~gap-12/24">
+      <!-- TEXT -->
+      <div class="flex flex-col items-start gap-6">
+        <!-- HEADING + TEXT -->
+        <div class="flex flex-col gap-4 max-w-2xl">
+          <!-- TOPPER + HEADING -->
+          <div class="flex flex-col gap-1">
+            <span class="font-proxima-nova text-primary dark:text-secondary font-bold leading-none">Interaktivní online výuka</span>
+            <h1 class="dark:text-white ~text-2xl/3xl font-bold">
+              Online kurzy španělštiny – flexibilní výuka odkudkoli
+            </h1>
+          </div>
+          <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+            Chcete se naučit španělsky pohodlně, efektivně a z jakéhokoli místa na světě? Moje online kurzy jsou navrženy tak,
+            aby spojovaly výhody klasické výuky s maximální flexibilitou digitálního prostředí.
+          </p>
+          <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+            Kurz probíhá v Google Meetu a Google Učebně, kde najdete veškeré studijní materiály i záznamy z lekcí. Každý kurz obsahuje 10
+            interaktivních lekcí po 60 minutách, které jsou rozvržené na několik měsíců tak, aby vám umožnily systematické a přirozené osvojování jazyka.
+            Pokud se některé lekce nemůžete zúčastnit, nemusíte se obávat – díky záznamům si ji můžete přehrát kdykoli později.
+          </p>
+          <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+            V malých skupinách (maximálně 10 studentů) se zaměřujeme především na konverzaci a praktické využití jazyka. Během hodin budete aktivně komunikovat
+            nejen s lektorkou, ale také s ostatními studenty – v plénu, ve dvojicích i v menších skupinkách. Každá lekce je doplněna o užitečné materiály,
+            interaktivní cvičení, prezentace, bonusové podklady i tipy na filmy, knihy nebo aplikace, které vám pomohou se španělštinou v každodenním životě.
+          </p>
+          <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+            V kurzu se nebudete učit jen jazyk – zároveň získáte vhled do španělské a hispánské kultury, zvyků, historie i literatury.
+            Díky mým dlouholetým zkušenostem a pobytu ve Španělsku vám mohu předat nejen jazykové znalosti, ale také osobní tipy a zajímavosti,
+            které vás ještě více přiblíží k autentické španělštině.
+          </p>
+          <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+            Přidejte se k online kurzu a začněte mluvit španělsky s jistotou a radostí!
+          </p>
+        </div>
+
+        <!-- CTA BUTTONS -->
+        <div class="flex gap-2">
+          <!-- CTA BUTTON -->
+          <a class="block relative px-4 py-2 bg-primary text-sm text-white font-semibold rounded-lg z-10 overflow-hidden whitespace-nowrap
+            transition-colors duration-300 hover:text-white
+            before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-tertiary before:-z-10
+            before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
+            href="#zacatecnici">
+            Kurz pro začátečníky
+          </a>
+
+          <!-- CTA BUTTON -->
+          <a class="block relative px-4 py-2 bg-primary text-sm text-white font-semibold rounded-lg z-10 overflow-hidden whitespace-nowrap
+            transition-colors duration-300 hover:text-white
+            before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-tertiary before:-z-10
+            before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
+            href="#a1-a2">
+            Kurz A1+A2
+          </a>
+
+          <!-- CTA BUTTON -->
+          <a class="block relative px-4 py-2 bg-primary text-sm text-white font-semibold rounded-lg z-10 overflow-hidden whitespace-nowrap
+            transition-colors duration-300 hover:text-white
+            before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-tertiary before:-z-10
+            before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
+            href="#b1">
+            Kurz B1
+          </a>
+        </div>
+      </div>
+
+      <!-- IMAGE -->
+      <picture>
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero/laptop_with_coffee.jpg" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}">
+        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/hero/laptop_with_coffee.jpg" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}">
+        <img
+            class="w-full max-w-3xl rounded-xl object-cover"
+            src="{% getUrl "/assets/images/hero/laptop_with_coffee.jpg" | resize({ width: 1536, height: 1008 }) | jpeg({ quality: 70 }) %}"
+            alt="Fotka notebooku na stole s kávou, poznámkovým blokem a telefonem"
+            decoding="async"
+            loading="lazy"
+            width="1536"
+            height="504"
+            draggable="false"/>
+      </picture>
+    </div>
+  </section>
+
+  <section id="zacatecnici" class="py-24 ~px-4/8 dark:bg-zinc-950">
+    <div class="container m-auto flex max-xl:flex-col justify-center items-center xl:items-start ~gap-12/24">
+      <!-- TEXT -->
+      <div class="flex flex-col items-start gap-6">
+        <!-- HEADING + TEXT -->
+        <div class="flex flex-col gap-4 max-w-2xl">
+          <!-- TOPPER + HEADING -->
+          <div class="flex flex-col gap-1">
+            <span class="font-proxima-nova text-primary dark:text-secondary font-bold leading-none">Začátečníci</span>
+            <h1 class="dark:text-white ~text-2xl/3xl font-bold">
+              Kurz španělštiny pro začátečníky
+            </h1>
+          </div>
+          <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+            Chcete se naučit španělsky od úplných základů v přátelském a motivujícím prostředí? Tento kurz je ideální volbou! V malé skupině nadšenců a s podporou
+            lektorky se ponoříte do základů španělského jazyka a osvojíte si klíčové dovednosti, na které budete moci postupně navazovat.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-2 max-w-2xl">
+          <h3 class="dark:text-white text-lg font-bold">Učíme se v praxi</h3>
+          <div class="flex flex-col gap-4">
+            <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Zapomeňte na nudnou teorii! Každou novou gramatickou a slovní zásobu ihned procvičíme v konverzaci – ve skupince, ve dvojicích
+              i formou interaktivních cvičení. Díky opakování a praktickému použití si vše lépe zapamatujete a získáte jistotu při mluvení.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2 max-w-2xl">
+          <h3 class="dark:text-white text-lg font-bold">Co všechno se naučíte?</h3>
+          <ol class="flex flex-col gap-1 list-decimal">
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Představit se a vést jednoduchý rozhovor
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Zeptat se na základní informace (zaměstnání, bydliště, národnost)
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Mluvit o svých zálibách a každodenních činnostech
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Porozumět běžným otázkám a umět na ně odpovědět
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Požádat o zopakování, pomalejší mluvu či vysvětlení neznámého výrazu
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Zeptat se na cestu nebo zjistit, kde se nachází konkrétní místo
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Časovat pravidelná i důležitá nepravidelná slovesa v přítomném, minulém i budoucím čase
+            </li>
+          </ol>
+        </div>
+
+        <div class="flex flex-col gap-2 max-w-2xl">
+          <h3 class="dark:text-white text-lg font-bold">Flexibilita a podpora</h3>
+          <div class="flex flex-col gap-4">
+            <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Všechny lekce probíhají v pohodlném online prostředí Google Classroom, kde najdete i veškeré materiály, poznámky a tabule s vysvětlením.
+              Pokud nějakou lekci nestihnete, nemusíte se bát – záznamy z hodin budou k dispozici, takže se k nim kdykoli můžete vrátit.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2 max-w-2xl">
+          <h3 class="dark:text-white text-lg font-bold">Bonusy pro účastníky</h3>
+          <ul class="flex flex-col gap-1 list-disc">
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Materiály a tabule ke stažení a uchování na neomezenou dobu
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Exkluzivní slevy na další kurzy, včetně pobytových kurzů ve Španělsku
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="a1-a2" class="py-24 ~px-4/8 bg-zinc-100 dark:bg-zinc-900">
+    <div class="container m-auto flex max-xl:flex-col justify-center items-center xl:items-start ~gap-12/24">
+      <!-- TEXT -->
+      <div class="flex flex-col items-start gap-6">
+        <!-- HEADING + TEXT -->
+        <div class="flex flex-col gap-4 max-w-2xl">
+          <!-- TOPPER + HEADING -->
+          <div class="flex flex-col gap-1">
+            <span class="font-proxima-nova text-primary dark:text-secondary font-bold leading-none">A1 - A2</span>
+            <h1 class="dark:text-white ~text-2xl/3xl font-bold">
+              Kurz španělštiny A1 - A2
+            </h1>
+          </div>
+          <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+            Už nějaký čas se učíte španělsky, ale stále se necítíte jistí při mluvení? Máte pocit, že se točíte v kruhu a chybí vám pevné základy?
+            Pak je tento kurz přesně pro vás!
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-2 max-w-2xl">
+          <h3 class="dark:text-white text-lg font-bold">Komu je kurz určen?</h3>
+          <div class="flex flex-col gap-4">
+            <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Tento kurz je ideální pro věčné začátečníky i pro ty, kteří si chtějí upevnit a rozšířit své znalosti na úroveň A1–A2.
+              Zaměřujeme se na praktickou komunikaci, rozšiřování slovní zásoby a systematické opakování klíčových gramatických jevů.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2 max-w-2xl">
+          <h3 class="dark:text-white text-lg font-bold">Co se v kurzu naučíte?</h3>
+          <ol class="flex flex-col gap-1 list-decimal">
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Pohotově reagovat v běžných situacích – ve městě, v restauraci, na cestách
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Plynule používat minulý, přítomný i budoucí čas pro jednoduché konverzace
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Zvládnout orientaci v cizím prostředí – ptát se na cestu, koupit jízdenky, rezervovat ubytování
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Sebevědomě vést rozhovory o každodenních tématech – rodina, práce, volný čas, cestování
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Upevnit si znalost nepravidelných sloves a osvojit si složitější větné struktury
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Naučit se efektivní strategie pro rozšiřování slovní zásoby a samostatné studium
+            </li>
+          </ol>
+        </div>
+
+        <div class="flex flex-col gap-2 max-w-2xl">
+          <h3 class="dark:text-white text-lg font-bold">Flexibilita a individuální přístup</h3>
+          <div class="flex flex-col gap-4">
+            <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Kurz probíhá online v Google Učebně, kde budete mít přístup ke všem materiálům i záznamům lekcí, abyste se k nim mohli kdykoliv vrátit.
+              Pokud si svou úrovní nejste jistí, můžete využít VIP konzultaci – během 15minutového hovoru společně zjistíme,
+              zda je tento kurz pro vás ideální, nebo by bylo lepší vás přeřadit na jinou úroveň.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2 max-w-2xl">
+          <h3 class="dark:text-white text-lg font-bold">Bonusy pro účastníky</h3>
+          <ul class="flex flex-col gap-1 list-disc">
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Trvalý přístup k materiálům a záznamům lekcí
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Individuální zpětná vazba a podpora během kurzu
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Možnost přizpůsobení úrovně po domluvě
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Exkluzivní slevy na další kurzy, včetně pobytových kurzů ve Španělsku
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="b1" class="py-24 ~px-4/8 dark:bg-zinc-950">
+    <div class="container m-auto flex max-xl:flex-col justify-center items-center xl:items-start ~gap-12/24">
+      <!-- TEXT -->
+      <div class="flex flex-col items-start gap-6">
+        <!-- HEADING + TEXT -->
+        <div class="flex flex-col gap-4 max-w-2xl">
+          <!-- TOPPER + HEADING -->
+          <div class="flex flex-col gap-1">
+            <span class="font-proxima-nova text-primary dark:text-secondary font-bold leading-none">B1</span>
+            <h1 class="dark:text-white ~text-2xl/3xl font-bold">
+              Kurz španělštiny B1
+            </h1>
+          </div>
+          <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+            Jste ve fázi, kdy už zvládáte základní konverzaci, ale chcete mluvit plynuleji, přesněji a sebevědoměji? Dokážete se vyjádřit v minulém,
+            přítomném i budoucím čase, ale občas váháte, který čas použít? Chcete si rozšířit slovní zásobu, zdokonalit gramatiku a lépe porozumět
+            složitějším textům i rodilým mluvčím? Pak je tento kurz přesně pro vás!
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-2 max-w-2xl">
+          <h3 class="dark:text-white text-lg font-bold">Co vás v kurzu čeká?</h3>
+          <div class="flex flex-col gap-4">
+            <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Kurz pro úroveň B1 se zaměřuje na upevňování a prohlubování gramatiky, rozšiřování slovní zásoby a především na aktivní používání jazyka v konverzaci.
+              Každá lekce je interaktivní, dynamická a plná praktických cvičení, která vám pomohou osvojit si jazyk přirozenou cestou.
+            </p>
+
+            <div class="flex flex-col gap-2">
+              <span class="font-proxima-nova dark:text-white font-bold">V průběhu kurzu se budeme věnovat těmto klíčovým oblastem:</span>
+              <ol class="flex flex-col gap-1 list-decimal">
+                <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+                  <span class="font-bold">Minulé časy</span> – jak je správně kombinovat a používat automaticky bez dlouhého přemýšlení
+                </li>
+                <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+                  <span class="font-bold">Subjunktiv</span> – konečně pochopíte, kdy a proč se používá, a přestanete se ho bát
+                </li>
+                <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+                  <span class="font-bold">Pokročilejší konverzace</span> – naučíte se vyjádřit svůj názor, souhlasit i nesouhlasit
+                </li>
+                <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+                  <span class="font-bold">Zvládnutí složitějších textů a poslechu</span> – lépe porozumíte psanému textu i rodilým mluvčím
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2 max-w-2xl">
+          <h3 class="dark:text-white text-lg font-bold">Unikátní koncept výuky</h3>
+          <div class="flex flex-col gap-4">
+            <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Minulé časy a subjunktivum budeme trénovat v lekcích, z nich každá je tematicky propojená s historií a kulturou španělsky mluvících zemí.
+              Ponoříme se do klíčových epoch španělských dějin, seznámíme se s významnými osobnostmi a na jejich příbězích si procvičíme jazyk v praxi.
+            </p>
+            <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Nejprve si přečtete text o určité historické době, což vám pomůže rozvíjet slovní zásobu a porozumění.
+              Poté interaktivně prozkoumáme příběh důležité osobnosti, což vám umožní přirozeně aplikovat gramatická pravidla.
+              Nakonec budeme konverzovat, diskutovat a argumentovat, abyste si vše upevnili v praxi.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2 max-w-2xl">
+          <h3 class="dark:text-white text-lg font-bold">Bonusy pro účastníky</h3>
+          <ul class="flex flex-col gap-1 list-disc">
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Tipy na zajímavá a méně známá místa, která stojí za návštěvu
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Doporučení na tematické knihy, písně a filmy ke zlepšení jazyka
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Záznamy lekcí a výukové materiály dostupné kdykoliv i po skončení kurzu
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Možnost individuální konzultace a zpětné vazby
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include "components/faq.njk" %}
+  {% include "components/reviews.njk" %}
+{% endblock body %}

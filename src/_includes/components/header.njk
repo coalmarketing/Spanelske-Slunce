@@ -1,66 +1,120 @@
 <!-- NAVIGATION -->
-<header class="fixed ~top-4/8 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] container py-4 px-7 bg-white dark:bg-zinc-950 rounded-xl z-50
-  transition-[width,max-width,transform] duration-300 group-[&.scroll]/body:w-full group-[&.scroll]/body:max-w-full group-[&.scroll]/body:~-translate-y-4/8
-  group-[&.scroll]/body:rounded-none group-[&.scroll]/body:shadow-lg">
+<header
+  id="navigation"
+  class="fixed ~top-4/8 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] container py-4 px-7 bg-white dark:bg-zinc-950 rounded-xl z-50
+    transition-[width,max-width,transform] duration-300 group-[&.scroll]/body:w-full group-[&.scroll]/body:max-w-full group-[&.scroll]/body:~-translate-y-4/8
+    group-[&.scroll]/body:rounded-none group-[&.scroll]/body:shadow-lg"
+>
   <div class="container m-auto flex justify-between items-center">
     <!-- NAVIGATION LOGO -->
-    <a
-        class="flex-1"
-        aria-label="Kliknutím přejdete na domovskou stránku"
-        href="/">
-      <img
-          class="h-12  w-auto dark:hidden"
-          decoding="async"
-          loading="eager"
-          src="/assets/svgs/Spanelske_Slunce_logo_dark.svg"
-          alt="Španělské Slunce - logo"
-          width="153"
-          height="48">
+    <div class="flex-1 flex">
+      <a
+          aria-label="Kliknutím přejdete na domovskou stránku"
+          href="/">
+        <img
+            class="h-12 w-auto dark:hidden"
+            decoding="async"
+            loading="eager"
+            src="/assets/svgs/Spanelske_Slunce_logo_dark.svg"
+            alt="Španělské Slunce - logo"
+            width="153"
+            height="48">
 
-      <img
-          class="hidden dark:block h-12 w-auto"
-          decoding="async"
-          loading="eager"
-          src="/assets/svgs/Spanelske_Slunce_logo_light.svg"
-          alt="Španělské Slunce - logo"
-          width="153"
-          height="48">
-    </a>
+        <img
+            class="hidden dark:block h-12 w-auto"
+            decoding="async"
+            loading="eager"
+            src="/assets/svgs/Spanelske_Slunce_logo_light.svg"
+            alt="Španělské Slunce - logo"
+            width="153"
+            height="48">
+      </a>
+    </div>
 
     <!-- NAVIGATION -->
-    <nav class="hidden lg:flex justify-center whitespace-nowrap">
-      <ul class="flex gap-8">
-        {% set navPages = collections.all | eleventyNavigation %}
+    <div
+      class="hidden max-xl:group-[.mobile-menu]/body:block xl:block max-xl:absolute max-xl:top-[calc(100%+0.5rem)] max-xl:left-1/2 max-xl:-translate-x-1/2
+        max-xl:w-full max-xl:group-[.mobile-menu]/body:w-[calc(100vw-5%)] max-xl:p-4 max-xl:bg-white dark:max-xl:bg-zinc-950 max-xl:rounded-xl">
+      <nav class="flex justify-center whitespace-nowrap">
+        <ul class="flex max-xl:flex-col gap-2 xl:gap-8">
+          {% set navPages = collections.all | eleventyNavigation %}
 
-        {# Loop through all pages with a eleventyNavigation in the frontmatter #}
-        {% for entry in navPages %}
+          {# Loop through all pages with a eleventyNavigation in the frontmatter #}
+          {% for entry in navPages %}
 
-          {# Define a hasChild variable to make it easier to test what navigation items are have child dropdown pages #}
-          {% set hasChild = entry.children.length %}
-          <li
-                class="group relative flex items-center{% if hasChild %} dropdown{% endif %}"
-                {% if hasChild %}
-                tabindex="0"
-                {% endif %}>
-            <a
-              href="{{ entry.url }}"
-              class="py-2 text-sm font-semibold
-              {% if entry.url == page.url or entry.title | lower in page.url %} text-primary dark:text-primary
-              {% else %} text-zinc-800 dark:text-zinc-200 transition-colors duration-300 hover:text-black dark:hover:text-white{% endif %}"
-              {% if entry.url == page.url or entry.title | lower in page.url %}
-              aria-current="page"
-              {% endif %}>
-              {{ entry.title }}
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-    </nav>
+            {# Define a hasChild variable to make it easier to test what navigation items are have child dropdown pages #}
+            {% set hasChild = entry.children.length %}
+
+            <li
+              class="group relative flex items-center{% if hasChild %} dropdown{% endif %}"
+              {%- if hasChild -%}tabindex="0"{%- endif -%}
+            >
+              {# If the page has child dropdown pages, render it as a <button> tag with the appropriate dropdown HTML #}
+              {% if hasChild %}
+                {# Render the <button> with the active class, dropdown icon and child links #}
+                <button 
+                class="dropdown-button flex items-center py-4 text-sm font-semibold text-zinc-800 dark:text-zinc-200
+                  transition-colors duration-300 hover:text-black dark:hover:text-white"
+                aria-expanded="false"
+                aria-controls="dropdown-{{ entry.key }}"
+                aria-label="dropdown-{{ entry.key }}"
+                type="button"
+              >
+                  <span>{{ entry.key }}</span>
+
+                  <!-- ICON -->
+                  <svg class="-mr-2" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor">
+                    <path d="M480-360 280-560h400L480-360Z"/>
+                  </svg>
+                </button>
+
+                {# Dropdowns have another ul/li set up within the parent li, which gets rendered in the same way as a normal link #}
+                <div class="absolute top-11 -left-4 py-8 px-4
+                  transition-[transform,_opacity] duration-300 scale-y-0 opacity-0 origin-top group-hover:scale-y-100 group-hover:opacity-100">
+                  <ul
+                    id="dropdown-{{ entry.key }}"
+                    class="flex flex-col gap-2 py-3 px-4 bg-white dark:bg-zinc-950 rounded-xl shadow-lg"
+                >
+                    {% for child in entry.children %}
+                      <li class="drop-li transition-[transform,_opacity] duration-200 opacity-0 translate-x-12
+                      group-hover:opacity-100 group-hover:translate-x-0"
+                      style="transition-delay: {{ 150 + 75 * loop.index }}ms;"
+                    >
+                        <a
+                        href="{{ child.url }}"
+                        class="li-link py-2 text-sm font-semibold
+                        {% if child.url == page.url %} text-primary dark:text-primary
+                        {% else %} text-zinc-800 dark:text-zinc-200 transition-colors duration-300 hover:text-black dark:hover:text-white{% endif %}"
+                        {%- if child.url == page.url -%}aria-current="page"{%- endif -%}
+                      >
+                          {{ child.key }}
+                        </a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              {% else %}
+                {# Normal pages are rendered as <a> tags, in the normal way you'd expect #}
+                <a
+                href="{{ entry.url }}"
+                class="py-4 text-sm font-semibold
+                {% if entry.url == page.url %} text-primary dark:text-primary
+                {% else %} text-zinc-800 dark:text-zinc-200 transition-colors duration-300 hover:text-black dark:hover:text-white{%- endif -%}"
+                {%- if entry.url == page.url or entry.title | lower in page.url -%}aria-current="page"{%- endif -%}
+              >
+                  {{ entry.key }}
+                </a>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
 
     <!-- CTA + DARKMODE BUTTON -->
-    <div class="flex-1 flex justify-end items-center gap-6">
+    <div class="flex-1 flex justify-end items-center gap-4 xl:gap-6">
       <!-- CTA BUTTON -->
-      <a class="hidden lg:block relative px-4 py-2 bg-primary text-white font-semibold rounded-lg z-10 overflow-hidden whitespace-nowrap
+      <a class="hidden xl:block relative px-4 py-2 bg-primary text-white font-semibold rounded-lg z-10 overflow-hidden whitespace-nowrap
         before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-tertiary before:-z-10
         before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
         href="/kontakt">
@@ -150,41 +204,44 @@
           </svg>
         </span>
       </label>
+
       <!-- MOBILE MENU BUTTON -->
-      <div class="flex lg:hidden">
-        <button
-            class="group flex justify-center items-center gap-1 h-11 w-11 bg-primary rounded-lg transition-transform duration-300 [&.clicked]:rotate-90"
-            type="button"
-            id="hamburger-menu"
-            aria-expanded="false">
-          <span class="sr-only">Otevřít navigaci</span>
-          <div class="relative h-4 w-6">
-            <span class="absolute top-0 block h-0.5 w-full bg-white rounded-full transition-transform duration-300 group-[.clicked]:rotate-45 group-[.clicked]:top-1/2 group-[.clicked]:-translate-y-1/2 group-[.clicked]:left-1/2 group-[.clicked]:-translate-x-1/2"></span>
-            <span class="absolute top-1/2 -translate-y-1/2 block h-0.5 w-full bg-white rounded-full transition-[opacity] duration-300 group-[.clicked]:opacity-0"></span>
-            <span class="absolute bottom-0 block h-0.5 w-full bg-white rounded-full transition-transform duration-300 group-[.clicked]:rotate-[315deg] group-[.clicked]:top-1/2 group-[.clicked]:-translate-y-1/2 group-[.clicked]:left-1/2 group-[.clicked]:-translate-x-1/2"></span>
-          </div>
-        </button>
-      </div>
+      <button
+          id="mobile-menu-toggle"
+          class="toggle group flex xl:hidden justify-center items-center gap-1 h-10 w-10 bg-transparent rounded-lg select-none
+            transition-transform duration-300 [&.active]:rotate-90"
+          type="button"
+          aria-expanded="false"
+          aria-controls="expanded-ul"
+          aria-label="Tlačítko mobilního menu"
+        >
+        <div class="relative h-[1.125rem] w-6">
+          <span class="absolute top-0 block h-[3px] w-full bg-zinc-700 dark:bg-zinc-300 rounded-full transition-transform duration-300 group-[.active]:rotate-45 group-[.active]:top-1/2 group-[.active]:-translate-y-1/2 group-[.active]:left-1/2 group-[.active]:-translate-x-1/2"></span>
+          <span class="absolute top-1/2 -translate-y-1/2 block h-[3px] w-full bg-zinc-700 dark:bg-zinc-300 rounded-full transition-[opacity] duration-300 group-[.active]:opacity-0"></span>
+          <span class="absolute bottom-0 block h-[3px] w-full bg-zinc-700 dark:bg-zinc-300 rounded-full transition-transform duration-300 group-[.active]:rotate-[315deg] group-[.active]:top-1/2 group-[.active]:-translate-y-1/2 group-[.active]:left-1/2 group-[.active]:-translate-x-1/2"></span>
+        </div>
+      </button>
     </div>
   </div>
 
-  <!-- MOBILE MENU -->
-  <nav class="absolute top-[calc(100%+0.5rem)] left-1/2 -translate-x-1/2 lg:!hidden w-[95%] py-4 bg-white dark:bg-gray-900 ring-2 ring-primary rounded-xl shadow
-  transition-[opacity,transform] origin-top duration-300 delay-150 scale-y-0 group-[.mobile-menu]/body:scale-y-100 opacity-0 group-[.mobile-menu]/body:opacity-100"
-  id="mobile-menu">
+  <!-- MOBILE MENU
+  <nav
+    id="mobile-menu"
+    class="absolute top-[calc(100%+0.5rem)] left-1/2 -translate-x-1/2 lg:!hidden w-full py-4 bg-white dark:bg-gray-900 rounded-xl shadow
+    transition-[opacity,transform] origin-top duration-300 delay-150 scale-y-0 group-[.mobile-menu]/body:scale-y-100 opacity-0 group-[.mobile-menu]/body:opacity-100"
+  >
     <ul>
       {%- for entry in navPages %}
         <li>
           <a
             href="{{ entry.url }}"
-            class="block text-center text-lg uppercase py-2 {% if entry.url == page.url or entry.title | lower in page.url %}
-            text-primary{% else %}
-            text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white{% endif %}"
+            class="block text-center py-2
+              {% if entry.url == page.url %} text-primary {% else %} text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white{% endif %}"
             {% if entry.url == page.url or entry.title | lower in page.url %}
             aria-current="page"
             {% endif %}>{{ entry.title }}</a>
         </li>
       {%- endfor %}
     </ul>
-  </nav>
+  </nav>  -->
 </header>

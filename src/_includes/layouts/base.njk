@@ -13,7 +13,7 @@
     <link rel="canonical" href="{{ client.domain }}{{ page.url }}">
 
     <!--Social Media Display-->
-    <meta property="og:title" content="{{ title }}"/>
+    <meta property="og:title" content="{{ title }} | {{ client.name }}"/>
     <meta property="og:description" content="{{ description }}"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="{{ client.domain }}{{ page.url }}"/>
@@ -26,18 +26,18 @@
     <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg"/>
     <link rel="shortcut icon" href="/assets/favicons/favicon.ico"/>
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png"/>
-    <meta name="apple-mobile-web-app-title" content="BV Speed s.r.o."/>
+    <meta name="apple-mobile-web-app-title" content="Španělské Slunce"/>
     <link rel="manifest" href="/assets/favicons/site.webmanifest"/>
 
     <!-- Preloads -->
-    <link rel="preload" as="image" href="/assets/svgs/bvspeed_logo_white.svg">
-    <link rel="preload" as="image" href="/assets/svgs/bvspeed_logo_black.svg">
-    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/work-sans-v19-latin-ext-regular.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/oswald-v53-latin-ext-500.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/oswald-v53-latin-ext-600.woff2" crossorigin>
+    <link rel="preload" as="image" href="/assets/svgs/Spanelske_Slunce_logo_light.svg">
+    <link rel="preload" as="image" href="/assets/svgs/Spanelske_Slunce_logo_dark.svg">
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/ProximaNova-Regular.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/ttf" href="/assets/fonts/TTTravels-Bold.ttf" crossorigin>
+    <link rel="preload" as="font" type="font/ttf" href="/assets/fonts/TTTravels-Bold.ttf" crossorigin>
 
     <!-- Preload an image - tag not rendered if preloadImg is blank to stop console errors -->
-    {% if preloadImg != '' %}
+    {% if preloadImg %}
       <link rel="preload" as="image" href="{{ preloadImg }}"/>
     {% endif %}
 
@@ -48,7 +48,7 @@
 
     {% block head %}{% endblock %}
 
-    <title>{{ title }}</title>
+    <title>{{ title }} | {{ client.name }}</title>
   </head>
 
   <body class="group/body{% if page.url == '/' %} home{% else %} interior{% endif %} selection:bg-primary selection:text-white">

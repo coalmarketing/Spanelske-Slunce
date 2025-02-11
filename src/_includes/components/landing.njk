@@ -1,20 +1,42 @@
 <!-- LANDING -->
-<section class="relative ~px-4/8 pt-60 pb-16 bg-gray-900 dark:bg-gray-950 z-10">
+<section class="relative pt-56 pb-12 ~px-4/8 overflow-hidden">
   <div class="container m-auto flex flex-col items-start gap-6">
     <div class="flex flex-col gap-1">
-      <span class="relative text-primary font-medium
-      before:absolute before:top-1/2 before:-translate-y-1/2 before:right-[calc(100%+0.25rem)] lg:before:right-[calc(100%+1rem)] before:h-px before:w-[10vw] before:bg-primary">BV Speed</span>
-      <h1 class="text-white text-4xl font-semibold leading-none">
+      <div class="flex items-center gap-2">
+        <img
+          class="mb-0.5"
+          src="/assets/svgs/hero/logo_icon.svg"
+          alt="Tmavé pozadí"
+          decoding="async"
+          loading="eager"
+          width="20"
+          height="20"
+          draggable="false"/>
+        <span class="font-proxima-nova text-secondary text-lg font-bold leading-none">Španělské Slunce</span>
+      </div>
+      <span class="text-white text-4xl font-bold leading-none">
         {{ title }}
-      </h1>
+      </span>
     </div>
     <div class="flex items-center gap-4 *:font-work-sans *:text-sm">
-      <a class="text-gray-300 hover:text-white" href="/">Domů</a>
-      <span class="text-gray-300">/</span>
+      <a class="text-zinc-200 hover:text-white" href="/">Domů</a>
+      <div class="h-0.5 w-4 mt-0.5 bg-primary"></div>
       <a class="text-white" href="#">{{ title }}</a>
     </div>
   </div>
 
   <!-- BACKGROUND -->
-  <img class="absolute top-0 left-0 h-full w-full object-cover opacity-20 -z-10" src="/assets/svgs/landing/landing_background.svg" alt="Pozadí sekce CTA" decoding="async" loading="lazy" width="1920" height="24" draggable="false"/>
+  <picture class="before:absolute before:top-0 before:left-0 before:h-full before:w-full before:-z-10 before:bg-black/75">
+    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero/hero_background_image.jpg" | resize({ width: 1920, height: 388 }) | webp({ quality: 70 }) %}">
+    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/hero/hero_background_image.jpg" | resize({ width: 1920, height: 388 }) | webp({ quality: 70 }) %}">
+    <img
+      class="absolute inset-0 h-full w-full object-cover -z-20 scale-110 blur-xl"
+      src="{% getUrl "/assets/images/hero/hero_background_image.jpg" | resize({ width: 1920, height: 388 }) | jpeg({ quality: 70 }) %}"
+      alt="Tmavé pozadí"
+      decoding="async"
+      loading="eager"
+      width="1920"
+      height="388"
+      draggable="false"/>
+  </picture>
 </section>

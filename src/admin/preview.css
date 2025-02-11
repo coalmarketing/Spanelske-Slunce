@@ -1,0 +1,17 @@
+:root {
+    --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body {
+    padding: 0.75rem;
+}
+
+.frame-content {
+    font-family: var(--font-sans);
+    line-height: 1.9rem;
+}
+
+.frame-content img {
+    max-width: 100%;
+    border-radius: 0.75rem;
+}

@@ -1,0 +1,61 @@
+---
+title: 'Překlady'
+description: 'Jsme spolehlivým partnerem v oblasti nákladní dopravy a spedice.'
+permalink: 'preklady/'
+eleventyNavigation:
+  key: Překlady
+  parent: Služby
+  order: 400
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block body %}
+  {% include "components/landing.njk" %}
+
+  <!-- SERVICES -->
+  <section class="py-24 ~px-4/8 bg-zinc-100 dark:bg-zinc-900">
+    <div class="container m-auto flex justify-center items-start ~gap-12/24">
+      <!-- HEADING + TEXT -->
+      <div class="flex flex-col gap-4 max-w-2xl">
+        <!-- TOPPER + HEADING -->
+        <div class="flex flex-col gap-1">
+          <span class="font-proxima-nova text-primary dark:text-secondary font-bold leading-none">Překlady a tlumočení</span>
+          <h1 class="dark:text-white ~text-2xl/3xl font-bold">
+              Profesionální překlady a&nbsp;tlumočení pro&nbsp;vaše potřeby
+            </h1>
+        </div>
+        <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+            Potřebujete spolehlivého partnera pro překlady a tlumočení ze španělštiny do češtiny a naopak? Ať už řešíte obchodní jednání, firemní školení,
+            odborné prezentace nebo překlady důležitých dokumentů, mohu vám pomoci zajistit precizní a srozumitelný přenos informací.
+          </p>
+        <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+            Osobně i online vám pomohu s tlumočením během důležitých schůzek, konferencí nebo telefonických jednání. Postarám se o to, abyste se bez
+            problémů dorozuměli se svými obchodními partnery, klienty nebo kolegy.
+          </p>
+
+        <div class="flex flex-col gap-2">
+          <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+            Každý překlad je zpracován s důrazem na správnou terminologii, srozumitelnost a přirozenost textu. Překládám širokou škálu dokumentů,
+          </p>
+          <ul class="flex flex-col gap-1 list-disc">
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Obchodní korespondence a smluv
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Marketingových materiálů a webových stránek
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Technických a odborných textů
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Článků, blogů a jiných publikací
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include "components/cta.njk" %}
+{% endblock body %}

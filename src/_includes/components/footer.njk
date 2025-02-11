@@ -2,7 +2,7 @@
 <footer class="py-16 ~px-4/8 bg-white dark:bg-zinc-950 border-t border-zinc-300 dark:border-gray-600">
     <div class="container m-auto flex flex-col gap-12">
         <!-- LOGO + NAVIGATION + CONTACT -->
-        <div class="flex flex-row justify-between items-center gap-16">
+        <div class="flex max-xl:flex-col justify-between md:items-center gap-16">
             <div class="flex flex-col items-start gap-4">
                 <img
                     class="dark:hidden h-20 w-auto"
@@ -28,64 +28,67 @@
             </div>
 
             <!-- NAVIGATION + CONTACT -->
-            <div class="flex gap-20">
-                <!-- SERVICES -->
-                <div class="flex flex-col gap-4">
-                    <span class="dark:text-white font-proxima-nova font-bold">Naše služby</span>
-                    <ul class="flex flex-col gap-3">
-                        <li>
-                            <a href="/online-kurzy" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white">
+            <div class="flex max-md:flex-col-reverse gap-16 md:gap-20">
+                <!-- NAVIGATION -->
+                <div class="flex gap-20">
+                    <!-- SERVICES -->
+                    <div class="flex flex-col gap-4">
+                        <span class="dark:text-white font-proxima-nova font-bold">Naše služby</span>
+                        <ul class="flex flex-col gap-3">
+                            <li>
+                                <a href="/online-kurzy" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white">
                                 Online kurzy
                             </a>
-                        </li>
-                        <li>
-                            <a href="/pobytove-kurzy" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white">
+                            </li>
+                            <li>
+                                <a href="/pobytove-kurzy" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white">
                                 Pobytové kurzy
                             </a>
-                        </li>
-                        <li>
-                            <a href="/videokurzy" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white">
+                            </li>
+                            <li>
+                                <a href="/videokurzy" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white">
                                 Videokurzy
                             </a>
-                        </li>
-                        <li>
-                            <a href="/preklady" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white">
+                            </li>
+                            <li>
+                                <a href="/preklady" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white">
                                 Překlady
                             </a>
-                        </li>
-                    </ul>
-                </div>
+                            </li>
+                        </ul>
+                    </div>
 
-                <!-- LINKS -->
-                <div class="flex flex-col gap-4">
-                    <span class="dark:text-white font-proxima-nova font-bold">Užitečné odkazy</span>
-                    <ul class="flex flex-col gap-3">
-                        <li>
-                            <a href="/o-mne" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white">
+                    <!-- LINKS -->
+                    <div class="flex flex-col gap-4">
+                        <span class="dark:text-white font-proxima-nova font-bold">Užitečné odkazy</span>
+                        <ul class="flex flex-col gap-3">
+                            <li>
+                                <a href="/o-mne" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white">
                                 O mně
                             </a>
-                        </li>
-                        <li>
-                            <a href="/galerie" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white">
+                            </li>
+                            <li>
+                                <a href="/galerie" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white">
                                 Galerie
                             </a>
-                        </li>
-                        <li>
-                            <a href="/reference" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white">
+                            </li>
+                            <li>
+                                <a href="/reference" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white">
                                 Reference
                             </a>
-                        </li>
-                        <li>
-                            <a href="/kontakt" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white">
+                            </li>
+                            <li>
+                                <a href="/kontakt" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white">
                                 Kontakt
                             </a>
-                        </li>
-                        <li>
-                            <a href="/blog" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white">
+                            </li>
+                            <li>
+                                <a href="/blog" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white">
                                 Blog
                             </a>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- CONTACT INFO -->
@@ -158,13 +161,13 @@
             <!-- SEPARATOR -->
             <div class="h-px w-full bg-zinc-300 dark:bg-zinc-600"></div>
 
-            <div class="flex justify-between items-center">
+            <div class="flex justify-center sm:justify-between items-center">
                 <!-- CREDITS -->
                 <span class="font-proxima-nova text-center text-sm text-zinc-600 dark:text-zinc-400 font-medium">
                     © 2024 Všechna práva vyhrazena - Ručně vyvinuto od <a class="underline hover:text-black dark:hover:text-white" href="https://www.coalmarketing.cz" target="_blank">coalmarketing.cz</a>
                 </span>
 
-                <a href="#" class="font-proxima-nova text-center text-sm text-zinc-600 dark:text-zinc-400 font-medium hover:text-black dark:hover:text-white">
+                <a href="#" class="max-sm:hidden font-proxima-nova text-center text-sm text-zinc-600 dark:text-zinc-400 font-medium hover:text-black dark:hover:text-white">
                     Zpět nahoru
                 </a>
             </div>

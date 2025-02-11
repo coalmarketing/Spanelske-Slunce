@@ -1,0 +1,53 @@
+---
+title: 'Galerie'
+description: 'Máte nějaké dotazy? Máte zájem o cenovou nabídku nebo konzultaci? Neváhejte se nám ozvat.'
+permalink: 'galerie/'
+eleventyNavigation:
+  key: Galerie
+  order: 400
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block head %}
+  <script defer src="/assets/js/fslightbox.js"></script>
+{% endblock %}
+
+{% block body %}
+  {% include "components/landing.njk" %}
+
+  {# Loop over the latest (reverse) blog posts #}
+  {% for album in collections.gallery | reverse %}
+    {# Check if the gallery album has any photos #}
+    {% if album.data.images | length > 0 %}
+      <section class="py-24 ~px-4/8 odd:bg-white dark:odd:bg-zinc-950 even:bg-zinc-100 dark:even:bg-zinc-900">
+        <div class="container m-auto flex flex-col gap-8">
+          <span class="text-2xl dark:text-white font-bold">{{ album.data.title }}</span>
+
+          <!-- GALLERY PHOTOS -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+            {% for image in album.data.images %}
+              <!-- IMAGE -->
+              <a data-fslightbox="{{ album.fileSlug }}" href="{% getUrl image.url | rotate | resize({ height: 1944 }) | webp({ quality: 70 }) %}">
+                <picture>
+                  <source srcset="{% getUrl image.url | rotate | resize({ width: 486, height: 486 }) | webp({ quality: 70 }) %}">
+                  <img
+                    class="object-cover aspect-square rounded-xl"
+                    src="{% getUrl image.url | rotate | resize({ width: 486, height: 486 }) | jpeg({ quality: 70 }) %}"
+                    alt="{% if image.alt -%} image.alt {%- else -%} Fotografie {{ album.data.title }}-{{ loop.index }} {%- endif %}"
+                    decoding="async"
+                    loading="lazy"
+                    width="1536"
+                    height="504"
+                    draggable="false"/>
+                </picture>
+              </a>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+    {% endif %}
+  {% endfor %}
+
+  {% include "components/cta.njk" %}
+{% endblock body %}

@@ -1,0 +1,115 @@
+---
+title: 'Pobytové kurzy'
+description: 'Jsme spolehlivým partnerem v oblasti nákladní dopravy a spedice.'
+permalink: 'pobytove-kurzy/'
+eleventyNavigation:
+  key: Pobytové kurzy
+  parent: Služby
+  order: 200
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block body %}
+  {% include "components/landing.njk" %}
+
+  <!-- SERVICES -->
+  <section class="py-24 ~px-4/8 bg-zinc-100 dark:bg-zinc-900">
+    <div class="container m-auto flex max-xl:flex-col justify-center items-center xl:items-start ~gap-12/24">
+      <!-- TEXT -->
+      <div class="flex flex-col items-start gap-6">
+        <!-- HEADING + TEXT -->
+        <div class="flex flex-col gap-4 max-w-2xl">
+          <!-- TOPPER + HEADING -->
+          <div class="flex flex-col gap-1">
+            <span class="font-proxima-nova text-primary dark:text-secondary font-bold leading-none">Vzdělání se zážitkem</span>
+            <h1 class="dark:text-white ~text-2xl/3xl font-bold">
+              Poznávejte, učte se a&nbsp;zažijte Španělsko naplno!
+            </h1>
+          </div>
+          <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+            Chcete se naučit španělsky pohodlně, efektivně a z jakéhokoli místa na světě? Moje online kurzy jsou navrženy tak,
+            aby spojovaly výhody klasické výuky s maximální flexibilitou digitálního prostředí.
+          </p>
+          <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+            Kurz probíhá v Google Meetu a Google Učebně, kde najdete veškeré studijní materiály i záznamy z lekcí. Každý kurz obsahuje 10
+            interaktivních lekcí po 60 minutách, které jsou rozvržené na několik měsíců tak, aby vám umožnily systematické a přirozené osvojování jazyka.
+            Pokud se některé lekce nemůžete zúčastnit, nemusíte se obávat – díky záznamům si ji můžete přehrát kdykoli později.
+          </p>
+          <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+            V malých skupinách (maximálně 10 studentů) se zaměřujeme především na konverzaci a praktické využití jazyka. Během hodin budete aktivně komunikovat
+            nejen s lektorkou, ale také s ostatními studenty – v plénu, ve dvojicích i v menších skupinkách. Každá lekce je doplněna o užitečné materiály,
+            interaktivní cvičení, prezentace, bonusové podklady i tipy na filmy, knihy nebo aplikace, které vám pomohou se španělštinou v každodenním životě.
+          </p>
+          <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+            V kurzu se nebudete učit jen jazyk – zároveň získáte vhled do španělské a hispánské kultury, zvyků, historie i literatury.
+            Díky mým dlouholetým zkušenostem a pobytu ve Španělsku vám mohu předat nejen jazykové znalosti, ale také osobní tipy a zajímavosti,
+            které vás ještě více přiblíží k autentické španělštině.
+          </p>
+          <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+            Přidejte se k online kurzu a začněte mluvit španělsky s jistotou a radostí!
+          </p>
+        </div>
+      </div>
+
+      <!-- IMAGE -->
+      <picture>
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero/laptop_with_coffee.jpg" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}">
+        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/hero/laptop_with_coffee.jpg" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}">
+        <img
+            class="w-full max-w-3xl rounded-xl object-cover"
+            src="{% getUrl "/assets/images/hero/laptop_with_coffee.jpg" | resize({ width: 1536, height: 1008 }) | jpeg({ quality: 70 }) %}"
+            alt="Fotka notebooku na stole s kávou, poznámkovým blokem a telefonem"
+            decoding="async"
+            loading="lazy"
+            width="1536"
+            height="504"
+            draggable="false"/>
+      </picture>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="py-24 ~px-4/8 dark:bg-zinc-950">
+    <div class="container m-auto flex flex-col items-center gap-8">
+      <!-- TOPPER + HEADING -->
+      <div class="flex flex-col gap-2">
+        <span class="font-proxima-nova text-center text-primary dark:text-secondary font-bold leading-none">Galerie</span>
+        <h2 class="dark:text-white text-center ~text-2xl/3xl font-bold">
+            Prohlédněte si fotografie z našich pobytů
+          </h2>
+      </div>
+
+      <!-- GALLERY -->
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 ~gap-4/8 w-full">
+        {% for i in range(0, 8) %}
+          {% set imagePath = '/assets/images/gallery/gallery_' + loop.index + '.jpg' %}
+          <picture>
+            <source media="(max-width: 600px)" srcset="{% getUrl imagePath | resize({ width: 720, height: 640 }) | webp({ quality: 70 }) %}">
+            <source media="(min-width: 601px)" srcset="{% getUrl imagePath | resize({ width: 720, height: 640 }) | webp({ quality: 70 }) %}">
+            <img
+                class="h-80 w-full object-cover rounded-xl"
+                src="{% getUrl imagePath | resize({ width: 720, height: 640 }) | jpeg({ quality: 70 }) %}"
+                alt="Fotografie z galerie {{ loop.index }}"
+                decoding="async"
+                loading="eager"
+                width="360"
+                height="320"
+                draggable="false"/>
+          </picture>
+        {% endfor %}
+      </div>
+
+      <!-- CTA BUTTON -->
+      <a class="block relative px-4 py-2 bg-primary text-sm text-white font-semibold rounded-lg z-10 overflow-hidden whitespace-nowrap
+          before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-tertiary before:-z-10
+          before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
+          href="/galerie">
+          Zobrazit vše
+        </a>
+    </div>
+  </section>
+
+  {% include "components/reviews.njk" %}
+  {% include "components/cta.njk" %}
+{% endblock body %}

@@ -1,182 +1,198 @@
+# yaml-language-server: $schema=./schema.json
 backend:
-    name: git-gateway
-    branch: main
+  name: git-gateway
+  branch: main
 
 local_backend: true
 
 # Change url to a link to the image you want to use, no file paths, must be a URL
-logo_url: "https://www.senoweb.cz/assets/images/senoweb_og_logo_rounded.png"
-locale: cs
+logo_url: "https://coalmarketing.cz/wp-content/uploads/2024/08/coalmarketing_logo_long_color-black-1024x239.png"
+locale: "cs"
 
 # Where should uploaded files be saved
-media_folder: src/assets/images/cms
+media_folder: "src/assets/images/cms"
 
 # Where should media be served, relative to the base of the built site
-public_folder: /assets/images/cms
+public_folder: "/assets/images/cms"
 
 collections:
-    # SETTINGS CONFIG
-    - label: Nastavení
-      name: settings
-      delete: false
-      editor:
-          preview: false
-      files:
-          - label: Nastavení webu
-            name: website_settings
-            file: src/_data/client.json
-            description: Dovoluje klientovi upravit jeho kontaktní infrormace pomocí default souboru client.json
+  # SETTINGS CONFIG
+  - label: "Nastavení"
+    name: "settings"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - label: "Nastavení webu"
+        name: "website_settings"
+        file: "src/_data/client.json"
+        description: "Dovoluje klientovi upravit jeho kontaktní infrormace pomocí default souboru client.json"
+        fields:
+          - {
+              label: "Název podniku",
+              name: "name",
+              widget: "string",
+              hint: "Použito v kartě prohlížeče a odkazech pro sdílení",
+            }
+          - {
+              label: "Email",
+              name: "email",
+              widget: "string",
+              hint: "Hlavní email, kde vás mohou zákaznici kontaktovat",
+            }
+          - {
+              label: "Telefonní číslo bez mezer",
+              name: "phoneForTel",
+              widget: "string",
+              hint: "Použito pro klikatelné odkazy k volání. Ve formátu +420xxxxxxxxx",
+            }
+          - {
+              label: "Telefonní číslo s mezerami",
+              name: "phoneFormatted",
+              widget: "string",
+              hint: "Použito jako viditelný text na stránkách. Ve formátu +420 xxx xxx xxx",
+            }
+          - label: "Adresa"
+            name: "address"
+            widget: "object"
             fields:
-                - label: Název podniku
-                  name: name
-                  widget: string
-                  summary: Použito v kartě prohlížeče a odkazech pro sdílení
+              - {
+                  label: "Ulice a č.p.",
+                  name: lineOne,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: "Město",
+                  name: "city",
+                  widget: "string",
+                  required: false,
+                }
+              - { label: "PSČ", name: "zip", widget: "string", required: false }
+              - {
+                  label: "Google Mapy odkaz",
+                  name: "mapLink",
+                  widget: "string",
+                  hint: "Odkaz pro sdílení adresy vašeho podniku z Google Mapy",
+                  required: false,
+                }
 
-                - label: Email
-                  name: email
-                  widget: string
-                  summary: Hlavní email, kde vás mohou zákaznici kontaktovat
+          - label: "Sociální sítě"
+            name: "social"
+            widget: "object"
+            fields:
+              - {
+                  label: "Facebook",
+                  name: "facebook",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Instagram",
+                  name: "instagram",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Youtube",
+                  name: "youtube",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "TikTok",
+                  name: "tiktok",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "WhatsApp",
+                  name: "whatsapp",
+                  widget: "string",
+                  required: false,
+                }
 
-                - label: Telefonní číslo bez mezer
-                  name: phoneForTel
-                  widget: string
-                  summary: Použito pro klikatelné odkazy k volání. Ve formátu +420xxxxxxxxx
+  # BLOG CONFIG
+  - label: "Blog"
+    name: "blog"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Název", name: "title", widget: "string" }
+      - {
+          label: "URL odkaz",
+          name: "url",
+          widget: "string",
+          hint: "Určete, kam bude stránka zapsána. Pokud použijete „Blogový příspěvek“, bude příspěvek přístupný z „blog/blogovy-prispevek“.",
+        }
+      - {
+          label: "Popis",
+          name: "description",
+          widget: "string",
+          hint: "Kratší popis blogového příspěvku, který se zobrazuje na náhledech příspěvků",
+        }
+      - {
+          label: "Kategorie",
+          name: "category",
+          widget: "string",
+          hint: "Kategorie, do které blogový příspěvek patří",
+        }
+      - { label: "Autor", name: "author", widget: "string" }
+      - { label: "Datum", name: "date", widget: "datetime" }
+      - { label: "Štítky", name: "tags", widget: "hidden", default: ["post"] }
+      - { label: "Náhledový obrázek", name: "image", widget: "image" }
+      - { label: "Popis obrázku", name: "imageAlt", widget: "string" }
+      - { label: "Obsah", name: "body", widget: "markdown" }
 
-                - label: Telefonní číslo s mezerami
-                  name: phoneFormatted
-                  widget: string
-                  summary: Použito jako viditelný text na stránkách. Ve formátu +420 xxx xxx xxx
+  # GALLERY PHOTOS
+  - label: "Galerie"
+    name: "gallery"
+    folder: "src/content/gallery"
+    editor:
+      preview: false
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Název alba", name: "title", widget: "string" }
+      - { label: "Datum", name: "date", widget: "datetime", date_format: true }
+      - name: images
+        label: Fotografie
+        widget: list
+        fields:
+          - { name: url, label: Fotografie, widget: image }
+          - {
+              label: "Popis fotografie",
+              name: "alt",
+              widget: "string",
+              required: false,
+            }
+      - {
+          label: "Štítky",
+          name: "tags",
+          widget: "hidden",
+          default: ["gallery"],
+        }
 
-                - label: Adresa
-                  name: address
-                  widget: object
-                  fields:
-                      - label: Ulice a č.p.
-                        name: lineOne
-                        widget: string
-
-                      - label: Město
-                        name: city
-                        widget: string
-
-                      - label: PSČ
-                        name: zip
-                        widget: string
-
-                      - label: Google Mapy odkaz
-                        name: mapLink
-                        widget: string
-                        summary: Odkaz pro sdílení adresy vašeho podniku z Google Mapy
-
-                - label: Sociální sítě
-                  name: social
-                  widget: object
-                  fields:
-                      - label: Facebook
-                        name: facebook
-                        widget: string
-
-                      - label: Instagram
-                        name: instagram
-                        widget: string
-
-                      - label: Youtube
-                        name: youtube
-                        widget: string
-
-                      - label: TikTok
-                        name: tiktok
-                        widget: string
-
-                      - label: WhatsApp
-                        name: whatsapp
-                        widget: string
-
-    # BLOG CONFIG
-    - label: Blog
-      name: blog
-      folder: src/content/blog
-      create: true
-      slug: "{{slug}}"
-      fields:
-          - label: Název
-            name: title
-            widget: string
-
-          - label: Krátký název
-            name: shortTitle
-            widget: string
-            hint: Krátký název je použit jako nadpis stránky
-
-          - label: Popis
-            name: description
-            widget: string
-
-          - label: Autor
-            name: author
-            widget: string
-
-          - label: Datum
-            name: date
-            widget: datetime
-
-          - label: Štítky
-            name: tags
-            widget: list
-            default:
-                - post
-
-          - label: Náhledový obrázek
-            name: image
-            widget: image
-
-          - label: Popis obrázku
-            name: imageAlt
-            widget: string
-
-          - label: Obsah
-            name: body
-            widget: markdown
-
-    # GALLERY ALBUMS
-    - label: Alba galerie
-      name: galleryAlbums
-      folder: src/content/gallery/albums
-      editor:
-          preview: false
-      create: true
-      slug: "{{slug}}"
-      fields:
-          - label: Název
-            name: title
-            widget: string
-            
-          - label: Popis
-            name: description
-            widget: string
-            required: false
-
-    # GALLERY ALBUMS
-    - label: Galerie
-      name: galleryPhotos
-      folder: src/content/gallery
-      editor:
-          preview: false
-      create: true
-      slug: "{{slug}}"
-      fields:
-          - label: Obrázek
-            name: image
-            widget: image
-
-          - label: Popis obrázku
-            name: imageAlt
-            widget: string
-
-          - label: Album
-            name: album
-            widget: relation
-            collection: galleryAlbums
-            search_fields: [title]
-            value_field: "{{slug}}"
-            display_fields: [title]
+  # REFERENCES
+  - label: "Reference"
+    name: "testimonials"
+    folder: "src/content/testimonial"
+    editor:
+      preview: false
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Text",
+          name: "text",
+          widget: "string",
+          hint: "Citovaný text reference",
+        }
+      - { label: "Jméno zákazníka", name: "customerName", widget: "string" }
+      - {
+          label: "Štítky",
+          name: "tags",
+          widget: "hidden",
+          default: ["testimonial"],
+        }
