@@ -1,49 +1,98 @@
-<form
-		target="_top"
-		method="post"
-		id="se-webform-11"
-		style="width: 611px"
- target="_self" class="se-webform-11 se-webform" action="https://app.smartemailing.cz/public/web-forms-v2/display-form/673769-pdf7dcd3ggwqypzz9w6icgcgihbqarw6bcrewfalufo0jn7a9l9sl6fc5y4x9oyhxvlaz44s576m8q84khvib6xuafhr3lsd274n">
-
-    <div class="se-webform-inner">
-        <div class="se-header">
-            <h3>
-				Kam si přejete poslat podrobnější informace o kurzech ve Španělsku? :)
-			</h3>
-        </div>
-        <div
-					class="se-image"
-					style="
-							background-size: cover;
-							height: 864px;
-							background-image: url(https://cdn-smartemailing.cz/673769/media/barcelona-foto-na-stojato-sf.jpg);
-							"></div>
-
-        <div class="se-body">
-            <ul>
-                <li>
-                    <label for="frm-webFormHtmlRenderer-webFormForm-fields-df_emailaddress" class="se-label se-required">E-mailová adresa</label>
-                    <input type="text" name="fields[df_emailaddress]" data-emailaddress="1" id="frm-webFormHtmlRenderer-webFormForm-fields-df_emailaddress" required data-nette-rules='[{"op":":filled","msg":"E-mailová adresa je povinné pole."},{"op":":email","msg":"E-mailová adresa je povinné pole."},{"op":"SE20\\Validators\\TypesFormValidator::validateEmailAddress","msg":"E-mailová adresa je povinné pole."}]'>
-                </li>
-                <li>
-                    <label for="frm-webFormHtmlRenderer-webFormForm-fields-df_name" class="se-label ">Křestní jméno</label>
-                    <input type="text" name="fields[df_name]" id="frm-webFormHtmlRenderer-webFormForm-fields-df_name">
-                </li>
-                <li>
-                    <label for="frm-webFormHtmlRenderer-webFormForm-fields-df_surname" class="se-label ">Příjmení</label>
-                    <input type="text" name="fields[df_surname]" id="frm-webFormHtmlRenderer-webFormForm-fields-df_surname">
-                </li>
-
-            </ul>
+<!-- SUBSCRIBE -->
+<section class="py-24 ~px-4/8 bg-zinc-100 dark:bg-zinc-900">
+    <div class="container m-auto flex flex-col justify-center items-center gap-16">
+        <!-- HEADING + TEXT -->
+        <div class="flex flex-col items-center gap-4 max-w-2xl">
+            <!-- TOPPER + HEADING -->
+            <div class="flex flex-col items-center gap-1">
+                <span class="font-proxima-nova text-center text-primary dark:text-secondary font-bold leading-none">Novinky</span>
+                <h2 class="dark:text-white text-center ~text-2xl/3xl font-bold">
+                    Buďte v obraze! Získejte novinky o pobytových kurzech jako první!
+                </h2>
+            </div>
+            <p class="font-proxima-nova text-center text-zinc-800 dark:text-zinc-200">
+                Chcete mít vždy aktuální informace o nových videokurzech, připravovaných pobytových kurzech a osvědčených tipech pro efektivní studium cizích jazyků?
+                Přihlaste se k odběru našeho newsletteru a získejte přístup k novinkám, speciálním nabídkám a inspirativním článkům.
+            </p>
         </div>
 
-        <div class="se-submit">
-            <button type="submit" name="_submit" value="SEM!!! :)">SEM!!! :)</button>
-        </div>
+        <!-- SUBSCRIBE FORM -->
+        <form
+            class="flex flex-col gap-6 w-full max-w-md p-8 bg-white dark:bg-zinc-950 rounded-xl"
+	        target="_top"
+	        method="POST"
+            target="_self"
+            action="https://app.smartemailing.cz/public/web-forms-v2/display-form/673769-pdf7dcd3ggwqypzz9w6icgcgihbqarw6bcrewfalufo0jn7a9l9sl6fc5y4x9oyhxvlaz44s576m8q84khvib6xuafhr3lsd274n"
+        >
+            <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-2">
+                    <label class="font-proxima-nova dark:text-white font-bold" for="frm-webFormHtmlRenderer-webFormForm-fields-df_emailaddress">
+                        Email
+                    </label>
+                    <input
+                        class="bg-zinc-100 dark:bg-zinc-500 border-zinc-200 dark:border-zinc-400 font-proxima-nova text-black dark:text-white rounded-lg
+                            focus:border-primary focus:ring-2 focus:ring-primary/50 placeholder:text-zinc-500 dark:placeholder:text-zinc-300"
+                        type="email"
+                        autocomplete="email"
+                        placeholder="petr.novak@seznam.cz"
+                        name="fields[df_emailaddress]"
+                        data-emailaddress="1"
+                        id="frm-webFormHtmlRenderer-webFormForm-fields-df_emailaddress"
+                        required
+                        data-nette-rules='[{"op":":filled","msg":"E-mailová adresa je povinné pole."},{"op":":email","msg":"E-mailová adresa je povinné pole."},{"op":"SE20\\Validators\\TypesFormValidator::validateEmailAddress","msg":"E-mailová adresa je povinné pole."}]'>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label class="font-proxima-nova dark:text-white font-bold" for="frm-webFormHtmlRenderer-webFormForm-fields-df_name">
+                        Křestní jméno
+                    </label>
+                    <input
+                        class="bg-zinc-100 dark:bg-zinc-500 border-zinc-200 dark:border-zinc-400 font-proxima-nova text-black dark:text-white rounded-lg
+                            focus:border-primary focus:ring-2 focus:ring-primary/50 placeholder:text-zinc-500 dark:placeholder:text-zinc-300"
+                        type="text"
+                        autocomplete="given-name"
+                        placeholder="Petr"
+                        name="fields[df_name]"
+                        id="frm-webFormHtmlRenderer-webFormForm-fields-df_name">
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label class="font-proxima-nova dark:text-white font-bold" for="frm-webFormHtmlRenderer-webFormForm-fields-df_surname">
+                        Příjmení
+                    </label>
+                    <input
+                        class="bg-zinc-100 dark:bg-zinc-500 border-zinc-200 dark:border-zinc-400 font-proxima-nova text-black dark:text-white rounded-lg
+                            focus:border-primary focus:ring-2 focus:ring-primary/50 placeholder:text-zinc-500 dark:placeholder:text-zinc-300"
+                        type="text"
+                        autocomplete="family-name"
+                        placeholder="Novák"
+                        name="fields[df_surname]"
+                        id="frm-webFormHtmlRenderer-webFormForm-fields-df_surname">
+                </div>
+            </div>
 
+            <div class="flex flex-col gap-4">
+                <!-- SUBMIT BUTTON -->
+                <button
+                    class="relative px-4 py-2 bg-primary text-white font-semibold rounded-lg z-10 overflow-hidden whitespace-nowrap
+                        before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-tertiary before:-z-10
+                        before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
+                    type="submit"
+                    name="_submit">
+                    Odeslat
+                </button>
+
+                <!-- PRIVACY POLICY -->
+                <p class="font-proxima-nova text-sm text-zinc-800 dark:text-zinc-200 text-center">Odesláním souhlasíte se
+                    <a class="underline hover:text-black dark:hover:text-white" href="/gdpr">zpracováním osobních údajů</a>
+                </p>
+            </div>
+
+            <input type="hidden" name="referrer" id="se-ref-field-id" value="">
+            <input type="hidden" name="sessionid" id="se-sessionid-field" value="">
+            <input type="hidden" name="sessionUid" id="se-sessionUid-field" value="">
+            <input type="hidden" name="_do" value="webFormHtmlRenderer-webFormForm-submit">
+        </form>
     </div>
-
-    <input type="hidden" name="referrer" id="se-ref-field-id" value=""><input type="hidden" name="sessionid" id="se-sessionid-field" value=""><input type="hidden" name="sessionUid" id="se-sessionUid-field" value=""><input type="hidden" name="_do" value="webFormHtmlRenderer-webFormForm-submit"></form>
+</section>
 
 <script>
     var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {

@@ -1412,6 +1412,10 @@ select {
   top: 50%;
 }
 
+.top-40 {
+  top: 10rem;
+}
+
 .top-\[1\%\] {
   top: 1%;
 }
@@ -1422,10 +1426,6 @@ select {
 
 .top-\[7\%\] {
   top: 7%;
-}
-
-.top-40 {
-  top: 10rem;
 }
 
 .-z-10 {
@@ -1500,6 +1500,10 @@ select {
   margin-top: 0.125rem;
 }
 
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -1510,10 +1514,6 @@ select {
 
 .mt-auto {
   margin-top: auto;
-}
-
-.mt-1 {
-  margin-top: 0.25rem;
 }
 
 .line-clamp-3 {
@@ -2341,24 +2341,16 @@ select {
   opacity: 0;
 }
 
-.opacity-10 {
-  opacity: 0.1;
-}
-
 .opacity-15 {
   opacity: 0.15;
 }
 
-.opacity-50 {
-  opacity: 0.5;
-}
-
-.opacity-25 {
-  opacity: 0.25;
-}
-
 .opacity-20 {
   opacity: 0.2;
+}
+
+.opacity-50 {
+  opacity: 0.5;
 }
 
 .blur-xl {
@@ -2943,9 +2935,9 @@ html.dark label.darkmode-container input[type="checkbox"] ~ .elements svg:nth-ch
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.before\:bg-black\/75::before {
+.before\:bg-black\/70::before {
   content: var(--tw-content);
-  background-color: rgb(0 0 0 / 0.75);
+  background-color: rgb(0 0 0 / 0.7);
 }
 
 .before\:bg-tertiary::before {
@@ -2958,16 +2950,6 @@ html.dark label.darkmode-container input[type="checkbox"] ~ .elements svg:nth-ch
   content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(212 212 216 / var(--tw-bg-opacity, 1));
-}
-
-.before\:bg-black\/60::before {
-  content: var(--tw-content);
-  background-color: rgb(0 0 0 / 0.6);
-}
-
-.before\:bg-black\/70::before {
-  content: var(--tw-content);
-  background-color: rgb(0 0 0 / 0.7);
 }
 
 .before\:bg-gradient-to-r::before {
@@ -3697,6 +3679,16 @@ html.dark label.darkmode-container input[type="checkbox"] ~ .elements svg:nth-ch
   background-color: rgb(9 9 11 / var(--tw-bg-opacity, 1));
 }
 
+.dark\:bg-zinc-800:where(.dark, .dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 39 42 / var(--tw-bg-opacity, 1));
+}
+
+.dark\:bg-zinc-700:where(.dark, .dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(63 63 70 / var(--tw-bg-opacity, 1));
+}
+
 .dark\:fill-white:where(.dark, .dark *) {
   fill: #fff;
 }
@@ -3757,12 +3749,6 @@ html.dark label.darkmode-container input[type="checkbox"] ~ .elements svg:nth-ch
   content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(63 63 70 / var(--tw-bg-opacity, 1));
-}
-
-.dark\:before\:bg-zinc-950:where(.dark, .dark *)::before {
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(9 9 11 / var(--tw-bg-opacity, 1));
 }
 
 .dark\:before\:to-zinc-950:where(.dark, .dark *)::before {
