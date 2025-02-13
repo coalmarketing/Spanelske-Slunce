@@ -57,7 +57,7 @@ eleventyNavigation:
 
       <!-- IMAGE -->
       <picture>
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service/translation.jpg" | resize({ width: 1536, height: 1008, position: 'top' }) | webp({ quality: 70 }) %}">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service/translation.jpg" | resize({ width: 1136, height: 746, position: 'top' }) | webp({ quality: 70 }) %}">
         <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service/translation.jpg" | resize({ width: 1536, height: 1008, position: 'top' }) | webp({ quality: 70 }) %}">
         <img
             class="w-full max-w-3xl rounded-xl object-cover"
@@ -65,7 +65,7 @@ eleventyNavigation:
             alt="Segrada Famila"
             decoding="async"
             loading="lazy"
-            width="1536"
+            width="768"
             height="504"
             draggable="false"/>
       </picture>

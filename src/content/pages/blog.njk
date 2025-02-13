@@ -30,16 +30,16 @@ eleventyNavigation:
               <div class="flex flex-col gap-2">
                 <!-- IMAGE -->
                 <picture>
-                  <source media="(max-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}">
-                  <source media="(min-width: 601px)" srcset="{% getUrl post.data.image | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}">
+                  <source media="(max-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 1056, height: 512 }) | webp({ quality: 70 }) %}">
+                  <source media="(min-width: 601px)" srcset="{% getUrl post.data.image | resize({ width: 784, height: 512 }) | webp({ quality: 70 }) %}">
                   <img
                     class="h-64 w-full rounded-xl object-cover"
-                    src="{% getUrl post.data.image | resize({ width: 1536, height: 1008 }) | jpeg({ quality: 70 }) %}"
+                    src="{% getUrl post.data.image | resize({ width: 784, height: 512 }) | jpeg({ quality: 70 }) %}"
                     alt="Fotka lektorky Ludmily Vyčítalové"
                     decoding="async"
                     loading="lazy"
-                    width="1536"
-                    height="504"
+                    width="392"
+                    height="256"
                     draggable="false"/>
                 </picture>
 

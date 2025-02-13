@@ -97,7 +97,7 @@ eleventyNavigation:
 
       <!-- IMAGE -->
       <picture>
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero/laptop_with_coffee.jpg" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero/laptop_with_coffee.jpg" | resize({ width: 1136, height: 746 }) | webp({ quality: 70 }) %}">
         <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/hero/laptop_with_coffee.jpg" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}">
         <img
             class="w-full max-w-3xl rounded-xl object-cover"
@@ -105,7 +105,7 @@ eleventyNavigation:
             alt="Fotka notebooku na stole s kávou, poznámkovým blokem a telefonem"
             decoding="async"
             loading="lazy"
-            width="1536"
+            width="768"
             height="504"
             draggable="false"/>
       </picture>
