@@ -140,7 +140,13 @@ collections:
         }
       - { label: "Autor", name: "author", widget: "string" }
       - { label: "Datum", name: "date", widget: "datetime" }
-      - { label: "Štítky", name: "tags", widget: "hidden", default: ["post"] }
+      - {
+          label: "Štítky",
+          name: "tags",
+          widget: "list",
+          default: ["post"],
+          hint: "Pro pobytové kurzy přidat 'pobytoveKurzy' - poté se příspěvek zobrazí na stránce pobytových kurzů",
+        }
       - { label: "Náhledový obrázek", name: "image", widget: "image" }
       - { label: "Popis obrázku", name: "imageAlt", widget: "string" }
       - { label: "Obsah", name: "body", widget: "markdown" }

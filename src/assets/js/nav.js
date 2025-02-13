@@ -5,8 +5,8 @@ const hamburgerMenu = document.querySelector("#navigation .toggle");
 
 // Function to toggle the aria-expanded attribute
 function toggleAriaExpanded(element) {
-    const isExpanded = element.getAttribute("aria-expanded");
-    element.setAttribute("aria-expanded", isExpanded === "false" ? "true" : "false");
+    const isExpanded = element.getAttribute("aria-expanded") === "true";
+    element.setAttribute("aria-expanded", (!isExpanded).toString());
 }
 
 // Function to toggle the menu open or closed
@@ -28,63 +28,85 @@ navbarMenu.addEventListener("click", function (event) {
 });
 
 // Function to handle dropdown toggle
-function toggleDropdown(element) {
+function toggleDropdown(element, event) {
+    // Prevent the event from bubbling up to parent dropdowns
+    event?.stopPropagation();
+
+    // Toggle the active class
     element.classList.toggle("active");
+
+    // Find and toggle the dropdown button's aria-expanded state
     const dropdownButton = element.querySelector(".dropdown-button");
     if (dropdownButton) {
         toggleAriaExpanded(dropdownButton);
     }
+
+    // Find and toggle the dropdown content's visibility
+    const dropdownContent = element.querySelector(".dropdown-content");
+    if (dropdownContent) {
+        const isVisible = element.classList.contains("active");
+        dropdownContent.setAttribute("aria-hidden", (!isVisible).toString());
+    }
 }
 
-// Add event listeners to each dropdown element for accessibility
-const dropdownElements = document.querySelectorAll(".dropdown");
-dropdownElements.forEach(element => {
-    let escapePressed = false;
+// Function to close dropdown
+function closeDropdown(element) {
+    element.classList.remove("active");
+    const dropdownButton = element.querySelector(".dropdown-button");
+    const dropdownContent = element.querySelector(".dropdown-content");
 
-    element.addEventListener("focusout", function (event) {
-        // Skip the focusout logic if escape was pressed
-        if (escapePressed) {
-            escapePressed = false;
-            return;
-        }
-
-        // If the focus has moved outside the dropdown, remove the active class from the dropdown 
-        if (!element.contains(event.relatedTarget)) {
-            element.classList.remove("active");
-            const dropdownButton = element.querySelector(".dropdown-button");
-
-            if (dropdownButton) {
-                toggleAriaExpanded(dropdownButton);
-            }
-        }
-    });
-
-    element.addEventListener("keydown", function (event) {
-        if (element.classList.contains("active")) {
-            event.stopPropagation();
-        }
-
-        // Pressing Enter or Space will toggle the dropdown and adjust the aria-expanded attribute
-        if (event.key === "Enter" || event.key === " ") {
-            event.preventDefault();
-            toggleDropdown(element);
-        }
-
-        // Pressing Escape will remove the active class from the dropdown. The stopPropagation above will stop the hamburger menu from closing
-        if (event.key === "Escape") {
-            escapePressed = true;
-            toggleDropdown(element);
-        }
-    });
-
-    // Handles dropdown menus on mobile - the matching media query (max-width: 63.9375rem) is necessary so that clicking the dropdown button on desktop does not add the active class and thus interfere with the hover state
-    const maxWidthMediaQuery = window.matchMedia("(max-width: 63.9375rem)");
-    if (maxWidthMediaQuery.matches) {
-        element.addEventListener("click", () => toggleDropdown(element));
+    if (dropdownButton) {
+        dropdownButton.setAttribute("aria-expanded", "false");
     }
+
+    if (dropdownContent) {
+        dropdownContent.setAttribute("aria-hidden", "true");
+    }
+}
+
+// Initialize dropdowns
+const dropdownElements = document.querySelectorAll(".dropdown");
+dropdownElements.forEach(dropdown => {
+    const dropdownButton = dropdown.querySelector(".dropdown-button");
+    const dropdownContent = dropdown.querySelector(".dropdown-content");
+
+    // Set initial ARIA attributes
+    if (dropdownButton) {
+        dropdownButton.setAttribute("aria-expanded", "false");
+        dropdownButton.setAttribute("aria-haspopup", "true");
+    }
+
+    if (dropdownContent) {
+        dropdownContent.setAttribute("aria-hidden", "true");
+    }
+
+    // Handle click events on dropdown buttons
+    dropdownButton?.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        toggleDropdown(dropdown, event);
+    });
+
+    // Handle keyboard navigation
+    dropdown.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            closeDropdown(dropdown);
+            dropdownButton?.focus();
+        } else if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            toggleDropdown(dropdown, event);
+        }
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", (event) => {
+        if (!dropdown.contains(event.target)) {
+            closeDropdown(dropdown);
+        }
+    });
 });
 
-// Pressing Enter will redirect to the href
+// Handle dropdown links
 const dropdownLinks = document.querySelectorAll(".drop-li > .li-link");
 dropdownLinks.forEach(link => {
     link.addEventListener("keydown", function (event) {
@@ -94,20 +116,15 @@ dropdownLinks.forEach(link => {
     });
 });
 
-// If you press Escape and the hamburger menu is open, close it
+// Close mobile menu on Escape key
 document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && hamburgerMenu.classList.contains("active")) {
         toggleMenu();
     }
 });
 
-// Add scroll class to body element on scroll
+// Add scroll class to body element
 document.addEventListener('scroll', () => {
     const scroll = document.documentElement.scrollTop;
-
-    if (scroll >= 100) {
-        bodyElement.classList.add('scroll')
-    } else {
-        bodyElement.classList.remove('scroll')
-    }
+    bodyElement.classList.toggle('scroll', scroll >= 100);
 });

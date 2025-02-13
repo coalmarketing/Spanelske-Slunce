@@ -1,6 +1,6 @@
 ---
 title: 'Blog'
-description: 'Máte nějaké dotazy? Máte zájem o cenovou nabídku nebo konzultaci? Neváhejte se nám ozvat.'
+description: 'Inspirace, tipy a zajímavosti o španělštině! Články o gramatice, slovní zásobě, cestování a jazykovém vzdělávání. Ponořte se do španělského jazyka.'
 permalink: 'blog/'
 eleventyNavigation:
   key: Blog
@@ -46,7 +46,7 @@ eleventyNavigation:
                 <!-- METADATA -->
                 <div class="flex justify-between items-center">
                   <!-- CATEGORY -->
-                  <span class="py-1 px-2 bg-tertiary font-proxima-nova text-sm text-white font-bold rounded-lg">Pobytové kurzy</span>
+                  <span class="py-1 px-2 bg-tertiary font-proxima-nova text-sm text-white font-bold rounded-lg">{{ post.data.category }}</span>
                   <!-- DATE -->
                   <div class="flex items-center gap-1.5">
                     <svg class="text-zinc-800 dark:text-zinc-200" xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 -960 960 960" fill="currentColor">
@@ -66,7 +66,7 @@ eleventyNavigation:
                   <a
                     title="{{ post.data.title }}"
                     class="relative dark:text-white font-proxima-nova text-2xl xl:text-xl font-bold truncate transition-colors duration-300 hover:text-tertiary
-                      before:absolute before:top-0 before:right-0 before:h-full before:w-16 before:bg-gradient-to-r before:from-white/0 before:to-white/100"
+                      before:absolute before:top-0 before:right-0 before:h-full before:w-16 before:bg-gradient-to-r before:from-white/0 before:to-white/100 dark:before:to-zinc-950"
                     href="{{ post.url }}">
                     <h3>
                       {{ post.data.title }}

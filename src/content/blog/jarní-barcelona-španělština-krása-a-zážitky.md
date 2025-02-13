@@ -10,6 +10,7 @@ author: Ludmila Vyčítalová
 date: 2024-12-13T18:00:00.000Z
 tags:
   - post
+  - pobytoveKurzy
 image: /assets/images/cms/jarni_barcelona.webp
 imageAlt: Jarní Barcelona 2024
 ---

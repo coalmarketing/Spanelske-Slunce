@@ -10,9 +10,14 @@ eleventyNavigation:
 
 {% extends "layouts/base.njk" %}
 
+{% block head %}
+  <link rel="stylesheet" href="/assets/css/fapi.css">
+{% endblock head %}
+
 {% block body %}
   {% include "components/landing.njk" %}
 
+  <!-- ONLINE KURZY -->
   <section class="py-24 ~px-4/8 bg-zinc-100 dark:bg-zinc-900">
     <div class="container m-auto flex max-xl:flex-col justify-center items-center xl:items-start ~gap-12/24">
       <!-- TEXT -->
@@ -51,7 +56,7 @@ eleventyNavigation:
         </div>
 
         <!-- CTA BUTTONS -->
-        <div class="flex gap-2">
+        <div class="flex flex-wrap gap-2">
           <!-- CTA BUTTON -->
           <a class="block relative px-4 py-2 bg-primary text-sm text-white font-semibold rounded-lg z-10 overflow-hidden whitespace-nowrap
             transition-colors duration-300 hover:text-white
@@ -78,6 +83,15 @@ eleventyNavigation:
             href="#b1">
             Kurz B1
           </a>
+
+          <!-- CTA BUTTON -->
+          <a class="block relative px-4 py-2 bg-primary text-sm text-white font-semibold rounded-lg z-10 overflow-hidden whitespace-nowrap
+            transition-colors duration-300 hover:text-white
+            before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-tertiary before:-z-10
+            before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
+            href="#b2">
+            Kurz B2
+          </a>
         </div>
       </div>
 
@@ -98,8 +112,11 @@ eleventyNavigation:
     </div>
   </section>
 
+  <!-- KURZ ZAČÁTEČNÍCI -->
   <section id="zacatecnici" class="py-24 ~px-4/8 dark:bg-zinc-950">
-    <div class="container m-auto flex max-xl:flex-col justify-center items-center xl:items-start ~gap-12/24">
+    <div class="container m-auto flex max-xl:flex-col-reverse justify-center items-center xl:items-start ~gap-12/24">
+      <script type="text/javascript" src="https://form.fapi.cz/script.php?id=be28c499-dd8e-4001-b7b9-3dd1fa25932c"></script>
+
       <!-- TEXT -->
       <div class="flex flex-col items-start gap-6">
         <!-- HEADING + TEXT -->
@@ -179,6 +196,7 @@ eleventyNavigation:
     </div>
   </section>
 
+  <!-- KURZ A1 + A2 -->
   <section id="a1-a2" class="py-24 ~px-4/8 bg-zinc-100 dark:bg-zinc-900">
     <div class="container m-auto flex max-xl:flex-col justify-center items-center xl:items-start ~gap-12/24">
       <!-- TEXT -->
@@ -261,11 +279,18 @@ eleventyNavigation:
           </ul>
         </div>
       </div>
+
+      <!-- FAPI -->
+      <script type="text/javascript" src="https://form.fapi.cz/script.php?id=1b0e09f5-b9be-40a4-9efa-3e8149198b0a"></script>
     </div>
   </section>
 
+  <!-- KURZ B1 -->
   <section id="b1" class="py-24 ~px-4/8 dark:bg-zinc-950">
     <div class="container m-auto flex max-xl:flex-col justify-center items-center xl:items-start ~gap-12/24">
+      <!-- FAPI -->
+      <script type="text/javascript" src="https://form.fapi.cz/script.php?id=31077e8c-b17c-45f8-ad0b-7eeb919c331e"></script>
+
       <!-- TEXT -->
       <div class="flex flex-col items-start gap-6">
         <!-- HEADING + TEXT -->
@@ -345,6 +370,90 @@ eleventyNavigation:
           </ul>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- KURZ B2 -->
+  <section id="b2" class="py-24 ~px-4/8 bg-zinc-100 dark:bg-zinc-900">
+    <div class="container m-auto flex max-xl:flex-col-reverse justify-center items-center xl:items-start ~gap-12/24">
+      <!-- TEXT -->
+      <div class="flex flex-col items-start gap-6">
+        <!-- HEADING + TEXT -->
+        <div class="flex flex-col gap-4 max-w-2xl">
+          <!-- TOPPER + HEADING -->
+          <div class="flex flex-col gap-1">
+            <span class="font-proxima-nova text-primary dark:text-secondary font-bold leading-none">B2</span>
+            <h1 class="dark:text-white ~text-2xl/3xl font-bold">
+              Kurz španělštiny B2
+            </h1>
+          </div>
+          <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+            Pokud už ovládáte různé minulé časy, umíte se vyjádřit v budoucnosti, zvládáte podmínkové věty, umíte do svého projevu vnést prvek probíhajícího děje,
+            pracujete s polovětnými konstrukcemi a dokážete vyjádřit své názory, souhlas či nesouhlas, pak jste na správném místě!
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-2 max-w-2xl">
+          <span class="font-proxima-nova dark:text-white font-bold">V kurzu B2 se zaměříme na:</span>
+          <ol class="flex flex-col gap-1 list-decimal">
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              <span class="font-bold">Rozšíření slovní zásoby</span> – včetně idiomů, lidových výrazů a přirozených frází
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              <span class="font-bold">Zlepšení porozumění</span> – práce s autentickými materiály (články, podcasty, rozhovory)
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              <span class="font-bold">Plynulost projevu</span> – trénink spontánní konverzace na různá témata
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              <span class="font-bold">Jistotu v argumentaci</span> – naučíte se obratně vyjadřovat své názory a postoje
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              <span class="font-bold">Práci se subjunktivem</span> – rozšíříte jeho použití v běžné konverzaci
+            </li>
+          </ol>
+        </div>
+
+        <div class="flex flex-col gap-2 max-w-2xl">
+          <h3 class="dark:text-white text-lg font-bold">Jste na úrovni B2? Pojďme si to ověřit!</h3>
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-2">
+              <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+                Nejste si jistí, jestli je B2 pro vás to pravé? Po zakoupení kurzu můžete využít mé VIP služby:
+              </p>
+              <ul class="flex flex-col gap-1 list-disc">
+                <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+                  15 minutový telefonát, kde si vyzkoušíme krátký rozhovor
+                </li>
+                <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+                  Rozbor vašeho projevu a doporučení správné úrovně
+                </li>
+              </ul>
+            </div>
+            <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Pokud kupujete kurz jako dárek, obdarovaný se může přesunout do jiné úrovně, pokud to bude potřeba.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2 max-w-2xl">
+          <h3 class="dark:text-white text-lg font-bold">Jak kurz probíhá?</h3>
+          <ul class="flex flex-col gap-1 list-disc">
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              10 online lekcí se záznamem, který vám zůstane neomezeně k dispozici
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Interaktivní výuka s praktickými cvičeními a reálnými situacemi
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Strukturovaný program pro postupné zlepšování
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- FAPI -->
+      <script type="text/javascript" src="https://form.fapi.cz/script.php?id=71a93ca5-7068-4d2b-b43d-e3a6a831be40"></script>
     </div>
   </section>
 

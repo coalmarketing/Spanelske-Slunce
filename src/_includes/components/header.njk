@@ -34,9 +34,9 @@
     <!-- NAVIGATION -->
     <div
       class="hidden max-xl:group-[.mobile-menu]/body:block xl:block max-xl:absolute max-xl:top-[calc(100%+0.5rem)] max-xl:left-1/2 max-xl:-translate-x-1/2
-        max-xl:w-full max-xl:group-[.mobile-menu]/body:w-[calc(100vw-5%)] max-xl:p-4 max-xl:bg-white dark:max-xl:bg-zinc-950 max-xl:rounded-xl">
+        max-xl:w-full max-xl:group-[.mobile-menu]/body:w-full max-xl:group-[.mobile-menu]/body:max-w-[calc(100vw-2rem)] max-xl:p-4 max-xl:bg-white dark:max-xl:bg-zinc-950 max-xl:rounded-xl max-xl:shadow-lg">
       <nav class="flex justify-center whitespace-nowrap">
-        <ul class="flex max-xl:flex-col gap-2 xl:gap-8">
+        <ul class="flex max-xl:flex-col gap-2 xl:gap-8 max-xl:w-full">
           {% set navPages = collections.all | eleventyNavigation %}
 
           {# Loop through all pages with a eleventyNavigation in the frontmatter #}
@@ -46,20 +46,20 @@
             {% set hasChild = entry.children.length %}
 
             <li
-              class="group relative flex items-center{% if hasChild %} dropdown{% endif %}"
+              class="group/li relative flex max-xl:flex-col xl:items-center max-xl:w-full{% if hasChild %} dropdown{% endif %}"
               {%- if hasChild -%}tabindex="0"{%- endif -%}
             >
               {# If the page has child dropdown pages, render it as a <button> tag with the appropriate dropdown HTML #}
               {% if hasChild %}
                 {# Render the <button> with the active class, dropdown icon and child links #}
                 <button 
-                class="dropdown-button flex items-center py-4 text-sm font-semibold text-zinc-800 dark:text-zinc-200
-                  transition-colors duration-300 hover:text-black dark:hover:text-white"
-                aria-expanded="false"
-                aria-controls="dropdown-{{ entry.key }}"
-                aria-label="dropdown-{{ entry.key }}"
-                type="button"
-              >
+                  class="dropdown-button group/button flex items-center py-2 max-xl:pl-4 xl:py-4 max-xl:border-l-4 max-xl:border-border-zinc-300 dark:max-xl:border-zinc-600 max-xl:rounded-r-md
+                    text-sm font-semibold text-zinc-800 dark:text-zinc-200 transition-colors duration-300 hover:text-black dark:hover:text-white"
+                  aria-expanded="false"
+                  aria-controls="dropdown-{{ entry.key }}"
+                  aria-label="dropdown-{{ entry.key }}"
+                  type="button"
+                >
                   <span>{{ entry.key }}</span>
 
                   <!-- ICON -->
@@ -69,22 +69,24 @@
                 </button>
 
                 {# Dropdowns have another ul/li set up within the parent li, which gets rendered in the same way as a normal link #}
-                <div class="absolute top-11 -left-4 py-8 px-4
-                  transition-[transform,_opacity] duration-300 scale-y-0 opacity-0 origin-top group-hover:scale-y-100 group-hover:opacity-100">
+                <div class="xl:absolute xl:top-11 xl:-left-4 xl:py-8 xl:px-4 max-xl:h-0 max-xl:group-[&.active]/li:h-auto
+                  transition-[transform,_opacity] duration-300 xl:scale-y-0 xl:opacity-0 origin-top xl:group-hover/li:scale-y-100 xl:group-hover/li:opacity-100">
                   <ul
                     id="dropdown-{{ entry.key }}"
-                    class="flex flex-col gap-2 py-3 px-4 bg-white dark:bg-zinc-950 rounded-xl shadow-lg"
-                >
+                    class="flex flex-col
+                      xl:py-2 xl:px-4 xl:bg-white xl:dark:bg-zinc-950 xl:rounded-xl xl:shadow-lg
+                      max-xl:hidden max-xl:group-[&.active]/li:flex max-xl:gap-2 max-xl:mt-2 max-xl:mb-4 max-xl:ml-4"
+                  >
                     {% for child in entry.children %}
-                      <li class="drop-li transition-[transform,_opacity] duration-200 opacity-0 translate-x-12
-                      group-hover:opacity-100 group-hover:translate-x-0"
+                      <li class="drop-li xl:transition-[transform,_opacity] xl:duration-200 xl:opacity-0 xl:translate-x-12 xl:group-hover/li:opacity-100 xl:group-hover/li:translate-x-0"
                       style="transition-delay: {{ 150 + 75 * loop.index }}ms;"
                     >
                         <a
                         href="{{ child.url }}"
-                        class="li-link py-2 text-sm font-semibold
-                        {% if child.url == page.url %} text-primary dark:text-primary
-                        {% else %} text-zinc-800 dark:text-zinc-200 transition-colors duration-300 hover:text-black dark:hover:text-white{% endif %}"
+                        class="li-link block py-2 max-xl:pl-4 text-sm font-semibold max-xl:border-l-4
+                          {% if child.url == page.url %} text-primary dark:text-primary max-xl:border-l-primary max-xl:bg-primary/10
+                          {% else %} text-zinc-800 dark:text-zinc-200 transition-colors duration-300 hover:text-black dark:hover:text-white
+                          max-xl:hover:bg-zinc-100 dark:max-xl:hover:bg-zinc-900 max-xl:border-l-zinc-300 dark:max-xl:border-l-zinc-600 max-xl:focus:text-black{%- endif -%}"
                         {%- if child.url == page.url -%}aria-current="page"{%- endif -%}
                       >
                           {{ child.key }}
@@ -97,11 +99,12 @@
                 {# Normal pages are rendered as <a> tags, in the normal way you'd expect #}
                 <a
                 href="{{ entry.url }}"
-                class="py-4 text-sm font-semibold
-                {% if entry.url == page.url %} text-primary dark:text-primary
-                {% else %} text-zinc-800 dark:text-zinc-200 transition-colors duration-300 hover:text-black dark:hover:text-white{%- endif -%}"
-                {%- if entry.url == page.url or entry.title | lower in page.url -%}aria-current="page"{%- endif -%}
-              >
+                class="py-2 max-xl:pl-4 xl:py-4 text-sm font-semibold max-xl:w-full max-xl:border-l-4 max-xl:rounded-r-md
+                  {% if entry.url == page.url %} text-primary dark:text-primary max-xl:border-l-primary max-xl:bg-primary/10
+                  {% else %} text-zinc-800 dark:text-zinc-200 transition-colors duration-300 hover:text-black dark:hover:text-white
+                  max-xl:hover:bg-zinc-100 dark:max-xl:hover:bg-zinc-900 max-xl:border-l-zinc-300 dark:max-xl:border-l-zinc-600 max-xl:focus:text-black{%- endif -%}"
+                  {%- if entry.url == page.url -%}aria-current="page"{%- endif -%}
+                >
                   {{ entry.key }}
                 </a>
               {% endif %}
@@ -212,36 +215,14 @@
             transition-transform duration-300 [&.active]:rotate-90"
           type="button"
           aria-expanded="false"
-          aria-controls="expanded-ul"
           aria-label="Tlačítko mobilního menu"
         >
-        <div class="relative h-[1.125rem] w-6">
+        <span class="block relative h-[1.125rem] w-6">
           <span class="absolute top-0 block h-[3px] w-full bg-zinc-700 dark:bg-zinc-300 rounded-full transition-transform duration-300 group-[.active]:rotate-45 group-[.active]:top-1/2 group-[.active]:-translate-y-1/2 group-[.active]:left-1/2 group-[.active]:-translate-x-1/2"></span>
           <span class="absolute top-1/2 -translate-y-1/2 block h-[3px] w-full bg-zinc-700 dark:bg-zinc-300 rounded-full transition-[opacity] duration-300 group-[.active]:opacity-0"></span>
           <span class="absolute bottom-0 block h-[3px] w-full bg-zinc-700 dark:bg-zinc-300 rounded-full transition-transform duration-300 group-[.active]:rotate-[315deg] group-[.active]:top-1/2 group-[.active]:-translate-y-1/2 group-[.active]:left-1/2 group-[.active]:-translate-x-1/2"></span>
-        </div>
+        </span>
       </button>
     </div>
   </div>
-
-  <!-- MOBILE MENU
-  <nav
-    id="mobile-menu"
-    class="absolute top-[calc(100%+0.5rem)] left-1/2 -translate-x-1/2 lg:!hidden w-full py-4 bg-white dark:bg-gray-900 rounded-xl shadow
-    transition-[opacity,transform] origin-top duration-300 delay-150 scale-y-0 group-[.mobile-menu]/body:scale-y-100 opacity-0 group-[.mobile-menu]/body:opacity-100"
-  >
-    <ul>
-      {%- for entry in navPages %}
-        <li>
-          <a
-            href="{{ entry.url }}"
-            class="block text-center py-2
-              {% if entry.url == page.url %} text-primary {% else %} text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white{% endif %}"
-            {% if entry.url == page.url or entry.title | lower in page.url %}
-            aria-current="page"
-            {% endif %}>{{ entry.title }}</a>
-        </li>
-      {%- endfor %}
-    </ul>
-  </nav>  -->
 </header>

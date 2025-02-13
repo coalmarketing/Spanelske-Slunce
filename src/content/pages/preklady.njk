@@ -1,6 +1,6 @@
 ---
 title: 'Překlady'
-description: 'Jsme spolehlivým partnerem v oblasti nákladní dopravy a spedice.'
+description: 'Profesionální překlady a tlumočení ze španělštiny i do španělštiny. Spolehlivě, rychle a přesně.'
 permalink: 'preklady/'
 eleventyNavigation:
   key: Překlady
@@ -54,6 +54,21 @@ eleventyNavigation:
           </ul>
         </div>
       </div>
+
+      <!-- IMAGE -->
+      <picture>
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service/translation.jpg" | resize({ width: 1536, height: 1008, position: 'top' }) | webp({ quality: 70 }) %}">
+        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service/translation.jpg" | resize({ width: 1536, height: 1008, position: 'top' }) | webp({ quality: 70 }) %}">
+        <img
+            class="w-full max-w-3xl rounded-xl object-cover"
+            src="{% getUrl "/assets/images/service/translation.jpg" | resize({ width: 1536, height: 1008, position: 'top' }) | jpeg({ quality: 70 }) %}"
+            alt="Segrada Famila"
+            decoding="async"
+            loading="lazy"
+            width="1536"
+            height="504"
+            draggable="false"/>
+      </picture>
     </div>
   </section>
 
