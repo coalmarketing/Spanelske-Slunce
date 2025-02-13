@@ -101,15 +101,15 @@ eleventyNavigation:
         <!-- IMAGE POLYGON LEFT -->
         <div class="polygon-1 absolute top-[52%] sm:top-1/2 left-0 -translate-y-1/2 transform h-[60%] sm:h-[70%] w-[40%]">
           <picture>
-            <source srcset="{% getUrl "/assets/images/hero/laptop_with_coffee.jpg" | resize({ width: 608, height: 640, position: 'left' }) | webp({ quality: 70 }) %}">
+            <source srcset="{% getUrl "/assets/images/hero/laptop_with_coffee.jpg" | resize({ width: 454, height: 576, position: 'left' }) | webp({ quality: 70 }) %}">
             <img
                 class="h-full w-full object-cover"
-                src="{% getUrl "/assets/images/hero/laptop_with_coffee.jpg" | resize({ width: 608, height: 640, position: 'left' }) | jpeg({ quality: 70 }) %}"
+                src="{% getUrl "/assets/images/hero/laptop_with_coffee.jpg" | resize({ width: 454, height: 576, position: 'left' }) | jpeg({ quality: 70 }) %}"
                 alt="Otevřený notebook na stole s kávou a poznámkovým blokem"
                 decoding="async"
                 loading="eager"
-                width="304"
-                height="320"
+                width="227"
+                height="288"
                 draggable="false"/>
           </picture>
         </div>
@@ -117,15 +117,15 @@ eleventyNavigation:
         <!-- IMAGE POLYGON TOP -->
         <div class="polygon-2 absolute top-[1%] sm:top-0 left-[25%] transform h-[50%] w-[40%]">
           <picture>
-            <source srcset="{% getUrl "/assets/images/hero/segrada-familia.jpg" | resize({ width: 672, height: 480 }) | webp({ quality: 70 }) %}">
+            <source srcset="{% getUrl "/assets/images/hero/segrada-familia.jpg" | resize({ width: 480, height: 454 }) | webp({ quality: 70 }) %}">
             <img
                 class="h-full w-full object-cover"
-                src="{% getUrl "/assets/images/hero/segrada-familia.jpg" | resize({ width: 672, height: 480 }) | jpeg({ quality: 70 }) %}"
+                src="{% getUrl "/assets/images/hero/segrada-familia.jpg" | resize({ width: 480, height: 454 }) | jpeg({ quality: 70 }) %}"
                 alt="Sagrada Família"
                 decoding="async"
                 loading="eager"
-                width="336"
-                height="240"
+                width="240"
+                height="227"
                 draggable="false"/>
           </picture>
         </div>
@@ -133,30 +133,30 @@ eleventyNavigation:
         <!-- IMAGE POLYGON BOTTOM -->
         <div class="polygon-3 absolute bottom-[12%] sm:bottom-0 left-[32%] sm:left-[29%] transform h-[40%] sm:h-[54%] w-[44%]">
           <picture>
-            <source srcset="{% getUrl "/assets/images/hero/person-writing-notebook.jpg" | resize({ width: 704, height: 512 }) | webp({ quality: 70 }) %}">
+            <source srcset="{% getUrl "/assets/images/hero/person-writing-notebook.jpg" | resize({ width: 500, height: 384 }) | webp({ quality: 70 }) %}">
             <img
                 class="h-full w-full object-cover"
-                src="{% getUrl "/assets/images/hero/person-writing-notebook.jpg" | resize({ width: 704, height: 512 }) | jpeg({ quality: 70 }) %}"
+                src="{% getUrl "/assets/images/hero/person-writing-notebook.jpg" | resize({ width: 500, height: 384 }) | jpeg({ quality: 70 }) %}"
                 alt="Osoba zapisující si do poznámkového bloku"
                 decoding="async"
                 loading="eager"
-                width="352"
-                height="256"
+                width="250"
+                height="192"
                 draggable="false"/>
           </picture>
         </div>
 
         <div class="polygon-4 bg-black absolute top-[7%] sm:top-[3%] right-0 transform h-[65%] sm:h-[80%] w-[36%]">
           <picture>
-            <source srcset="{% getUrl "/assets/images/hero/workbooks.jpg" | resize({ width: 544, height: 736 }) | webp({ quality: 70 }) %}">
+            <source srcset="{% getUrl "/assets/images/hero/workbooks.jpg" | resize({ width: 408, height: 624 }) | webp({ quality: 70 }) %}">
             <img
                 class="h-full w-full object-cover"
-                src="{% getUrl "/assets/images/hero/workbooks.jpg" | resize({ width: 544, height: 736 }) | jpeg({ quality: 70 }) %}"
+                src="{% getUrl "/assets/images/hero/workbooks.jpg" | resize({ width: 408, height: 624 }) | jpeg({ quality: 70 }) %}"
                 alt="Učebnice španělštiny"
                 decoding="async"
                 loading="eager"
-                width="272"
-                height="368"
+                width="204"
+                height="312"
                 draggable="false"/>
           </picture>
         </div>
@@ -453,7 +453,7 @@ eleventyNavigation:
     <div class="container m-auto flex max-2xl:flex-col justify-center items-center ~gap-12/24">
       <!-- IMAGE -->
       <picture>
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-me/ludmila-vycitalova.webp" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-me/ludmila-vycitalova.webp" | resize({ width: 1136, height: 746 }) | webp({ quality: 70 }) %}">
         <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/about-me/ludmila-vycitalova.webp" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}">
         <img
             class="w-full max-w-3xl rounded-xl object-cover"
@@ -795,12 +795,12 @@ eleventyNavigation:
       <!-- IMAGES -->
       <div class="basis-1/2 flex justify-center items-start ~gap-4/8">
         <picture>
-          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-highlight/service_hightlight_1.jpg" | resize({ width: 688, height: 960 }) | webp({ quality: 70 }) %}">
+          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-highlight/service_hightlight_1.jpg" | resize({ width: 552, height: 960 }) | webp({ quality: 70 }) %}">
           <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service-highlight/service_hightlight_1.jpg" | resize({ width: 688, height: 960 }) | webp({ quality: 70 }) %}">
           <img
                 class="basis-1/2 h-[30rem] w-full mt-24 object-cover object-bottom rounded-xl"
                 src="{% getUrl "/assets/images/service-highlight/service_hightlight_1.jpg" | resize({ width: 688, height: 960 }) | jpeg({ quality: 70 }) %}"
-                alt="Fotografie z galerie {{ loop.index }}"
+                alt="Fotografie španělské budovy"
                 decoding="async"
                 loading="eager"
                 width="344"
@@ -809,12 +809,12 @@ eleventyNavigation:
         </picture>
 
         <picture>
-          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-highlight/service_hightlight_2.jpg" | resize({ width: 688, height: 960 }) | webp({ quality: 70 }) %}">
+          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-highlight/service_hightlight_2.jpg" | resize({ width: 552, height: 960 }) | webp({ quality: 70 }) %}">
           <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service-highlight/service_hightlight_2.jpg" | resize({ width: 688, height: 960 }) | webp({ quality: 70 }) %}">
           <img
                 class="basis-1/2 h-[30rem] w-full object-cover rounded-xl"
                 src="{% getUrl "/assets/images/service-highlight/service_hightlight_2.jpg" | resize({ width: 688, height: 960 }) | jpeg({ quality: 70 }) %}"
-                alt="Fotografie z galerie {{ loop.index }}"
+                alt="Fotografie španělské budovy"
                 decoding="async"
                 loading="eager"
                 width="344"
@@ -869,7 +869,7 @@ eleventyNavigation:
         {% for i in range(0, 8) %}
           {% set imagePath = '/assets/images/gallery/gallery_' + loop.index + '.jpg' %}
           <picture>
-            <source media="(max-width: 600px)" srcset="{% getUrl imagePath | resize({ width: 720, height: 640 }) | webp({ quality: 70 }) %}">
+            <source media="(max-width: 600px)" srcset="{% getUrl imagePath | resize({ width: 1136, height: 640 }) | webp({ quality: 70 }) %}">
             <source media="(min-width: 601px)" srcset="{% getUrl imagePath | resize({ width: 720, height: 640 }) | webp({ quality: 70 }) %}">
             <img
                 class="h-80 w-full object-cover rounded-xl"
