@@ -146,14 +146,16 @@
             </div>
         </div>
 
-        <!-- GALLERY -->
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 ~gap-4/8 w-full">
-            {% for i in range(0, 4) %}
-                {% set imagePath = '/assets/images/gallery/gallery_' + loop.index + '.jpg' %}
-                <picture>
-                    <source media="(max-width: 600px)" srcset="{% getUrl imagePath | resize({ width: 720, height: 640 }) | webp({ quality: 70 }) %}">
-                    <source media="(min-width: 601px)" srcset="{% getUrl imagePath | resize({ width: 720, height: 640 }) | webp({ quality: 70 }) %}">
-                    <img
+        {# Show the gallery showcase only on interior pages #}
+        {% if page.url != "/" %}
+            <!-- GALLERY -->
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 ~gap-4/8 w-full">
+                {% for i in range(0, 4) %}
+                    {% set imagePath = '/assets/images/gallery/gallery_' + loop.index + '.jpg' %}
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="{% getUrl imagePath | resize({ width: 720, height: 640 }) | webp({ quality: 70 }) %}" type="image/webp">
+                        <source media="(min-width: 601px)" srcset="{% getUrl imagePath | resize({ width: 720, height: 640 }) | webp({ quality: 70 }) %}" type="image/webp">
+                        <img
                   class="h-80 w-full object-cover rounded-xl"
                   src="{% getUrl imagePath | resize({ width: 720, height: 640 }) | jpeg({ quality: 70 }) %}"
                   alt="Fotografie z galerie {{ loop.index }}"
@@ -162,8 +164,9 @@
                   width="360"
                   height="320"
                   draggable="false"/>
-                </picture>
-            {% endfor %}
-        </div>
+                    </picture>
+                {% endfor %}
+            </div>
+        {% endif %}
     </div>
 </section>

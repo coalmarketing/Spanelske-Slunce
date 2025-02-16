@@ -187,12 +187,13 @@ collections:
     editor:
       preview: false
     create: true
-    slug: "{{slug}}"
+    identifier_field: "customerName"
+    slug: "{{slug}}_{{year}}-{{month}}-{{day}}"
     fields:
       - {
           label: "Text",
           name: "text",
-          widget: "string",
+          widget: "text",
           hint: "Citovaný text reference",
         }
       - { label: "Jméno zákazníka", name: "customerName", widget: "string" }

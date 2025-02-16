@@ -38,8 +38,8 @@
         <div class="container m-auto flex flex-col items-center gap-16">
             <!-- IMAGE -->
             <picture>
-                <source media="(max-width: 600px)" srcset="{% getUrl image | resize({ width: 1792 }) | webp({ quality: 70 }) %}">
-                <source media="(min-width: 601px)" srcset="{% getUrl image | resize({ width: 1792 }) | webp({ quality: 70 }) %}">
+                <source media="(max-width: 600px)" srcset="{% getUrl image | resize({ width: 1792 }) | webp({ quality: 70 }) %}" type="image/webp">
+                <source media="(min-width: 601px)" srcset="{% getUrl image | resize({ width: 1792 }) | webp({ quality: 70 }) %}" type="image/webp">
                 <img
                     class="w-full max-w-4xl rounded-xl object-cover"
                     src="{% getUrl image | resize({ width: 1792 }) | jpeg({ quality: 70 }) %}"

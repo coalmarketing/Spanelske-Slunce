@@ -1,6 +1,6 @@
 ---
 title: 'Kvalitní výuka španělštiny a krásné zážitky'
-description: 'Spojujeme Českou republiku s Evropou prostřednictvím rychlé, efektivní a ekologické přepravy.'
+description: 'Objevte efektivní kurzy španělštiny, videokurzy a pobytové kurzy, které vám pomohou se rozmluvit. Učte se přirozeně, prakticky a s radostí!'
 permalink: '/'
 tags: 'sitemap' # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
 eleventyNavigation:
@@ -11,6 +11,12 @@ eleventyNavigation:
 {% extends "layouts/base.njk" %}
 
 {% block head %}
+  <!-- Preload the hero images -->
+  <link rel="preload" as="image" href="{% getUrl '/assets/images/hero/laptop_with_coffee.jpg' | resize({ width: 454, height: 576, position: 'left' }) | webp({ quality: 70 }) %}"/>
+  <link rel="preload" as="image" href="{% getUrl '/assets/images/hero/segrada-familia.jpg' | resize({ width: 480, height: 454 }) | webp({ quality: 70 }) %}"/>
+  <link rel="preload" as="image" href="{% getUrl '/assets/images/hero/person-writing-notebook.jpg' | resize({ width: 500, height: 384 }) | webp({ quality: 70 }) %}"/>
+  <link rel="preload" as="image" href="{% getUrl '/assets/images/hero/workbooks.jpg' | resize({ width: 408, height: 624 }) | webp({ quality: 70 }) %}"/>
+
   <!-- Script for Netlify Identity -->
   <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <!-- Netlify Identity configuration -->
@@ -83,7 +89,7 @@ eleventyNavigation:
           </div>
           <p class="font-proxima-nova ~text-lg/xl text-zinc-200 max-2xl:text-center">
             Naučte se španělsky s profesionální lektorkou, která vám nabízí flexibilní výuku přesně podle vašich potřeb.
-            Ať už preferujete intenzivní prezenční kurzy, pohodlné online lekce nebo samostudium pomocí video kurzů, máme řešení pro každého.
+            Ať už preferujete pohodlné skupinové online lekce, samostudium pomocí videokurzů nebo chcete zažít autentické Španělsko na pobytovém kurzu, máme řešení pro každého.
           </p>
         </div>
 
@@ -101,7 +107,7 @@ eleventyNavigation:
         <!-- IMAGE POLYGON LEFT -->
         <div class="polygon-1 absolute top-[52%] sm:top-1/2 left-0 -translate-y-1/2 transform h-[60%] sm:h-[70%] w-[40%]">
           <picture>
-            <source srcset="{% getUrl "/assets/images/hero/laptop_with_coffee.jpg" | resize({ width: 454, height: 576, position: 'left' }) | webp({ quality: 70 }) %}">
+            <source srcset="{% getUrl "/assets/images/hero/laptop_with_coffee.jpg" | resize({ width: 454, height: 576, position: 'left' }) | webp({ quality: 70 }) %}" type="image/webp">
             <img
                 class="h-full w-full object-cover"
                 src="{% getUrl "/assets/images/hero/laptop_with_coffee.jpg" | resize({ width: 454, height: 576, position: 'left' }) | jpeg({ quality: 70 }) %}"
@@ -117,7 +123,7 @@ eleventyNavigation:
         <!-- IMAGE POLYGON TOP -->
         <div class="polygon-2 absolute top-[1%] sm:top-0 left-[25%] transform h-[50%] w-[40%]">
           <picture>
-            <source srcset="{% getUrl "/assets/images/hero/segrada-familia.jpg" | resize({ width: 480, height: 454 }) | webp({ quality: 70 }) %}">
+            <source srcset="{% getUrl "/assets/images/hero/segrada-familia.jpg" | resize({ width: 480, height: 454 }) | webp({ quality: 70 }) %}" type="image/webp">
             <img
                 class="h-full w-full object-cover"
                 src="{% getUrl "/assets/images/hero/segrada-familia.jpg" | resize({ width: 480, height: 454 }) | jpeg({ quality: 70 }) %}"
@@ -133,7 +139,7 @@ eleventyNavigation:
         <!-- IMAGE POLYGON BOTTOM -->
         <div class="polygon-3 absolute bottom-[12%] sm:bottom-0 left-[32%] sm:left-[29%] transform h-[40%] sm:h-[54%] w-[44%]">
           <picture>
-            <source srcset="{% getUrl "/assets/images/hero/person-writing-notebook.jpg" | resize({ width: 500, height: 384 }) | webp({ quality: 70 }) %}">
+            <source srcset="{% getUrl "/assets/images/hero/person-writing-notebook.jpg" | resize({ width: 500, height: 384 }) | webp({ quality: 70 }) %}" type="image/webp">
             <img
                 class="h-full w-full object-cover"
                 src="{% getUrl "/assets/images/hero/person-writing-notebook.jpg" | resize({ width: 500, height: 384 }) | jpeg({ quality: 70 }) %}"
@@ -148,7 +154,7 @@ eleventyNavigation:
 
         <div class="polygon-4 bg-black absolute top-[7%] sm:top-[3%] right-0 transform h-[65%] sm:h-[80%] w-[36%]">
           <picture>
-            <source srcset="{% getUrl "/assets/images/hero/workbooks.jpg" | resize({ width: 408, height: 624 }) | webp({ quality: 70 }) %}">
+            <source srcset="{% getUrl "/assets/images/hero/workbooks.jpg" | resize({ width: 408, height: 624 }) | webp({ quality: 70 }) %}" type="image/webp">
             <img
                 class="h-full w-full object-cover"
                 src="{% getUrl "/assets/images/hero/workbooks.jpg" | resize({ width: 408, height: 624 }) | jpeg({ quality: 70 }) %}"
@@ -165,8 +171,8 @@ eleventyNavigation:
 
     <!-- BACKGROUND -->
     <picture class="before:absolute before:top-0 before:left-0 before:h-full before:w-full before:-z-10 before:bg-black/70">
-      <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero/hero_background_image.jpg" | resize({ width: 1920, height: 800 }) | webp({ quality: 70 }) %}">
-      <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/hero/hero_background_image.jpg" | resize({ width: 1920, height: 800 }) | webp({ quality: 70 }) %}">
+      <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero/hero_background_image.jpg" | resize({ width: 1920, height: 800 }) | webp({ quality: 70 }) %}" type="image/webp">
+      <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/hero/hero_background_image.jpg" | resize({ width: 1920, height: 800 }) | webp({ quality: 70 }) %}" type="image/webp">
       <img
           class="absolute inset-0 h-full w-full object-cover -z-20 scale-110 blur-xl"
           src="{% getUrl "/assets/images/hero/hero_background_image.jpg" | resize({ width: 1920, height: 800 }) | jpeg({ quality: 70 }) %}"
@@ -250,7 +256,7 @@ eleventyNavigation:
 
           <!-- BACKGROUND ICON -->
           <img 
-            class="absolute -top-full -left-full opacity-15 rotate-[30deg] -z-10 transition-transform duration-300
+            class="absolute -top-full -left-full opacity-40 rotate-[30deg] -z-10 transition-transform duration-300
               group-hover:translate-x-64 group-hover:translate-y-64"
             src="/assets/svgs/services/SPSL_icon-online.svg"
             alt="Ikona online kurzu v pozadí"
@@ -311,7 +317,7 @@ eleventyNavigation:
 
           <!-- BACKGROUND ICON -->
           <img 
-            class="absolute -top-full -left-full opacity-15 rotate-[30deg] -z-10 transition-transform duration-300
+            class="absolute -top-full -left-full opacity-40 rotate-[30deg] -z-10 transition-transform duration-300
               group-hover:translate-x-64 group-hover:translate-y-64"
             src="/assets/svgs/services/SPSL_icon-spain.svg"
             alt="Ikona pobytového kurzu v pozadí"
@@ -373,7 +379,7 @@ eleventyNavigation:
 
           <!-- BACKGROUND ICON -->
           <img 
-            class="absolute -top-full -left-full opacity-15 rotate-[30deg] -z-10 transition-transform duration-300
+            class="absolute -top-full -left-full opacity-40 rotate-[30deg] -z-10 transition-transform duration-300
               group-hover:translate-x-64 group-hover:translate-y-64"
             src="/assets/svgs/services/SPSL_icon-video.svg"
             alt="Ikona videokurzu v pozadí"
@@ -434,7 +440,7 @@ eleventyNavigation:
 
           <!-- BACKGROUND ICON -->
           <img 
-            class="absolute -top-full -left-full opacity-15 rotate-[30deg] -z-10 transition-transform duration-300
+            class="absolute -top-full -left-full opacity-40 rotate-[30deg] -z-10 transition-transform duration-300
               group-hover:translate-x-64 group-hover:translate-y-64"
             src="/assets/svgs/services/SPSL_icon-translation.svg"
             alt="Ikona překladů v pozadí"
@@ -453,8 +459,8 @@ eleventyNavigation:
     <div class="container m-auto flex max-2xl:flex-col justify-center items-center ~gap-12/24">
       <!-- IMAGE -->
       <picture>
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-me/ludmila-vycitalova.webp" | resize({ width: 1136, height: 746 }) | webp({ quality: 70 }) %}">
-        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/about-me/ludmila-vycitalova.webp" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-me/ludmila-vycitalova.webp" | resize({ width: 1136, height: 746 }) | webp({ quality: 70 }) %}" type="image/webp">
+        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/about-me/ludmila-vycitalova.webp" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}" type="image/webp">
         <img
             class="w-full max-w-3xl rounded-xl object-cover"
             src="{% getUrl "/assets/images/about-me/ludmila-vycitalova.webp" | resize({ width: 1536, height: 1008 }) | jpeg({ quality: 70 }) %}"
@@ -598,8 +604,8 @@ eleventyNavigation:
               <div class="flex flex-col gap-2">
                 <!-- IMAGE -->
                 <picture>
-                  <source media="(max-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 1056, height: 512 }) | webp({ quality: 70 }) %}">
-                  <source media="(min-width: 601px)" srcset="{% getUrl post.data.image | resize({ width: 784, height: 512 }) | webp({ quality: 70 }) %}">
+                  <source media="(max-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 1056, height: 512 }) | webp({ quality: 70 }) %}" type="image/webp">
+                  <source media="(min-width: 601px)" srcset="{% getUrl post.data.image | resize({ width: 784, height: 512 }) | webp({ quality: 70 }) %}" type="image/webp">
                   <img
                     class="h-64 w-full rounded-xl object-cover"
                     src="{% getUrl post.data.image | resize({ width: 784, height: 512 }) | jpeg({ quality: 70 }) %}"
@@ -795,8 +801,8 @@ eleventyNavigation:
       <!-- IMAGES -->
       <div class="basis-1/2 flex justify-center items-start ~gap-4/8">
         <picture>
-          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-highlight/service_hightlight_1.jpg" | resize({ width: 552, height: 960 }) | webp({ quality: 70 }) %}">
-          <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service-highlight/service_hightlight_1.jpg" | resize({ width: 688, height: 960 }) | webp({ quality: 70 }) %}">
+          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-highlight/service_hightlight_1.jpg" | resize({ width: 552, height: 960 }) | webp({ quality: 70 }) %}" type="image/webp">
+          <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service-highlight/service_hightlight_1.jpg" | resize({ width: 688, height: 960 }) | webp({ quality: 70 }) %}" type="image/webp">
           <img
                 class="basis-1/2 h-[30rem] w-full mt-24 object-cover object-bottom rounded-xl"
                 src="{% getUrl "/assets/images/service-highlight/service_hightlight_1.jpg" | resize({ width: 688, height: 960 }) | jpeg({ quality: 70 }) %}"
@@ -809,8 +815,8 @@ eleventyNavigation:
         </picture>
 
         <picture>
-          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-highlight/service_hightlight_2.jpg" | resize({ width: 552, height: 960 }) | webp({ quality: 70 }) %}">
-          <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service-highlight/service_hightlight_2.jpg" | resize({ width: 688, height: 960 }) | webp({ quality: 70 }) %}">
+          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-highlight/service_hightlight_2.jpg" | resize({ width: 552, height: 960 }) | webp({ quality: 70 }) %}" type="image/webp">
+          <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service-highlight/service_hightlight_2.jpg" | resize({ width: 688, height: 960 }) | webp({ quality: 70 }) %}" type="image/webp">
           <img
                 class="basis-1/2 h-[30rem] w-full object-cover rounded-xl"
                 src="{% getUrl "/assets/images/service-highlight/service_hightlight_2.jpg" | resize({ width: 688, height: 960 }) | jpeg({ quality: 70 }) %}"
@@ -869,8 +875,8 @@ eleventyNavigation:
         {% for i in range(0, 8) %}
           {% set imagePath = '/assets/images/gallery/gallery_' + loop.index + '.jpg' %}
           <picture>
-            <source media="(max-width: 600px)" srcset="{% getUrl imagePath | resize({ width: 1136, height: 640 }) | webp({ quality: 70 }) %}">
-            <source media="(min-width: 601px)" srcset="{% getUrl imagePath | resize({ width: 720, height: 640 }) | webp({ quality: 70 }) %}">
+            <source media="(max-width: 600px)" srcset="{% getUrl imagePath | resize({ width: 1136, height: 640 }) | webp({ quality: 70 }) %}" type="image/webp">
+            <source media="(min-width: 601px)" srcset="{% getUrl imagePath | resize({ width: 720, height: 640 }) | webp({ quality: 70 }) %}" type="image/webp">
             <img
                 class="h-80 w-full object-cover rounded-xl"
                 src="{% getUrl imagePath | resize({ width: 720, height: 640 }) | jpeg({ quality: 70 }) %}"
@@ -894,6 +900,7 @@ eleventyNavigation:
     </div>
   </section>
 
+  {% include "components/faq.njk" %}
   {% include "components/reviews.njk" %}
   {% include "components/cta.njk" %}
 {% endblock body %}

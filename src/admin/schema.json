@@ -278,6 +278,10 @@
                         "type": "string",
                         "description": "This setting allows the customization of the collection list view. Similar to the slug field, a string with templates can be used to include values of different fields, e.g. {{title}}. This option over-rides the default of title field and identifier_field\nTemplate tags include: \n{{title}} \n{{filename}} The file name without the extension part. \n{{extension}} The file extension. \n{{commit_date}} The file commit date on supported backends (git based backends). \n{{commit_author}} The file author date on supported backends (git based backends)."
                     },
+                    "identifier_field": {
+                        "type": "string",
+                        "description": "Decap CMS expects every entry to provide a field named 'title' that serves as an identifier for the entry. The identifier field serves as an entry's title when viewing a list of entries, and is used in slug creation. If you would like to use a field other than 'title' as the identifier, you can set identifier_field to the name of the other field."
+                    },
                     "slug": {
                         "type": "string",
                         "description": "For folder collections where users can create new items, the slug option specifies a template for generating new filenames based on a file's creation date and title field. \n\nTemplate tags include:\nAny field can be referenced by wrapping the field name in double curly braces, eg. {{author}} \n{{slug}}: a url-safe version of the title field (or identifier field) for the file \n{{year}}: 4-digit year of the file creation date \n{{month}}: 2-digit month of the file creation date \n{{day}}: 2-digit day of the month of the file creation date \n{{hour}}: 2-digit hour of the file creation date \n{{minute}}: 2-digit minute of the file creation date \n{{second}}: 2-digit second of the file creation date"

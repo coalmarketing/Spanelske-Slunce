@@ -53,12 +53,17 @@ eleventyNavigation:
             </li>
           </ul>
         </div>
+
+        <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+          Nabízím překladatelské i tlumočnické služby z a do španělského jazyka rodilým mluvčím, včetně překladů obecných či obchodních textů.
+          Tlumočení provádím konsekutivně, simultánně i obousměrně, podle vašich potřeb a konkrétní situace.
+        </p>
       </div>
 
       <!-- IMAGE -->
       <picture>
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service/translation.jpg" | resize({ width: 1136, height: 746, position: 'top' }) | webp({ quality: 70 }) %}">
-        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service/translation.jpg" | resize({ width: 1536, height: 1008, position: 'top' }) | webp({ quality: 70 }) %}">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service/translation.jpg" | resize({ width: 1136, height: 746, position: 'top' }) | webp({ quality: 70 }) %}" type="image/webp">
+        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service/translation.jpg" | resize({ width: 1536, height: 1008, position: 'top' }) | webp({ quality: 70 }) %}" type="image/webp">
         <img
             class="w-full max-w-3xl rounded-xl object-cover"
             src="{% getUrl "/assets/images/service/translation.jpg" | resize({ width: 1536, height: 1008, position: 'top' }) | jpeg({ quality: 70 }) %}"

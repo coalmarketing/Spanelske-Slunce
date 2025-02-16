@@ -92,11 +92,12 @@ eleventyNavigation:
         </div>
       </div>
 
-      <!-- IMAGE -->
-      <picture class="xl:sticky xl:top-40">
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-me/ludmila-vycitalova.webp" | resize({ width: 1136, height: 746 }) | webp({ quality: 70 }) %}">
-        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/about-me/ludmila-vycitalova.webp" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}">
-        <img
+      <!-- IMAGES -->
+      <div class="flex flex-col ~gap-4/8">
+        <picture>
+          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-me/ludmila-vycitalova.webp" | resize({ width: 1136, height: 746 }) | webp({ quality: 70 }) %}" type="image/webp">
+          <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/about-me/ludmila-vycitalova.webp" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}" type="image/webp">
+          <img
             class="w-full max-w-3xl rounded-xl object-cover"
             src="{% getUrl "/assets/images/about-me/ludmila-vycitalova.webp" | resize({ width: 1536, height: 1008 }) | jpeg({ quality: 70 }) %}"
             alt="Fotka lektorky Ludmily Vyčítalové"
@@ -105,7 +106,22 @@ eleventyNavigation:
             width="768"
             height="504"
             draggable="false"/>
-      </picture>
+        </picture>
+
+        <picture>
+          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-me/ludmila-vycitalova-cena.webp" | resize({ width: 1136, height: 746 }) | webp({ quality: 70 }) %}" type="image/webp">
+          <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/about-me/ludmila-vycitalova-cena.webp" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}" type="image/webp">
+          <img
+            class="w-full max-w-3xl rounded-xl object-cover"
+            src="{% getUrl "/assets/images/about-me/ludmila-vycitalova-cena.webp" | resize({ width: 1536, height: 1008 }) | jpeg({ quality: 70 }) %}"
+            alt="Fotka lektorky Ludmily Vyčítalové, která přebírá cenu"
+            decoding="async"
+            loading="lazy"
+            width="768"
+            height="504"
+            draggable="false"/>
+        </picture>
+      </div>
     </div>
   </section>
 

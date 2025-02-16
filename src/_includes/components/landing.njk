@@ -32,8 +32,8 @@
 
   <!-- BACKGROUND -->
   <picture class="before:absolute before:top-0 before:left-0 before:h-full before:w-full before:-z-10 before:bg-black/70">
-    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero/hero_background_image.jpg" | resize({ width: 1920, height: 388 }) | webp({ quality: 70 }) %}">
-    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/hero/hero_background_image.jpg" | resize({ width: 1920, height: 388 }) | webp({ quality: 70 }) %}">
+    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero/hero_background_image.jpg" | resize({ width: 1920, height: 388 }) | webp({ quality: 70 }) %}" type="image/webp">
+    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/hero/hero_background_image.jpg" | resize({ width: 1920, height: 388 }) | webp({ quality: 70 }) %}" type="image/webp">
     <img
       class="absolute inset-0 h-full w-full object-cover -z-20 scale-110 blur-xl"
       src="{% getUrl "/assets/images/hero/hero_background_image.jpg" | resize({ width: 1920, height: 388 }) | jpeg({ quality: 70 }) %}"

@@ -30,7 +30,7 @@ eleventyNavigation:
               <!-- IMAGE -->
               <a data-fslightbox="{{ album.fileSlug }}" href="{% getUrl image.url | rotate | resize({ height: 1944 }) | webp({ quality: 70 }) %}">
                 <picture>
-                  <source srcset="{% getUrl image.url | rotate | resize({ width: 486, height: 486 }) | webp({ quality: 70 }) %}">
+                  <source srcset="{% getUrl image.url | rotate | resize({ width: 486, height: 486 }) | webp({ quality: 70 }) %}" type="image/webp">
                   <img
                     class="object-cover aspect-square rounded-xl"
                     src="{% getUrl image.url | rotate | resize({ width: 486, height: 486 }) | jpeg({ quality: 70 }) %}"

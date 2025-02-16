@@ -14,15 +14,15 @@ eleventyNavigation:
 
   <!-- CONTACT -->
   <section class="py-24 ~px-4/8 bg-zinc-100 dark:bg-zinc-900">
-    <div class="container m-auto flex items-center gap-24">
+    <div class="container m-auto flex max-lg:flex-col items-center ~gap-12/24">
       <!-- TEXT + CONTACT FORM -->
       <div class="flex flex-col gap-6 w-full max-w-md">
         <!-- TOPPER + HEADING -->
         <div class="flex flex-col gap-1">
           <span class="font-proxima-nova text-primary dark:text-secondary font-bold leading-none">Napište mi</span>
-          <h2 class="dark:text-white ~text-2xl/3xl font-bold">
+          <h1 class="dark:text-white ~text-2xl/3xl font-bold">
             Kontaktujte mě
-          </h2>
+          </h1>
         </div>
 
         <!-- CONTACT FORM -->
@@ -96,7 +96,8 @@ eleventyNavigation:
 
       <!-- CONTACT INFO -->
       <div class="flex gap-8 p-8 bg-white dark:bg-zinc-950 rounded-xl">
-        <ul class="flex-1 flex flex-col gap-4">
+        <ul class="flex-shrink-0 flex flex-col gap-4">
+          <!-- NAME -->
           <li class="flex items-center gap-4 p-4 pr-8 bg-zinc-100 dark:bg-zinc-900 rounded-xl">
             <!-- ICON -->
             <img
@@ -116,6 +117,7 @@ eleventyNavigation:
             </div>
           </li>
 
+          <!-- TELEFON -->
           <li class="flex items-center gap-4 p-4 pr-8 bg-zinc-100 dark:bg-zinc-900 rounded-xl">
             <!-- ICON -->
             <img
@@ -135,6 +137,7 @@ eleventyNavigation:
             </div>
           </li>
 
+          <!-- EMAIL -->
           <li class="flex items-center gap-4 p-4 pr-8 bg-zinc-100 dark:bg-zinc-900 rounded-xl">
             <!-- ICON -->
             <img
@@ -154,6 +157,7 @@ eleventyNavigation:
             </div>
           </li>
 
+          <!-- LOKACE -->
           <li class="flex items-center gap-4 p-4 pr-8 bg-zinc-100 dark:bg-zinc-900 rounded-xl">
             <!-- ICON -->
             <img
@@ -168,11 +172,56 @@ eleventyNavigation:
             <div class="flex flex-col gap-0.5 *:whitespace-nowrap">
               <h3 class="dark:text-white font-bold">Lokace</h3>
               <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
-              Okres Ústí nad Orlicí, Pardubický kraj
-            </p>
+                Okres Ústí nad Orlicí, Pardubický kraj
+              </p>
+            </div>
+          </li>
+
+          <!-- FACEBOOK -->
+          <li class="flex items-center gap-4 p-4 pr-8 bg-zinc-100 dark:bg-zinc-900 rounded-xl">
+            <!-- ICON -->
+            <img
+              src="/assets/svgs/contact/SPSL_icon-facebook.svg"
+              alt="Ikona facebooku"
+              decoding="async"
+              loading="lazy"
+              width="64"
+              height="64"
+              draggable="false"/>
+
+            <div class="flex flex-col gap-0.5 *:whitespace-nowrap">
+              <h3 class="dark:text-white font-bold">Facebook</h3>
+              <a
+                href="{{client.social.facebook}}"
+                target="_blank"
+                class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:underline hover:text-black dark:hover:text-white"
+              >
+                Španělské slunce
+              </a>
             </div>
           </li>
         </ul>
+
+        <picture class="hidden 2xl:block">
+          <!--Mobile Image-->
+          <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/contact/contact-info.jpg'  | avif %}" type="image/avif">
+          <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/contact/contact-info.jpg'  | webp %}" type="image/webp">
+          <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/contact/contact-info.jpg'  | jpeg %}" type="image/jpeg">
+          <!--Desktop Image-->
+          <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/contact/contact-info.jpg' | resize({ width: 1268, height: 1088 }) | avif %}" type="image/avif">
+          <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/contact/contact-info.jpg' | resize({ width: 1268, height: 1088 }) | webp %}" type="image/webp">
+          <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/contact/contact-info.jpg' | resize({ width: 1268, height: 1088 }) | jpeg %}" type="image/jpeg">
+          <img
+            class="h-full object-cover rounded-3xl"
+            src="{% getUrl '/assets/images/contact/contact-info.jpg' | resize({ width: 1268, height: 1088 }) | jpeg %}"
+            alt="Obrázek španělské budovy"
+            width="634"
+            height="544"
+            loading="lazy"
+            decoding="async"
+            aria-hidden="true"
+            draggable="false">
+        </picture>
       </div>
     </div>
   </section>
