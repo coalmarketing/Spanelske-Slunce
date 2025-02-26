@@ -102,7 +102,7 @@ eleventyNavigation:
                 src="{% getUrl imagePath | resize({ width: 720, height: 640 }) | jpeg({ quality: 70 }) %}"
                 alt="Fotografie z galerie {{ loop.index }}"
                 decoding="async"
-                loading="lazy"
+                loading="eager"
                 width="360"
                 height="320"
                 draggable="false"/>
@@ -144,11 +144,12 @@ eleventyNavigation:
               <!-- IMAGE + METADATA -->
               <div class="flex flex-col gap-2">
                 <!-- IMAGE -->
-                <picture>
-                  <source media="(max-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 1056, height: 512 }) | webp({ quality: 70 }) %}" type="image/webp">
-                  <source media="(min-width: 601px)" srcset="{% getUrl post.data.image | resize({ width: 784, height: 512 }) | webp({ quality: 70 }) %}" type="image/webp">
-                  <img
-                    class="h-64 w-full rounded-xl object-cover"
+                <a href="{{ post.url }}">
+                  <picture>
+                    <source media="(max-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 1056, height: 512 }) | webp({ quality: 70 }) %}" type="image/webp">
+                    <source media="(min-width: 601px)" srcset="{% getUrl post.data.image | resize({ width: 784, height: 512 }) | webp({ quality: 70 }) %}" type="image/webp">
+                    <img
+                    class="h-64 w-full md:h-full md:w-80 xl:h-64 xl:w-full rounded-xl object-cover"
                     src="{% getUrl post.data.image | resize({ width: 784, height: 512 }) | jpeg({ quality: 70 }) %}"
                     alt="Fotka lektorky Ludmily Vyčítalové"
                     decoding="async"
@@ -156,7 +157,8 @@ eleventyNavigation:
                     width="392"
                     height="256"
                     draggable="false"/>
-                </picture>
+                  </picture>
+                </a>
 
                 <!-- METADATA -->
                 <div class="flex justify-between items-center">
@@ -187,7 +189,7 @@ eleventyNavigation:
                       {{ post.data.title }}
                     </h3>
                   </a>
-                  <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200 line-clamp-3">
+                  <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200 line-clamp-6 xl:line-clamp-3">
                     {{ post.data.description }}
                   </p>
                 </div>

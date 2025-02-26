@@ -14,7 +14,7 @@
           draggable="false"/>
         <span class="font-proxima-nova text-secondary text-lg font-bold leading-none">Španělské Slunce</span>
       </div>
-      <span class="text-white text-4xl font-bold leading-none">
+      <span title="{{ title }}" class="text-white text-4xl font-bold line-clamp-1 leading-none">
         {{ title }}
       </span>
     </div>
@@ -26,16 +26,16 @@
         <a class="text-zinc-200 hover:text-white" href="/blog">Blog</a>
       {%- endif -%}
       <div class="h-0.5 w-4 mt-0.5 bg-primary"></div>
-      <a class="text-white" href="#">{{ title }}</a>
+      <a class="text-white line-clamp-1" href="#">{{ title }}</a>
     </div>
   </div>
 
   <!-- BACKGROUND -->
-  <picture class="before:absolute before:top-0 before:left-0 before:h-full before:w-full before:-z-10 before:bg-black/70">
+  <picture class="before:absolute before:top-0 before:left-0 before:h-full before:w-full before:-z-10 before:bg-black/60">
     <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero/hero_background_image.jpg" | resize({ width: 1920, height: 388 }) | webp({ quality: 70 }) %}" type="image/webp">
     <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/hero/hero_background_image.jpg" | resize({ width: 1920, height: 388 }) | webp({ quality: 70 }) %}" type="image/webp">
     <img
-      class="absolute inset-0 h-full w-full object-cover -z-20 scale-110 blur-xl"
+      class="absolute inset-0 h-full w-full object-cover -z-20 scale-110 blur-lg"
       src="{% getUrl "/assets/images/hero/hero_background_image.jpg" | resize({ width: 1920, height: 388 }) | jpeg({ quality: 70 }) %}"
       alt="Tmavé pozadí"
       decoding="async"

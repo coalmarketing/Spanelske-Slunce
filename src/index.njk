@@ -170,11 +170,11 @@ eleventyNavigation:
     </div>
 
     <!-- BACKGROUND -->
-    <picture class="before:absolute before:top-0 before:left-0 before:h-full before:w-full before:-z-10 before:bg-black/70">
+    <picture class="before:absolute before:top-0 before:left-0 before:h-full before:w-full before:-z-10 before:bg-black/60">
       <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero/hero_background_image.jpg" | resize({ width: 1920, height: 800 }) | webp({ quality: 70 }) %}" type="image/webp">
       <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/hero/hero_background_image.jpg" | resize({ width: 1920, height: 800 }) | webp({ quality: 70 }) %}" type="image/webp">
       <img
-          class="absolute inset-0 h-full w-full object-cover -z-20 scale-110 blur-xl"
+          class="absolute inset-0 h-full w-full object-cover -z-20 scale-110 blur-lg"
           src="{% getUrl "/assets/images/hero/hero_background_image.jpg" | resize({ width: 1920, height: 800 }) | jpeg({ quality: 70 }) %}"
           alt="Tmavé pozadí"
           decoding="async"
@@ -256,7 +256,7 @@ eleventyNavigation:
 
           <!-- BACKGROUND ICON -->
           <img 
-            class="absolute -top-full -left-full opacity-40 rotate-[30deg] -z-10 transition-transform duration-300
+            class="absolute -top-full -left-full opacity-25 rotate-[30deg] -z-10 transition-transform duration-300
               group-hover:translate-x-64 group-hover:translate-y-64"
             src="/assets/svgs/services/SPSL_icon-online.svg"
             alt="Ikona online kurzu v pozadí"
@@ -317,7 +317,7 @@ eleventyNavigation:
 
           <!-- BACKGROUND ICON -->
           <img 
-            class="absolute -top-full -left-full opacity-40 rotate-[30deg] -z-10 transition-transform duration-300
+            class="absolute -top-full -left-full opacity-25 rotate-[30deg] -z-10 transition-transform duration-300
               group-hover:translate-x-64 group-hover:translate-y-64"
             src="/assets/svgs/services/SPSL_icon-spain.svg"
             alt="Ikona pobytového kurzu v pozadí"
@@ -379,7 +379,7 @@ eleventyNavigation:
 
           <!-- BACKGROUND ICON -->
           <img 
-            class="absolute -top-full -left-full opacity-40 rotate-[30deg] -z-10 transition-transform duration-300
+            class="absolute -top-full -left-full opacity-25 rotate-[30deg] -z-10 transition-transform duration-300
               group-hover:translate-x-64 group-hover:translate-y-64"
             src="/assets/svgs/services/SPSL_icon-video.svg"
             alt="Ikona videokurzu v pozadí"
@@ -440,7 +440,7 @@ eleventyNavigation:
 
           <!-- BACKGROUND ICON -->
           <img 
-            class="absolute -top-full -left-full opacity-40 rotate-[30deg] -z-10 transition-transform duration-300
+            class="absolute -top-full -left-full opacity-25 rotate-[30deg] -z-10 transition-transform duration-300
               group-hover:translate-x-64 group-hover:translate-y-64"
             src="/assets/svgs/services/SPSL_icon-translation.svg"
             alt="Ikona překladů v pozadí"
@@ -594,7 +594,7 @@ eleventyNavigation:
         <!-- BLOG POSTS -->
         <div class="grid grid-cols-1 xl:grid-cols-3 justify-center gap-8 w-full max-xl:max-w-4xl">
           {# Loop over the latest (reverse) 3 (limit(3)) blog posts #}
-          {% for post in collections.post | reverse %}
+          {% for post in collections.post | reverse | limit(3) %}
             <!-- BLOG POST -->
             <article
               class="flex flex-col md:flex-row xl:flex-col gap-6 xl:max-w-md ~p-4/6 bg-white dark:bg-zinc-950 border-4 border-transparent rounded-xl
@@ -603,11 +603,12 @@ eleventyNavigation:
               <!-- IMAGE + METADATA -->
               <div class="flex flex-col gap-2">
                 <!-- IMAGE -->
-                <picture>
-                  <source media="(max-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 1056, height: 512 }) | webp({ quality: 70 }) %}" type="image/webp">
-                  <source media="(min-width: 601px)" srcset="{% getUrl post.data.image | resize({ width: 784, height: 512 }) | webp({ quality: 70 }) %}" type="image/webp">
-                  <img
-                    class="h-64 w-full rounded-xl object-cover"
+                <a href="{{ post.url }}">
+                  <picture>
+                    <source media="(max-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 1056, height: 512 }) | webp({ quality: 70 }) %}" type="image/webp">
+                    <source media="(min-width: 601px)" srcset="{% getUrl post.data.image | resize({ width: 784, height: 512 }) | webp({ quality: 70 }) %}" type="image/webp">
+                    <img
+                    class="h-64 w-full md:h-full md:w-80 xl:h-64 xl:w-full rounded-xl object-cover"
                     src="{% getUrl post.data.image | resize({ width: 784, height: 512 }) | jpeg({ quality: 70 }) %}"
                     alt="Fotka lektorky Ludmily Vyčítalové"
                     decoding="async"
@@ -615,7 +616,8 @@ eleventyNavigation:
                     width="392"
                     height="256"
                     draggable="false"/>
-                </picture>
+                  </picture>
+                </a>
 
                 <!-- METADATA -->
                 <div class="flex justify-between items-center">
@@ -646,7 +648,7 @@ eleventyNavigation:
                       {{ post.data.title }}
                     </h3>
                   </a>
-                  <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200 line-clamp-3">
+                  <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200 line-clamp-6 xl:line-clamp-3">
                     {{ post.data.description }}
                   </p>
                 </div>
