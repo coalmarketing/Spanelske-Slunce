@@ -2017,6 +2017,10 @@ select {
   background-color: rgb(206 35 39 / var(--tw-bg-opacity, 1));
 }
 
+.bg-primary\/20 {
+  background-color: rgb(206 35 39 / 0.2);
+}
+
 .bg-rose-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(225 29 72 / var(--tw-bg-opacity, 1));
@@ -2074,10 +2078,6 @@ select {
 .bg-zinc-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(24 24 27 / var(--tw-bg-opacity, 1));
-}
-
-.bg-primary\/20 {
-  background-color: rgb(206 35 39 / 0.2);
 }
 
 .fill-black {
@@ -2214,6 +2214,10 @@ select {
   padding-right: 0.5rem;
 }
 
+.pr-4 {
+  padding-right: 1rem;
+}
+
 .pr-8 {
   padding-right: 2rem;
 }
@@ -2232,10 +2236,6 @@ select {
 
 .pt-56 {
   padding-top: 14rem;
-}
-
-.pr-4 {
-  padding-right: 1rem;
 }
 
 .text-left {
@@ -3391,6 +3391,11 @@ html.dark label.darkmode-container input[type="checkbox"] ~ .elements svg:nth-ch
 @media not all and (min-width: 40rem) {
   .max-sm\:hidden {
     display: none;
+  }
+
+  .max-sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 
