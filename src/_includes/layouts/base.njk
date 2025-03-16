@@ -17,8 +17,8 @@
     <meta property="og:description" content="{{ description }}"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="{{ client.domain }}{{ page.url }}"/>
-    <meta property="og:image" content="/assets/images/logo-small.png"/>
-    <meta property="og:image:secure_url" content="/assets/images/logo-small.png"/>
+    <meta property="og:image" content="/assets/svgs/Spanelske_Slunce_logo_dark.svg"/>
+    <meta property="og:image:secure_url" content="/assets/svgs/Spanelske_Slunce_logo_dark.svg"/>
     <meta property="og:locale" content="cs_CZ">
 
     <!-- Favicons -->
@@ -50,6 +50,9 @@
     {% block head %}{% endblock %}
 
     <title>{{ title }} | {{ client.name }}</title>
+
+    <!-- Plausible Analytics -->
+    <script defer data-domain="spanelskeslunce.cz" src="https://analytics.senoweb.cz/js/script.outbound-links.js"></script>
   </head>
 
   <body class="group/body{% if page.url == '/' %} home{% else %} interior{% endif %} selection:bg-primary selection:text-white">
