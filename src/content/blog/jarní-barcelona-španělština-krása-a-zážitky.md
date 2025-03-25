@@ -12,7 +12,7 @@ tags:
   - post
   - pobytoveKurzy
 image: /assets/images/cms/jarni_barcelona.webp
-imageAlt: Jarní Barcelona 2024
+imageAlt: Jarní Barcelona 2025
 ---
 Zdravím Vás po čase a přináším skvělou nabídku – **jarní kurz španělštiny na úrovni A2/B1** v nádherné Barceloně!  
 
