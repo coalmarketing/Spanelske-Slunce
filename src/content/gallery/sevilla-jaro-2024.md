@@ -1,6 +1,7 @@
 ---
 title: Sevilla - jaro 2024
 date: 2024-03-01
+url: https://drive.google.com/drive/folders/1mpB6LAq_oM_aWKgFhKpGxARjeImGYIxE?usp=drive_link
 images:
   - url: /assets/images/cms/sevilla-2024-1.jpg
   - url: /assets/images/cms/sevilla-2024-2.jpg

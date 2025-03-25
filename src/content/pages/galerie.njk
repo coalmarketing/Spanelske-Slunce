@@ -22,7 +22,7 @@ eleventyNavigation:
     {% if album.data.images | length > 0 %}
       <section class="py-24 ~px-4/8 odd:bg-white dark:odd:bg-zinc-950 even:bg-zinc-100 dark:even:bg-zinc-900">
         <div class="container m-auto flex flex-col gap-8">
-          <span class="text-2xl dark:text-white font-bold">{{ album.data.title }}</span>
+          <span class="text-2xl dark:text-white font-bold line-clamp-1">{{ album.data.title }}</span>
 
           <!-- GALLERY PHOTOS -->
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-4">
@@ -44,6 +44,17 @@ eleventyNavigation:
               </a>
             {% endfor %}
           </div>
+
+          {% if album.data.url %}
+            <!-- CTA BUTTON -->
+            <a class="self-center block relative px-4 py-2 bg-primary text-white font-semibold rounded-lg z-10 overflow-hidden
+              before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-tertiary before:-z-10
+              before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
+              href="{{ album.data.url }}"
+              target="_blank">
+              Zobrazit vše
+            </a>
+          {% endif %}
         </div>
       </section>
     {% endif %}

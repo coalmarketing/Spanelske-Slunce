@@ -1,6 +1,7 @@
 ---
 title: Barcelona - podzim 2024
-date: 2025-10-01
+date: 2024-10-01
+url: https://drive.google.com/drive/folders/1y_WnRosh4VPW2N6dhgF_H4OUFV0YZTDZ?usp=drive_link
 images:
   - url: /assets/images/cms/barcelona-2024-1.jpg
   - url: /assets/images/cms/barcelona-2024-2.jpg

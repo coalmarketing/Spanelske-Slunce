@@ -162,6 +162,13 @@ collections:
     fields:
       - { label: "Název alba", name: "title", widget: "string" }
       - { label: "Datum", name: "date", widget: "datetime", date_format: true }
+      - {
+          label: "Odkaz pro zobrazení alba",
+          name: "url",
+          widget: "string",
+          required: false,
+          hint: "URL odkaz sloužící k zobrazení celého alba na Google Disku",
+        }
       - name: images
         label: Fotografie
         widget: list
