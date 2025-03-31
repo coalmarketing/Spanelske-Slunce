@@ -10,7 +10,7 @@ author: Mgr. Ludmila Vyčítalová
 date: 2025-03-31T18:03:00.000Z
 tags:
   - post
-image: /assets/images/cms/20240930_194143.jpg
+image: /assets/images/cms/461693369_122164021370098035_4243908904648634206_n.jpg
 imageAlt: Že je baby-box vynález posledních desetiletí? Omyl. V Barceloně
   fungoval už v 19. století.
 ---
