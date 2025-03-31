@@ -5,7 +5,7 @@ description: "Barcelona netradičně - baby-box z 19. století pro děti, které
   dělnické rodiny  za průmyslové revoluce neuživily. I takové věci poznáváme na
   našich pobytových kurzech ve Španělsku. Protože dějiny se netočily jen kolem
   věhlasné Sagrada Familia. "
-category: Článek
+category: Články
 author: Mgr. Ludmila Vyčítalová
 date: 2025-03-31T18:03:00.000Z
 tags:
@@ -14,11 +14,6 @@ image: /assets/images/cms/461693369_122164021370098035_4243908904648634206_n.jpg
 imageAlt: Že je baby-box vynález posledních desetiletí? Omyl. V Barceloně
   fungoval už v 19. století.
 ---
-
-
-
-# Barcelona jinak: Objevte neznámou tvář katalánské metropole
-
 Barcelona je město plné ikonických památek. Sagrada Familia, Park Güell, La Rambla – to jsou místa, která najdete v každém průvodci. Ale co kdyžbychom se na chvíli vzdali těchto největších turistických lákadel a ponořili se do hlubších příběhů, které Barcelona skrývá?
 
 ## Casa de la Maternitat: Příběh zapomenutých dětí
@@ -37,15 +32,11 @@ Sochy, honosné hrobky a monumenty zde tvoří atmosféru, která je tichá a p�
 
 Barcelona není jen o Gaudím a plážích. Je to město, které ukrývá příběhy, které se nezmiňují v turistických průvodcích. Ať už se rozhodnete prozkoumat Casa de la Maternitat, procházet se mezi sochami na Montjüicu nebo jen objevovat zapadlé uličky města, Barcelona vám vždy nabídne něco nového. Tak se nebojte vystoupit z davu a objevit město jinak!
 
-
-
 ### Studujte španělštinu tam, kde jazyk ožívá
 
 Pokud vás Barcelona (nebo Málaga, Valencie...) fascinuje a chcete spojit cestování se studiem španělštiny, nabízíme kurzy, které propojují jazyk s kulturou. 
 
 Během našich pobytů nejen zdokonalíte svou španělštinu, ale také poznáte skryté poklady měst, které běžní turisté často míjejí. Ať už jste začátečník nebo pokročilý student, studium jazyka přímo ve Španělsku je nejlepším způsobem, jak se ponořit do jeho krásy a autentičnosti. Přidejte se k nám na další jazykový kurz a objevte Španělsko jinak – nejen jako cestovatelé, ale jako její dočasní obyvatelé!
-
-
 
 Pokud nechcete o nabídky kurzů přicházet, zde můžete nám zanechat svou emailovou adresu a přijde Vám informace, že se něco chystá! 
 
