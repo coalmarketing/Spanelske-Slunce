@@ -1516,6 +1516,14 @@ select {
   margin-top: auto;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .line-clamp-1 {
   overflow: hidden;
   display: -webkit-box;
@@ -1910,10 +1918,6 @@ select {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
-}
-
-.self-start {
-  align-self: flex-start;
 }
 
 .self-center {
@@ -3399,10 +3403,6 @@ html.dark label.darkmode-container input[type="checkbox"] ~ .elements svg:nth-ch
 @media not all and (min-width: 40rem) {
   .max-sm\:hidden {
     display: none;
-  }
-
-  .max-sm\:flex-col {
-    flex-direction: column;
   }
 
   .max-sm\:text-sm {
