@@ -1,6 +1,6 @@
 ---
 title: Barcelona trochu jinak aneb baby-box není novinkou
-url: https://www.spanelskeslunce.cz/blog/
+url: Barcelona trochu jinak aneb baby-box není novinkou
 description: "Barcelona netradičně - baby-box z 19. století pro děti, které
   dělnické rodiny  za průmyslové revoluce neuživily. I takové věci poznáváme na
   našich pobytových kurzech ve Španělsku. Protože dějiny se netočily jen kolem
