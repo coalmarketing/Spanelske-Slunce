@@ -1,8 +1,9 @@
 https://spanelskeslunce.com/*         https://www.gerappa.cz/:splat       301!
 https://www.spanelskeslunce.com/*     https://www.gerappa.cz/:splat       301!
 
-/kontakty                       /kontakt
-/kontaktni-formular             /kontakt
-/galerie-pobytove-kurzy         /galerie
-/galerie-barcelona-podzim-2024  /galerie
-/tag/*                          /blog
+/kontakty                                   /kontakt
+/kontaktni-formular                         /kontakt
+/galerie-pobytove-kurzy                     /galerie
+/galerie-barcelona-podzim-2024              /galerie
+/tag/*                                      /blog
+/blog/https:www.spanelskeslunce.czblog      /blog
