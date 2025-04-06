@@ -28,9 +28,6 @@ Slunečná klubovna je unikátní online prostor, kde můžete denně zlepšovat
 
 Každý den najdete na nástěnce nové materiály, tipy a cvičení. Žádná nuda, žádné stereotypy – vždy něco nového pro vaši motivaci!
 
-
-
-
 ### 🔥 "Horké křeslo" – konzultace s lektorem
 
 Dvakrát týdně máte možnost využít "horké křeslo" – online konzultace, kde můžete probrat naprosto cokoliv, co se týká španělštiny. Nejasnosti v gramatice? Potíže s výslovností? Otázky ke slovní zásobě? Na všechno dostanete odpověď přímo od zkušeného lektora!
@@ -49,20 +46,15 @@ Všechna témata, poslechy s transkripcemi i předchozí učivo máte vždy pře
 
 ## Pro koho je Slunečná klubovna ideální?
 
+* Pro studenty od úrovně A1+, kteří už něco umí a chtějí se dynamicky posouvat dál 
 * Pro ty, kdo chtějí pravidelnou dávku španělštiny bez nutnosti dojíždění
-
 * Pro zaneprázdněné lidi, kteří si chtějí učení přizpůsobit svému rozvrhu
-
 * Pro samouky, kteří občas potřebují konzultaci s profesionálem
-
 * Pro všechny, kdo ocení okamžité výsledky a podporu komunity
 
 ## Vyzkoušejte Slunečnou klubovnu ještě dnes!
 
-
 Můžete si prohlédnout příklady příspěvků (prezentace, kterými listujete) za velmi přijatelnou zaváděcí cenu a zakoupit si členství na první měsíc zde: 
 [Vítejte v klubovně – Edukativní portál Španělského slunce](https://edu.spanelskeslunce.cz/domu-2/)
-
- 
 
 Krááásný den plný slunce vám přejeme! 😁☝️☀️
