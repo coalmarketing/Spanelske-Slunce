@@ -142,7 +142,7 @@ eleventyNavigation:
                 transition-colors duration-300 hover:border-tertiary"
             >
               <!-- IMAGE + METADATA -->
-              <div class="flex flex-col gap-2">
+              <div class="shrink-0 flex flex-col gap-2">
                 <!-- IMAGE -->
                 <a href="{{ post.url }}">
                   <picture>
@@ -182,7 +182,7 @@ eleventyNavigation:
                 <div class="flex flex-col gap-2">
                   <a
                     title="{{ post.data.title }}"
-                    class="relative dark:text-white font-proxima-nova text-2xl xl:text-xl font-bold truncate transition-colors duration-300 hover:text-tertiary
+                    class="relative dark:text-white font-proxima-nova text-2xl xl:text-xl font-bold line-clamp-1 xl:truncate transition-colors duration-300 hover:text-tertiary
                       before:absolute before:top-0 before:right-0 before:h-full before:w-16 before:bg-gradient-to-r before:from-white/0 before:to-white/100 dark:before:to-zinc-950"
                     href="{{ post.url }}">
                     <h3>
