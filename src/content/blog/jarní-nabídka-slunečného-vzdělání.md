@@ -34,6 +34,8 @@ Těšíme se na Vás! Pořiďte si své vstupy ve formulářích níže:
 
 <script type="text/javascript" src="https://form.fapi.cz/script.php?id=7f044949-f8db-471d-b63e-27f389fc1174"></script>
 
+<br>
 
+<br>
 
 <script type="text/javascript" src="https://form.fapi.cz/script.php?id=53dd8eff-cfe7-45db-939f-005a7dce5408"></script>
