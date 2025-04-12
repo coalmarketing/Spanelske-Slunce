@@ -7,7 +7,7 @@ author: Mgr. Ludmila Vyčítalová
 date: 2025-04-12T18:06:00.000Z
 tags:
   - Nabídka
-image: /assets/images/cms/snímek-obrazovky-2025-04-12-200200.png
+image: /assets/images/cms/snímek-obrazovky-2025-04-12-200701.png
 imageAlt: Náhled na jedno z každodenních konverzačních cvičení. Konverzuje se ve
   Facebooké skupině, v otevřeném nonstop meetu, dvakrát týdně se mnou v
   konzultačních půlhodinkách!
