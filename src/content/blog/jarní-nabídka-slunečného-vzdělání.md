@@ -30,7 +30,12 @@ rádi bychom Vás pozvali na naši nadcházející **sérii vzdělávacích akc�
 
 **Registrujte se nyní** a nenechte si ujít příležitost zlepšit svou španělštinu!
 
-Těšíme se na Vás! Pořiďte si své vstupy ve formulářích níže:
+Těšíme se na Vás! Pořiďte si své vstupy na webináře ve formulářích níže.
+
+Nebo se zapište do našeho slunečného kurzu online -  začínáme v polovině května! Viz 
+[Online kurzy | Španělské Slunce](https://www.spanelskeslunce.cz/online-kurzy/)
+
+ 
 
 <script type="text/javascript" src="https://form.fapi.cz/script.php?id=7f044949-f8db-471d-b63e-27f389fc1174"></script>
 
