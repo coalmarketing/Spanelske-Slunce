@@ -36,12 +36,12 @@ eleventyNavigation:
             aby spojovaly výhody klasické výuky s maximální flexibilitou digitálního prostředí.
           </p>
           <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
-            Kurz probíhá v Google Meetu a Google Učebně, kde najdete veškeré studijní materiály i záznamy z lekcí. Každý kurz obsahuje 10
-            interaktivních lekcí po 60 minutách, které jsou rozvržené na několik měsíců tak, aby vám umožnily systematické a přirozené osvojování jazyka.
+            Kurz probíhá jednou týdně v Google Meetu a Google Učebně, kde najdete veškeré studijní materiály i záznamy z lekcí. Každý kurz obsahuje 10
+            interaktivních lekcí po 90 minutách, které jsou rozvržené na několik měsíců tak, aby vám umožnily systematické a přirozené osvojování jazyka.
             Pokud se některé lekce nemůžete zúčastnit, nemusíte se obávat – díky záznamům si ji můžete přehrát kdykoli později.
           </p>
           <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
-            V malých skupinách (maximálně 10 studentů) se zaměřujeme především na konverzaci a praktické využití jazyka. Během hodin budete aktivně komunikovat
+            Ve (malých) skupinách se zaměřujeme především na konverzaci a praktické využití jazyka. Během hodin budete aktivně komunikovat
             nejen s lektorkou, ale také s ostatními studenty – v plénu, ve dvojicích i v menších skupinkách. Každá lekce je doplněna o užitečné materiály,
             interaktivní cvičení, prezentace, bonusové podklady i tipy na filmy, knihy nebo aplikace, které vám pomohou se španělštinou v každodenním životě.
           </p>
@@ -55,23 +55,41 @@ eleventyNavigation:
           </p>
         </div>
 
-        <!-- WARNING -->
-        <div class="flex items-center gap-4 p-2 pr-4 bg-primary/20 rounded-lg">
-          <img
-            src="/assets/svgs/online-kurzy/error.svg"
-            alt="Ikona varování"
-            width="44"
-            height="44"
-            loading="lazy"
-            decoding="async"
-            aria-hidden="true"
-            draggable="false">
+        <!-- ENROLLMENT MESSAGE -->
+        {% if onlineKurzy.show %}
+          <div class="flex items-center gap-4 p-2 pr-4 rounded-lg {%- if onlineKurzy.enableEnrollment %} bg-green-600/30{% else %} bg-primary/20{% endif %}">
+            {% if onlineKurzy.enableEnrollment %}
+              <img
+              src="/assets/svgs/online-kurzy/check.svg"
+              alt="Ikona fajfky"
+              width="44"
+              height="44"
+              loading="lazy"
+              decoding="async"
+              aria-hidden="true"
+              draggable="false">
+            {% else %}
+              <img
+                src="/assets/svgs/online-kurzy/error.svg"
+                alt="Ikona varování"
+                width="44"
+                height="44"
+                loading="lazy"
+                decoding="async"
+                aria-hidden="true"
+                draggable="false">
+            {% endif %}
 
-          <div class="flex flex-col">
-            <p class="font-proxima-nova max-sm:text-sm text-primary font-semibold">Další turnus online kurzů začíná od května 2025</p>
-            <p class="font-proxima-nova text-sm text-primary">Aktuálně lze pouze individuální výuka zahájit ihned</p>
+            <div class="flex flex-col">
+              <p class="font-proxima-nova max-sm:text-sm font-semibold {%- if onlineKurzy.enableEnrollment %} text-green-800{% else %} text-primary{% endif %}">
+                {{ onlineKurzy.text }}
+              </p>
+              <p class="font-proxima-nova text-sm {%- if onlineKurzy.enableEnrollment %} text-green-800{% else %} text-primary{% endif %}">
+                {{ onlineKurzy.note }}
+              </p>
+            </div>
           </div>
-        </div>
+        {% endif %}
 
         <!-- CTA BUTTONS -->
         <div class="flex flex-wrap gap-2">

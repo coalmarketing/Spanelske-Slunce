@@ -1751,10 +1751,6 @@ select {
   flex-shrink: 0;
 }
 
-.shrink {
-  flex-shrink: 1;
-}
-
 .basis-1\/2 {
   flex-basis: 50%;
 }
@@ -1940,12 +1936,6 @@ select {
   scroll-behavior: smooth;
 }
 
-.truncate {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 .whitespace-nowrap {
   white-space: nowrap;
 }
@@ -2094,6 +2084,31 @@ select {
 .bg-zinc-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(24 24 27 / var(--tw-bg-opacity, 1));
+}
+
+.bg-lime-500\/20 {
+  background-color: rgb(132 204 22 / 0.2);
+}
+
+.bg-lime-500\/30 {
+  background-color: rgb(132 204 22 / 0.3);
+}
+
+.bg-green-600\/20 {
+  background-color: rgb(22 163 74 / 0.2);
+}
+
+.bg-green-600\/40 {
+  background-color: rgb(22 163 74 / 0.4);
+}
+
+.bg-green-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 163 74 / var(--tw-bg-opacity, 1));
+}
+
+.bg-green-600\/30 {
+  background-color: rgb(22 163 74 / 0.3);
 }
 
 .fill-black {
@@ -2374,6 +2389,31 @@ select {
 .text-zinc-800 {
   --tw-text-opacity: 1;
   color: rgb(39 39 42 / var(--tw-text-opacity, 1));
+}
+
+.text-lime-500 {
+  --tw-text-opacity: 1;
+  color: rgb(132 204 22 / var(--tw-text-opacity, 1));
+}
+
+.text-lime-700 {
+  --tw-text-opacity: 1;
+  color: rgb(77 124 15 / var(--tw-text-opacity, 1));
+}
+
+.text-green-600 {
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity, 1));
+}
+
+.text-green-800 {
+  --tw-text-opacity: 1;
+  color: rgb(22 101 52 / var(--tw-text-opacity, 1));
+}
+
+.text-lime-800 {
+  --tw-text-opacity: 1;
+  color: rgb(63 98 18 / var(--tw-text-opacity, 1));
 }
 
 .underline {
@@ -3548,10 +3588,6 @@ html.dark label.darkmode-container input[type="checkbox"] ~ .elements svg:nth-ch
 
   .xl\:max-w-md {
     max-width: 28rem;
-  }
-
-  .xl\:flex-1 {
-    flex: 1 1 0%;
   }
 
   .xl\:translate-x-12 {

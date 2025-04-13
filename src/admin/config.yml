@@ -112,6 +112,44 @@ collections:
                   required: false,
                 }
 
+  # ONLINE KURZY MESSAGE
+  - label: "Online kurzy"
+    name: "online_courses"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - label: "Informace o možnosti zápisu"
+        name: "course_enrollment"
+        file: "src/_data/onlineKurzy.json"
+        description: "Dovoluje klientovi skrýt či zobrazit a případně upravit informaci o možnosti zápisu do online kurzu"
+        fields:
+          - {
+              label: "Zobrazit informaci o zápisu",
+              name: "show",
+              widget: "boolean",
+              hint: "Zvolte podle toho, jestli chcete informaci o zápisu zobrazit nebo skrýt",
+            }
+          - {
+              label: "Zápis je možný",
+              name: "enableEnrollment",
+              widget: "boolean",
+              hint: "Zvolte podle toho, jestli je zápis do online kurzu aktuálně možný nebo nikoliv",
+            }
+          - {
+              label: "Text",
+              name: "text",
+              widget: "string",
+              hint: "Text informace",
+            }
+          - {
+              label: "Poznámka",
+              name: "note",
+              widget: "string",
+              required: false,
+              hint: "Poznámka informace",
+            }
+
   # BLOG CONFIG
   - label: "Blog"
     name: "blog"
