@@ -1,12 +1,12 @@
 ---
-text: Před půl rokem jsem se přihlásil do kurzu španělštiny pro začátečníky
-  Estudiamos con Aventura 1. Paní lektorka studentům udělala velmi dobrý úvod do
-  jazyka, což mi hodně pomohlo překonat počáteční tápání. Kurs je metodicky
-  výborně připravený, provází studenty všemi úskalími jazyka a vysvětluje
-  obtížnější místa z učebnice. Vedle dokonalé znalosti jazyka má paní lektorka i
-  velké zkušenosti s výukou a propracovanou metodiku. Učení s ní je naprosto bez
-  stresu, spíše zábava.
-customerName: Miroslav Němeček
+text: >-
+  Měla jsem to štěstí mít Lídu Vyčítalovou za paní učitelku několik let na
+  gymnáziu. Učila nás španělský jazyk a díky její vášni pro jazyk jsem tomu
+  propadla i já a momentálně se snažím věnovat španělštině nadále, jelikož je to
+  krásný jazyk. 
+
+  Jde ale také o náročnou gramatiku a proto jsem moc ráda, že Lídin styl výuky byl strukturovaný podle jejího systému, který mi velmi vyhovoval. Vše bylo vždy jasné a kdykoliv jsem potřebovala poradit nebo měla více otázek, tak jsem věděla, že mi Lída poradí. Nikdy jsem neměla pocit, že bych se na Lídu nemohla spolehnout a jsem ráda, že jsem měla tu možnost mít ji za učitelku.
+customerName: Anna Bendlová
 tags:
   - testimonial
 ---
