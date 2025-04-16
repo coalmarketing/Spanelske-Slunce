@@ -19,15 +19,12 @@ imageAlt: "Za občanské války ve Španělsku zemřelo více, než půl milion�
 
 **Vím to - už tak se toho studenti učí hodně. Dějin přibývá, času na studium nikoliv. Dá se to však napravovat na speciálně zaměřených kurzech!** 
 
-
-V kurzu na úrovni B1 zaměřeném na španělské dějiny a literaturu (který dnes končí a po kterém se mi bude moc stýskat!) jsme se zvídavou partou dospělých studentů španělštiny probrali spoustu nesmírně zajímavých událostí, na které ve školním kurikulu povinného učiva nezbývá čas: administrativní a obchodní systém a správu Nového světa (Ameriky) španělskou vládou, karlistické války, důležité rozdíly mezi romantickou literaturou ve Španělsku a koloniemi v zámoří, Elenu Poniatowskou a *Noche de Tlatelolco*, a samozřejmě také mnohé španělské války. Ty Karlistické, i tu občanskou. Všechny totiž zanechaly silnou stopu.
+V kurzu na úrovni B1 zaměřeném na španělské dějiny a literaturu (který dnes končí a po kterém se mi bude moc stýskat!) jsme se zvídavou partou dospělých studentů španělštiny probrali spoustu nesmírně zajímavých událostí, na které ve školním kurikulu povinného učiva nezbývá čas: Kartágince, Římany i Vizigóty, 
+Al-Andalus, ale i administrativní a obchodní systém a správu Nového světa (Ameriky) španělskou vládou, nástup bourbonské dynastie po té habsburské, důležité rozdíly mezi romantickou literaturou ve Španělsku a koloniemi v zámoří, Elenu Poniatowskou a *Noche de Tlatelolco*, .... a samozřejmě také mnohé španělské války. Ty karlistické, i tu občanskou. Všechny totiž zanechaly silnou stopu.
 
 Na kurzu se mě studenti mimo jiné ptali, jak je vzpomínáno na diktátora Francisca Franca. A já jim popravdě odpověděla, že se ještě dnes naleznou zastánci "pevné ruky" a přísného vedení, kterým "Generalísimo" nešetřil. 
 
 V průběhu kurzu nám vykrystalizoval fakt, že Španělsko je po mnoho století jaksi rozděleno do dvou velkých "polovin". Svědčí o tom i fakt, že současná vláda je vůbec první, která musela sestavit koalici! Dosud se u vlády střídaly víceméně konzervativní a liberálně orientované strany. 
-
-
-
 
 ### Dvě tváře Španělska: Staletí konfliktu mezi tradicí a změnou
 
@@ -44,9 +41,6 @@ V průběhu kurzu nám vykrystalizoval fakt, že Španělsko je po mnoho stolet�
 Přestože Španělsko dnes stojí jako moderní demokracie, jizvy minulosti zůstávají patrné. Katalánské snahy o nezávislost, diskuse o exhumacích obětí frankismu a spory o historickou paměť ukazují, že země stále hledá cestu, jak se vyrovnat se svou složitou historií. Dvě Španělska – tradiční a moderní – nadále hledají způsob, jak spolu žít v jedné zemi. 
 
 Tento fascinující příběh je jedním z mnoha témat, kterým se věnujeme v našem kurzu pro pokročilé, kde se učíme nejen jazyk, ale i historii a literaturu. 
-
-
-
 
 *Carr, R. (2000). Spain: A History. Oxford: Oxford University Press.*
 
