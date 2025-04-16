@@ -1,5 +1,5 @@
 ---
-title: Končí běh kurzu B1 - Španělské dějiny  aliteratura
+title: Končí běh kurzu B1 - Španělské dějiny  a literatura
 url: kurz B1 španělské dějiny a literatura
 description: "Španělsko má nesmírně bohatou a zajímavou historii a je až k
   podivu, jak malá výseč se probírá v českých školách. Na našem kurzu pro
