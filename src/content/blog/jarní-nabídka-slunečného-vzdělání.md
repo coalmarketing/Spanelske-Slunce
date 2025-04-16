@@ -4,7 +4,7 @@ url: Jarní nabídka kurzů a webinářů
 description: Nabíráme do dalšího běhu online kurzů a připravujeme bezvadné webináře!
 category: Nabídka kurzů a služeb
 author: Mgr. Ludmila Vyčítalová
-date: 2025-04-12T18:06:00.000Z
+date: 2025-04-16T15:54:00.000Z
 tags:
   - Nabídka
 image: /assets/images/cms/snímek-obrazovky-2025-04-12-200701.png
