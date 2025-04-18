@@ -3,7 +3,7 @@ title: "Zářijová Valencie "
 url: Pobytový kurz ve Valencii
 description: V září je teplé moře a Valencie nabízí pláže, nádherné historické
   centrum a památky, ale i moderní architekturu, vědu a umění.
-category: Pobytové kurz
+category: Pobytové kurzy
 author: Mgr. Ludmila Vyčítalová
 date: 2025-04-18T09:34:00.000Z
 tags:
