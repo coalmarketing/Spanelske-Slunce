@@ -14,7 +14,7 @@ imageAlt: Valencie, město vědy a umění, krásných památek a jedinečné at
 ---
 Vážení, 
 
-předběžně hlásím, že v polovině září (termíny brzy upřesním, dle letenek) se můžete se Španělským Sluncem vydat do další nádherné španělské destinace. 
+předběžně hlásím, že v polovině září (termíny brzy upřesním, dle letenek - nejpravděpodobněji však 14. - 21. září 2025) se můžete se Španělským Sluncem vydat do další nádherné španělské destinace. 
 
 Na břehu Středozemního moře nás čeká nádherné historické centrum a krásné písčité pláže, ale také moderní město věd a umění, nepřekonatelný "Oceanografic", kde se zanoříte do podmořského světa. A k tomu také intenzivní studium tak, jak jste zvyklí! 
 
