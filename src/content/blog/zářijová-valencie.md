@@ -9,7 +9,7 @@ date: 2025-04-18T09:34:00.000Z
 tags:
   - pobytoveKurzy
 image: /assets/images/cms/valencia-na-web.svg
-imageAlt: Město věd a umění, Valencie
+imageAlt: Valencie, město vědy a umění, krásných památek a jedinečné atmosféry! ♥️
 ---
 Vážení, 
 
