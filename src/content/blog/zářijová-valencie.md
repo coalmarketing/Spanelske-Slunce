@@ -1,6 +1,6 @@
 ---
 title: "Zářijová Valencie "
-url: Pobytové kurzy
+url: Blog
 description: V září je teplé moře a Valencie nabízí pláže, nádherné historické
   centrum a památky, ale i moderní architekturu, vědu a umění.
 category: Pobytové kurzy
