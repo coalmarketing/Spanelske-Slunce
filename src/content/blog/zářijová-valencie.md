@@ -15,10 +15,8 @@ Vážení,
 
 předběžně hlásím, že v polovině září (termíny brzy upřesním, dle letenek) se můžete se Španělským Sluncem vydat do další nádherné španělské destinace. 
 
-Na břehu středozemního moře nás čeká nádherné historické centrum a krásné písčité pláže, ale také moderní město věd a umění, nepřekonatelný "Oceanografic", kde se zanoříte do podmořského světa. A k tomu také intenzivní studium tak, jak jste zvyklí! 
+Na břehu Středozemního moře nás čeká nádherné historické centrum a krásné písčité pláže, ale také moderní město věd a umění, nepřekonatelný "Oceanografic", kde se zanoříte do podmořského světa. A k tomu také intenzivní studium tak, jak jste zvyklí! 
 
 Detaily pobytu budou zveřejňovány v průběhu května, ale už nyní si můžete rezervovat své místo! :) 
-
-
 
 <script type="text/javascript" src="https://form.fapi.cz/script.php?id=d7501d87-4a8b-4ce7-95a3-42f55162bf19"></script>
