@@ -1,5 +1,5 @@
 ---
-title: "Zářijová Valencie "
+title: PŘIHLÁŠKY ZAHÁJENY - Zářijová Valencie! ☀️
 url: Pobytový kurz ve Valencii
 description: V září je teplé moře a Valencie nabízí pláže, nádherné historické
   centrum a památky, ale i moderní architekturu, vědu a umění.
