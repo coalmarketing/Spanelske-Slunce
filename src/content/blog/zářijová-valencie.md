@@ -17,6 +17,6 @@ předběžně hlásím, že v polovině září (termíny brzy upřesním, dle l
 
 Na břehu Středozemního moře nás čeká nádherné historické centrum a krásné písčité pláže, ale také moderní město věd a umění, nepřekonatelný "Oceanografic", kde se zanoříte do podmořského světa. A k tomu také intenzivní studium tak, jak jste zvyklí! 
 
-Detaily pobytu budou zveřejňovány v průběhu května, ale už nyní si můžete rezervovat své místo! :) 
+Detaily pobytu budou zveřejňovány v průběhu května, ale už nyní si můžete rezervovat své místo v následujícím formuláři:  
 
 <script type="text/javascript" src="https://form.fapi.cz/script.php?id=d7501d87-4a8b-4ce7-95a3-42f55162bf19"></script>
