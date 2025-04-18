@@ -8,7 +8,7 @@ author: Mgr. Ludmila Vyčítalová
 date: 2025-04-18T09:34:00.000Z
 tags:
   - pobytoveKurzy
-image: https://images.squarespace-cdn.com/content/v1/5a86b05bcf81e0af04936cc7/1648133622571-6P7YH8UP4RSS601Q1SMI/que-ver-en-valencia-artes.jpg
+image: /assets/images/cms/valencia-na-web.svg
 imageAlt: Město věd a umění, Valencie
 ---
 Vážení, 
