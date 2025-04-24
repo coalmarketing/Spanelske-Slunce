@@ -7,12 +7,14 @@ const darkmodeSwitch = document.querySelector("#darkmode-switch")
 
 // helper functions to toggle dark mode
 function enableDarkMode() {
-    html.classList.add('dark');
-    localStorage.setItem('theme', 'dark');
+  html.classList.add('dark');
+  html.classList.add('cc--darkmode'); // For cookie consent
+  localStorage.setItem('theme', 'dark');
 }
 function disableDarkMode() {
-    html.classList.remove('dark');
-    localStorage.setItem('theme', 'light');
+  html.classList.remove('dark');
+  html.classList.remove('cc--darkmode'); // For cookie consent
+  localStorage.setItem('theme', 'light');
 }
 
 // determines a new users dark mode preferences

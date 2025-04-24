@@ -15,7 +15,7 @@ eleventyNavigation:
   <link rel="preload" as="image" href="{% getUrl '/assets/images/hero/laptop_with_coffee.jpg' | resize({ width: 454, height: 576, position: 'left' }) | webp({ quality: 70 }) %}"/>
   <link rel="preload" as="image" href="{% getUrl '/assets/images/hero/segrada-familia.jpg' | resize({ width: 480, height: 454 }) | webp({ quality: 70 }) %}"/>
   <link rel="preload" as="image" href="{% getUrl '/assets/images/hero/person-writing-notebook.jpg' | resize({ width: 500, height: 384 }) | webp({ quality: 70 }) %}"/>
-  <link rel="preload" as="image" href="{% getUrl '/assets/images/hero/workbooks.jpg' | resize({ width: 408, height: 624 }) | webp({ quality: 70 }) %}"/>
+  <link rel="preload" as="image" href="{% getUrl '/assets/images/hero/descubre-workbook.png' | resize({ width: 408, height: 624 }) | webp({ quality: 70 }) %}"/>
 
   <!-- Script for Netlify Identity -->
   <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -50,7 +50,7 @@ eleventyNavigation:
           {% endif %}
         },
       {% endif %}
-      {% if client.domain and page.url %}"url": "{{ client.domain }}{{ page.url }}",{% endif %}
+      {% if client.domain and page.url %}"url": "{{ client.domain }}{{ page.url }}"{% if client.socials %},{% endif %}{% endif %}
       {% if client.socials %}
         "sameAs": [{% for platform, url in client.socials %}
             {% if not loop.first %},{% endif %}

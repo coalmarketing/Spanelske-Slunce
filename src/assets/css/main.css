@@ -1538,8 +1538,20 @@ select {
   display: block;
 }
 
+.inline {
+  display: inline;
+}
+
 .flex {
   display: flex;
+}
+
+.table {
+  display: table;
+}
+
+.table-caption {
+  display: table-caption;
 }
 
 .grid {
@@ -2013,6 +2025,10 @@ select {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
 
+.bg-green-600\/30 {
+  background-color: rgb(22 163 74 / 0.3);
+}
+
 .bg-neutral-950 {
   --tw-bg-opacity: 1;
   background-color: rgb(10 10 10 / var(--tw-bg-opacity, 1));
@@ -2084,31 +2100,6 @@ select {
 .bg-zinc-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(24 24 27 / var(--tw-bg-opacity, 1));
-}
-
-.bg-lime-500\/20 {
-  background-color: rgb(132 204 22 / 0.2);
-}
-
-.bg-lime-500\/30 {
-  background-color: rgb(132 204 22 / 0.3);
-}
-
-.bg-green-600\/20 {
-  background-color: rgb(22 163 74 / 0.2);
-}
-
-.bg-green-600\/40 {
-  background-color: rgb(22 163 74 / 0.4);
-}
-
-.bg-green-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(22 163 74 / var(--tw-bg-opacity, 1));
-}
-
-.bg-green-600\/30 {
-  background-color: rgb(22 163 74 / 0.3);
 }
 
 .fill-black {
@@ -2331,6 +2322,11 @@ select {
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
+.text-green-800 {
+  --tw-text-opacity: 1;
+  color: rgb(22 101 52 / var(--tw-text-opacity, 1));
+}
+
 .text-neutral-300 {
   --tw-text-opacity: 1;
   color: rgb(212 212 212 / var(--tw-text-opacity, 1));
@@ -2391,31 +2387,6 @@ select {
   color: rgb(39 39 42 / var(--tw-text-opacity, 1));
 }
 
-.text-lime-500 {
-  --tw-text-opacity: 1;
-  color: rgb(132 204 22 / var(--tw-text-opacity, 1));
-}
-
-.text-lime-700 {
-  --tw-text-opacity: 1;
-  color: rgb(77 124 15 / var(--tw-text-opacity, 1));
-}
-
-.text-green-600 {
-  --tw-text-opacity: 1;
-  color: rgb(22 163 74 / var(--tw-text-opacity, 1));
-}
-
-.text-green-800 {
-  --tw-text-opacity: 1;
-  color: rgb(22 101 52 / var(--tw-text-opacity, 1));
-}
-
-.text-lime-800 {
-  --tw-text-opacity: 1;
-  color: rgb(63 98 18 / var(--tw-text-opacity, 1));
-}
-
 .underline {
   text-decoration-line: underline;
 }
@@ -2438,6 +2409,10 @@ select {
 
 .blur-lg {
   --tw-blur: blur(16px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -2678,6 +2653,9 @@ select {
   --bg-planet-shadow: #828894;
   --bg-planet-lightshadow: #3a3a3a;
   --dot-size: 0.25rem;
+  --primary: #CE2327;
+  --secondary: #FFC30C;
+  --tertiary: #2159AA;
 }
 
 html body label.darkmode-container {
@@ -2865,6 +2843,25 @@ html.dark label.darkmode-container input[type="checkbox"] ~ .elements svg:nth-ch
 
 .polygon-4 {
   clip-path: polygon(0% 7%, 6% 0%, 87% 28%, 92% 33%, 99% 52%, 97% 57%, 74% 97%, 70% 99%, 45% 95%, 13% 61%);
+}
+
+#cc-main {
+  /** Change font **/
+  --cc-font-family: "Proxima Nova", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /** Change modal border radius **/
+  --cc-modal-border-radius: 0.75rem;
+  /** Change button primary color to primary and tertiary on hover **/
+  --cc-btn-primary-bg: var(--primary);
+  --cc-btn-primary-border-color: var(--primary);
+  --cc-btn-primary-hover-bg: var(--tertiary);
+  --cc-btn-primary-hover-border-color: var(--tertiary);
+  --cc-btn-primary-color: #FFF;
+  --cc-btn-primary-hover-color: #FFF;
+}
+
+.cc--darkmode #cc-main {
+  /** Change the darkmode modal background **/
+  --cc-bg: #09090b;
 }
 
 .dark\:prose-invert:where(.dark, .dark *) {

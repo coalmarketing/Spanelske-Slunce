@@ -56,6 +56,10 @@
   --bg-planet-shadow: #828894;
   --bg-planet-lightshadow: #3a3a3a;
   --dot-size: 0.25rem;
+
+  --primary: #CE2327;
+  --secondary: #FFC30C;
+  --tertiary: #2159AA;
 }
 
 html {
@@ -268,3 +272,34 @@ html {
 ///////////////////////////
 ///////////////////////////
 ///////////////////////////
+
+
+//////////////////////
+/// COOKIE CONSENT ///
+//////////////////////
+
+#cc-main {
+  /** Change font **/
+  --cc-font-family: "Proxima Nova", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /** Change modal border radius **/
+  --cc-modal-border-radius: .75rem;
+
+  /** Change button primary color to primary and tertiary on hover **/
+  --cc-btn-primary-bg: var(--primary);
+  --cc-btn-primary-border-color: var(--primary);
+  --cc-btn-primary-hover-bg: var(--tertiary);
+  --cc-btn-primary-hover-border-color: var(--tertiary);
+
+  --cc-btn-primary-color: #FFF;
+  --cc-btn-primary-hover-color: #FFF;
+}
+
+.cc--darkmode #cc-main {
+  /** Change the darkmode modal background **/
+  --cc-bg: #09090b;
+}
+
+//////////////////////
+//////////////////////
+//////////////////////
