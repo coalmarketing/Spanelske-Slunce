@@ -5,7 +5,7 @@ description: V září je teplé moře a Valencie nabízí pláže, nádherné h
   centrum a památky, ale i moderní architekturu, vědu a umění.
 category: Pobytové kurzy
 author: Mgr. Ludmila Vyčítalová
-date: 2025-04-18T09:34:00.000Z
+date: 2025-05-02T23:11:00.000Z
 tags:
   - post
   - pobytoveKurzy
