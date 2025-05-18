@@ -19,17 +19,21 @@ Nedávno jsme se vrátili z našeho intenzivního kurzu španělštiny v Barcelo
 
 Naše kurzy španělštiny v Barceloně jsou skutečně INTENZIVNÍ. Každý den jsme věnovali 4 hodiny výuce s důrazem na mluvený projev a praktické využití jazyka. Imerzní metoda, kdy jsme byli obklopeni španělštinou na každém kroku, se ukázala jako nesmírně efektivní.
 
-Účastnici po návratu napsali například: 
+**Účastnici po návratu napsali například:** 
 
 "*Liduško, moc děkuji, byl to skvěle strávený čas s fajn lidmi a báječná pohoda!!! Muchas gracias, amigos!*" (Jarmila)
+
+"*Lído, ještě jednou díky za tvoji péči, pro příště půjdu do sebe.*
+
+*Úžasně (estupendo) jsem si to užil - zdravím všechny compaňeros a těším se zas někdy..."* (Pepa)
 
 ".*..dlouho a dlouho budu vstřebávat všechny naše společné zážitky z krásné Barcelony...díky za všechno... byli jsme skvělá parta* 🙏👍❤️🍀(Alena)
 
 "*Moc mě těšilo vás všechny poznat, super parta lidí. Stálo to za to. Děkuji všem a hlavně Lidušce*" (Jitka)
 
+"*Jet na 5 dní do evropské metropole s partou cizích lidí mûže nêkomu pripadat bláznivê, ale já jsem si to s vámi moc užila... DÍKY ZA TO VŠEM...*" (Iva)
 
-
-Objevování Barcelony
+**Objevování Barcelony**
 
 Bydleli jsme v ulici La Marina, která spojuje moře a ikonickou Sagrada Familia. Každé ráno jsme mohli běhat k pláži nebo se procházet kolem Gaudího mistrovského díla. Barcelona nabízí tolik, že i měsíc by byl málo na prozkoumání všech jejích krás.
 
@@ -47,9 +51,7 @@ Kdybych chtěla být emotivní, tak bych vám napsala, že to byla jedna velká 
 
 Napsala bych vám, že toto je ta část práce, která mě dělá nesmírně šťastnou, protože vidět, jak vzniká krásná komunita, která se na sebe už těší na dalším pobytu, to je k nezaplacení! 
 
-
 Přijíždíme s nasyceným bříškem i duší, protože jídlo je luxusní (ano, i ty artyčoky, ať si říká, kdo chce co chce! 😁 ) a krásy je tam nepřeberně, takže umělec i estét uvnitř nás se tetelí radostí. 
-
 
 **Plánujete studium španělštiny?**
 
