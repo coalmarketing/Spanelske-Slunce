@@ -31,7 +31,7 @@ Naše kurzy španělštiny v Barceloně jsou skutečně INTENZIVNÍ. Každý den
 
 "*Moc mě těšilo vás všechny poznat, super parta lidí. Stálo to za to. Děkuji všem a hlavně Lidušce*" (Jitka)
 
-"*Jet na 5 dní do evropské metropole s partou cizích lidí mûže nêkomu pripadat bláznivê, ale já jsem si to s vámi moc užila... DÍKY ZA TO VŠEM...*" (Iva)
+"*Jet na 5 dní do evropské metropole s partou cizích lidí může někomu pripadat bláznivě, ale já jsem si to s vámi moc užila... DÍKY ZA TO VŠEM...*" (Iva)
 
 **Objevování Barcelony**
 
