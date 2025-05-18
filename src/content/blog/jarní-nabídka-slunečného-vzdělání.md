@@ -35,12 +35,10 @@ Těšíme se na Vás! Pořiďte si své vstupy na webináře ve formulářích n
 Nebo se zapište do našeho slunečného kurzu online -  začínáme v polovině května! Viz 
 [Online kurzy | Španělské Slunce](https://www.spanelskeslunce.cz/online-kurzy/)
 
- 
-
-<script type="text/javascript" src="https://form.fapi.cz/script.php?id=7f044949-f8db-471d-b63e-27f389fc1174"></script>
-
-<br>
-
-<br>
-
 <script type="text/javascript" src="https://form.fapi.cz/script.php?id=53dd8eff-cfe7-45db-939f-005a7dce5408"></script>
+
+<br>
+
+<br>
+
+<script type="text/javascript" src="https://form.fapi.cz/script.php?id=0c36d995-9103-4dff-9df4-c66fd810a74c"></script>
