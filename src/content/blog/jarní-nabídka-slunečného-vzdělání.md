@@ -18,11 +18,11 @@ rádi bychom Vás pozvali na naši nadcházející **sérii vzdělávacích akc�
 
 **👉 27. května** se můžete těšit na webinář **Minulé časy ve španělštině,** který Vám během 120 minut nabídne nejen souhrnné představení všech minulých časů, ale také se zaměří na jejich často problematické používání. Hlavním tématem bude rozlišení mezi **indefinido a imperfecto**, což je pro mnohé z nás skutečný oříšek. Všechny webináře budou nahrávány, takže se k nim můžete kdykoliv vrátit.
 
- 👉**18. června** proběhne webinář na téma **Subjuntivo,** kde si důkladně a názorně vysvětlíme, co subjunktiv je a jaké situace vyžadují jeho použití. Tento webinář bude plný praktických cvičení s okamžitou zpětnou vazbou, což Vám pomůže získat jistotu v jeho používání.
+ 
 
 **Proč se zúčastnit?**
 
-\- Získejte **jasný přehled** o minulých časech a subjunktivu.
+\- Získejte **jasný přehled** o minulých časech .
 
 \- Možnost **konzultovat své pochybnosti** s odbornicí.
 
@@ -36,9 +36,3 @@ Nebo se zapište do našeho slunečného kurzu online -  začínáme v polovině
 [Online kurzy | Španělské Slunce](https://www.spanelskeslunce.cz/online-kurzy/)
 
 <script type="text/javascript" src="https://form.fapi.cz/script.php?id=53dd8eff-cfe7-45db-939f-005a7dce5408"></script>
-
-<br>
-
-<br>
-
-<script type="text/javascript" src="https://form.fapi.cz/script.php?id=0c36d995-9103-4dff-9df4-c66fd810a74c"></script>
